@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "last_verified": "2026-09-30",
+  "sources": [
+    {
+      "id": "copilot-studio-billing-rates",
+      "category": "billing_rates",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management",
+      "last_verified": "2026-09-30",
+      "notes": "Standard-harness Copilot Credit rates, licensed-user zero-rating conditions, agent-flow trigger distinction, CUA exclusion."
+    },
+    {
+      "id": "copilot-studio-standard-licensing",
+      "category": "licensing",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing",
+      "last_verified": "2026-09-30",
+      "notes": "Standard harness licensing, Microsoft 365 Copilot inclusion, Copilot Studio access and capacity."
+    },
+    {
+      "id": "github-harness-billing",
+      "category": "harness_billing",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/billing-credit-overview",
+      "last_verified": "2026-09-30",
+      "notes": "Usage-based billing for GitHub Copilot harness agents/workflows including build, preview, evaluation and runtime."
+    },
+    {
+      "id": "github-harness-governance",
+      "category": "harness_billing",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/govern-credit-consumption",
+      "last_verified": "2026-09-30",
+      "notes": "Governance and capacity controls for GitHub Copilot harness credit consumption."
+    },
+    {
+      "id": "cowork-cost",
+      "category": "cowork_billing",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-copilot-credits-cost",
+      "last_verified": "2026-09-30",
+      "notes": "Cowork /cost command and monthly credit usage."
+    },
+    {
+      "id": "usage-based-billing",
+      "category": "cowork_billing",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/copilot-credits-overview",
+      "last_verified": "2026-09-30",
+      "notes": "Usage-based billing services, spending policies and cost management."
+    },
+    {
+      "id": "copilot-studio-pricing",
+      "category": "pricing",
+      "authority": "Microsoft",
+      "url": "https://www.microsoft.com/en-us/copilot/pricing/copilot-studio",
+      "last_verified": "2026-09-30",
+      "notes": "Public Copilot Studio plans/pricing. Recheck region and contract before quoting currency."
+    },
+    {
+      "id": "copilot-controls-overview",
+      "category": "governance",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-control-system/overview",
+      "last_verified": "2026-09-30",
+      "notes": "Copilot controls framework."
+    },
+    {
+      "id": "copilot-controls-security",
+      "category": "governance",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-controls/security-governance",
+      "last_verified": "2026-09-30",
+      "notes": "Security, compliance, privacy and oversharing controls."
+    },
+    {
+      "id": "copilot-controls-management",
+      "category": "governance",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-control-system/management-controls",
+      "last_verified": "2026-09-30",
+      "notes": "Licensing, metering, agent lifecycle and customization controls."
+    },
+    {
+      "id": "manage-m365-agents",
+      "category": "governance",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/manage",
+      "last_verified": "2026-09-30",
+      "notes": "Admin controls for agents built through different Microsoft 365 paths."
+    },
+    {
+      "id": "copilot-studio-whats-new",
+      "category": "availability",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new",
+      "last_verified": "2026-09-30",
+      "notes": "Notable product changes."
+    },
+    {
+      "id": "copilot-studio-released-versions",
+      "category": "released_versions",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/power-platform/released-versions/copilotstudio",
+      "last_verified": "2026-09-30",
+      "notes": "Weekly Tuesday update and regional version rollout, including France."
+    },
+    {
+      "id": "ai-at-work-roadmap",
+      "category": "roadmap",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/power-platform/release-plan/2026wave1/microsoft-copilot-studio/",
+      "last_verified": "2026-09-30",
+      "notes": "Forward-looking roadmap; dates are estimates and not commitments."
+    }
+  ]
+}
