@@ -67,3 +67,7 @@ The first version focuses on architecture, billing correctness, freshness and go
 ## Important
 
 This project is not affiliated with Microsoft. Licensing, pricing, availability and roadmap information must be checked against current official Microsoft sources before operational or purchasing decisions.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
