@@ -113,6 +113,30 @@
       "url": "https://learn.microsoft.com/en-us/power-platform/release-plan/2026wave1/microsoft-copilot-studio/",
       "last_verified": "2026-09-30",
       "notes": "Forward-looking roadmap; dates are estimates and not commitments."
+    },
+    {
+      "id": "usl-vs-ubb",
+      "category": "licensing",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/user-subscription-license-usage-based-billing",
+      "last_verified": "2026-09-30",
+      "notes": "Distinguishes fixed user subscription licensing from usage-based billing for advanced experiences such as Cowork and newer agentic capabilities."
+    },
+    {
+      "id": "copilot-extensibility-costs",
+      "category": "licensing",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/cost-considerations",
+      "last_verified": "2026-09-30",
+      "notes": "Cost considerations for Microsoft 365 Copilot extensibility, licensed versus unlicensed users, tenant data and APIs."
+    },
+    {
+      "id": "copilot-studio-harnesses",
+      "category": "architecture",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/harnesses-overview",
+      "last_verified": "2026-09-30",
+      "notes": "Official comparison of Copilot Studio harnesses and their implications for capability and billing."
     }
   ]
 }
