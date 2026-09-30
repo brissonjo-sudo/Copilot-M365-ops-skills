@@ -141,6 +141,7 @@ Use the minimum relevant file:
 - `references/product-map.md`
 - `references/decision-tree.md`
 - `references/licensing.md`
+- `references/usl-vs-ubb.md`
 - `references/billing.md`
 - `references/cowork.md`
 - `references/copilot-studio.md`
