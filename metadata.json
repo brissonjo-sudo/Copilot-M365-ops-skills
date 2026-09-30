@@ -1,0 +1,11 @@
+{
+  "name": "Copilot M365 Ops",
+  "description": "Architecture, licensing, cost, governance and operations guidance for Microsoft 365 Copilot, Copilot Studio, Cowork and agents.",
+  "platforms": ["Cowork", "Copilot Studio"],
+  "tags": ["microsoft-365", "copilot", "agents", "automation", "governance", "licensing"],
+  "author": "brissonjo-sudo",
+  "authorUrl": "https://github.com/brissonjo-sudo",
+  "version": "0.1.0",
+  "createdAt": "2026-09-30",
+  "updatedAt": "2026-09-30"
+}
