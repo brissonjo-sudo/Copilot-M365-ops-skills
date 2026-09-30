@@ -20,7 +20,7 @@ for source in sources["sources"]:
         continue
     verified = datetime.strptime(source["last_verified"], "%Y-%m-%d").date()
     age = (today - verified).days
-    if age > rule["max_age_days"]:
+    if age >= rule["max_age_days"]:
         msg = f"{source['id']} ({category}) is {age}d old; max {rule['max_age_days']}d"
         if rule["severity"] == "block":
             blocked.append(msg)
