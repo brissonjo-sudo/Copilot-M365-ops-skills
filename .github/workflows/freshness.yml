@@ -1,0 +1,70 @@
+name: freshness
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 6 * * 3"
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  freshness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check source freshness
+        id: freshness
+        continue-on-error: true
+        run: python scripts/check_freshness.py
+
+      - name: Check source reachability
+        id: reachability
+        continue-on-error: true
+        run: python scripts/check_sources.py
+
+      - name: Create or update maintenance issue
+        if: steps.freshness.outcome == 'failure' || steps.reachability.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = "Weekly Microsoft Copilot source review required";
+            const { data } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open"
+            });
+            const existing = data.find(i => i.title === title);
+            const body = [
+              "The scheduled freshness/reachability checks found at least one source requiring review.",
+              "",
+              "Run:",
+              "- `python scripts/check_freshness.py`",
+              "- `python scripts/check_sources.py`",
+              "",
+              "Then verify the affected facts against current official Microsoft documentation and update `sources/sources.json`."
+            ].join("\n");
+            if (existing) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body
+              });
+            }
+
+      - name: Fail workflow when review is required
+        if: steps.freshness.outcome == 'failure' || steps.reachability.outcome == 'failure'
+        run: exit 1
