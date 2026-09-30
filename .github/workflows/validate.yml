@@ -18,3 +18,5 @@ jobs:
           python-version: "3.12"
       - name: Validate repository
         run: python scripts/validate_repo.py
+      - name: Enforce critical source freshness
+        run: python scripts/check_freshness.py
