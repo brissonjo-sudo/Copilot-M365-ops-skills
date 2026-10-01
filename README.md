@@ -1,6 +1,10 @@
 # Copilot M365 Ops Skill
 
-A maintainable Agent Skill for **Microsoft 365 Copilot, Copilot Studio, Cowork, agents, automation, licensing, Copilot Credits, governance, security and architecture decisions**.
+A maintainable **ChatGPT skill specializing in Microsoft 365 Copilot**: Copilot Studio, Microsoft Copilot Cowork, agents, automation, licensing, Copilot Credits, governance, security and architecture decisions.
+
+ChatGPT is the primary execution platform. Copilot Studio and Microsoft Copilot Cowork are products the skill advises on. Agent Skills format portability to other hosts is secondary and does not imply tested support.
+
+Start with [INSTALL_CHATGPT.md](INSTALL_CHATGPT.md). Installation and native skill availability depend on the ChatGPT surface and workspace.
 
 ## What problem this solves
 
@@ -39,16 +43,11 @@ docs/                           maintenance, research notes and roadmap
 
 ## Freshness model
 
-Critical facts have short TTLs:
+The canonical policy is [sources/freshness-policy.json](sources/freshness-policy.json). Review ages are 7 days for pricing, billing, licensing, quotas, availability and roadmap/releases; 30 days for governance; 180 days for stable architecture.
 
-- pricing: 1 day;
-- billing rates: 1 day;
-- licensing: 7 days;
-- Cowork/harness billing: 7 days;
-- roadmap/releases: 7 days;
-- governance: 30 days.
+These are repository review ages, not permission to answer from cache. Categories marked `live_check_required` require a current official source check at answer time. If retrieval is unavailable, disclose the limitation and keep advice conditional.
 
-A weekly GitHub Action runs after Microsoft's Tuesday Copilot Studio release-page update window and opens/updates an issue when review is required.
+A weekly GitHub Action runs Wednesday at 06:30 UTC after the documented Tuesday release-page update. It opens/updates a maintenance issue for stale sources, including warning categories, or unreachable URLs. HTTP reachability alone does not verify the content or refresh review dates.
 
 ## Local validation
 
@@ -56,6 +55,7 @@ A weekly GitHub Action runs after Microsoft's Tuesday Copilot Studio release-pag
 python scripts/validate_repo.py
 python scripts/check_freshness.py
 python scripts/check_sources.py
+python -m unittest discover -s tests -p 'test_*.py' -v
 ```
 
 ## Current status

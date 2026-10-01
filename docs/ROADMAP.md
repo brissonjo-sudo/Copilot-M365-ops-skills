@@ -27,8 +27,9 @@
 
 ## v0.5 — Distribution
 - package for compatible Agent Skill runtimes;
-- Copilot/Cowork catalog submission preparation;
-- installation documentation.
+- ChatGPT plugin packaging/distribution where supported;
+- ChatGPT installation and native activation verification;
+- secondary portability checks for compatible Agent Skills hosts, without assuming support.
 
 ## v1.0
 Release only after the skill passes architecture, billing, freshness and governance test gates across the supported scenarios.

@@ -1,0 +1,32 @@
+{
+  "scenario_id": "licensed-manual-mail-briefing",
+  "thread_id": "6abd4845-0bf4-83ed-a9ff-8f58373d34b7",
+  "url": "https://chatgpt.com/c/6abd4845-0bf4-83ed-a9ff-8f58373d34b7",
+  "turns": [
+    {
+      "id": "046fd9a4-27ec-42a4-98af-1484efceef23",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1790789731.657,
+      "completedAt": 1790789745.376485,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "046fd9a4-27ec-42a4-98af-1484efceef23",
+          "content": [
+            {
+              "type": "text",
+              "text": "Lis le fichier Texte collé.txt et applique le skill copilot-m365-ops qu’il contient. Réponds à la demande finale ID licensed-manual-mail-briefing. Confirme la lecture du corpus, vérifie les sources officielles volatiles en direct, réponse concise en français.\n\n[User attached 1 file; file contents were not included]"
+            }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "bf51277a-53e8-44b8-a3d7-adff14de6e0b",
+          "text": "### licensed-manual-mail-briefing\n\n**Architecture recommandée**  \nUn **agent interne Copilot Studio, standard harness**, utilisé sous l’identité du directeur licencié Microsoft 365 Copilot. Chaque matin, il clique sur « Générer mon briefing » pour résumer les mails de la veille. Cette architecture correspond précisément au cas manuel décrit dans le corpus. :chatgpt-content-reference{index=\"0\"}\n\n**Pourquoi**\n- Le déclenchement est **manuel**, par un utilisateur authentifié et licencié Microsoft 365 Copilot.\n- L’agent peut exploiter les données Microsoft 365 accessibles à cet utilisateur, dans la limite de ses permissions.\n- Si un flow est nécessaire pour préparer/récupérer les données, il faut privilégier un **agent flow appelé par l’agent**.\n\n**Coût**  \nVérification Microsoft effectuée en direct : pour un agent standard destiné aux employés, les fonctions utilisées par un utilisateur **licencié Microsoft 365 Copilot** et exécutées sous son identité sont actuellement indiquées **« No charge »** en Copilot Credits, sous réserve des limites de fair use. :chatgpt-content-reference{index=\"1\"}\n\nSi un agent flow est ajouté, cette absence de facturation ne vaut que lorsqu’il est déclenché via **« When an agent calls the flow »**. Un autre type de déclenchement consomme des Copilot Credits. :chatgpt-content-reference{index=\"2\"}\n\n**Prérequis DSI**\n- licence Microsoft 365 Copilot du directeur ;\n- agent publié et accessible à cet utilisateur ;\n- authentification Microsoft Entra ;\n- permissions suffisantes sur sa messagerie ;\n- validation des connecteurs/DLP nécessaires.\n\nMicrosoft confirme également qu’une licence Microsoft 365 Copilot permet d’utiliser Copilot Studio pour étendre Microsoft 365 Copilot avec des agents. :chatgpt-content-reference{index=\"3\"}\n\n**Conclusion :** pour ce cas précis, le déclenchement manuel par le directeur licencié est la solution simple et normalement **sans Copilot Credits supplémentaires** dans le standard harness, tant que les conditions ci-dessus sont respectées."
+        }
+      ]
+    }
+  ]
+}

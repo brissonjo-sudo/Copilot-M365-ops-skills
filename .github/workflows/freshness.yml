@@ -21,7 +21,7 @@ jobs:
       - name: Check source freshness
         id: freshness
         continue-on-error: true
-        run: python scripts/check_freshness.py
+        run: python scripts/check_freshness.py --review
 
       - name: Check source reachability
         id: reachability
@@ -44,7 +44,7 @@ jobs:
               "The scheduled freshness/reachability checks found at least one source requiring review.",
               "",
               "Run:",
-              "- `python scripts/check_freshness.py`",
+              "- `python scripts/check_freshness.py --review`",
               "- `python scripts/check_sources.py`",
               "",
               "Then verify the affected facts against current official Microsoft documentation and update `sources/sources.json`."

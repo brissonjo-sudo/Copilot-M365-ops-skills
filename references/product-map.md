@@ -7,6 +7,7 @@ Use this file to identify the correct Microsoft surface before discussing implem
 | Microsoft 365 Copilot | User productivity across M365 apps | Human prompt | User subscription / included capabilities |
 | Copilot Chat | Conversational Microsoft 365 entry point | Human prompt | License-dependent |
 | Agent Builder / M365 agents | Lightweight internal agent experiences | Human prompt | License / metering depends on scenario |
+| Copilot Studio — Copilot Chat harness | Extend Microsoft 365 Copilot | User interaction | Verify its own licensing and capabilities |
 | Copilot Studio — standard harness | Internal/external custom agents and agent flows | Human, flow, event | Copilot Credits, with documented zero-rating cases |
 | Copilot Studio — GitHub Copilot harness | Reasoning-heavy multistep agents/workflows | Build, test, human, autonomous | Usage-based Copilot Credits |
 | Cowork | Long-running / multistep work across tools and skills | User task / supported automation | Usage-based Copilot Credits |

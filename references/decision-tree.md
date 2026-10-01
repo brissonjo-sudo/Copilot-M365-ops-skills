@@ -10,7 +10,7 @@ If yes:
 
 If yes:
 - consider an internal agent;
-- determine standard harness vs GitHub Copilot harness;
+- determine Copilot Chat, standard or GitHub Copilot harness from the actual authoring/runtime path;
 - verify user licensing and publishing path.
 
 ## 3. Does it execute actions?

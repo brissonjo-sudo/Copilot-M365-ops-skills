@@ -2,7 +2,9 @@
 import json
 import re
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 errors = []
@@ -10,6 +12,7 @@ errors = []
 required = [
     "SKILL.md",
     "README.md",
+    "INSTALL_CHATGPT.md",
     "VERSION",
     "metadata.json",
     "sources/sources.json",
@@ -29,6 +32,9 @@ if not re.search(r"(?m)^name:\s*copilot-m365-ops\s*$", skill):
     errors.append("SKILL.md name must be copilot-m365-ops")
 if not re.search(r"(?m)^description:\s*>-", skill):
     errors.append("SKILL.md must include an agent-facing description")
+for companion in re.findall(r'`((?:references|playbooks|sources)/[^`]+)`', skill):
+    if not (ROOT / companion).is_file():
+        errors.append(f"Missing skill companion: {companion}")
 
 metadata = json.loads((ROOT / "metadata.json").read_text(encoding="utf-8"))
 for key in ("name", "description", "platforms", "tags", "version"):
@@ -38,6 +44,8 @@ for key in ("name", "description", "platforms", "tags", "version"):
 version = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
 if metadata.get("version") != version:
     errors.append("VERSION and metadata.json version differ")
+if metadata.get('platforms') != ['ChatGPT']:
+    errors.append('Primary execution platform must be ChatGPT')
 
 sources = json.loads((ROOT / "sources" / "sources.json").read_text(encoding="utf-8"))
 policy = json.loads((ROOT / "sources" / "freshness-policy.json").read_text(encoding="utf-8"))["policy"]
@@ -50,6 +58,15 @@ for source in sources.get("sources", []):
         errors.append(f"No policy for source category: {source['category']}")
     if not source["url"].startswith("https://"):
         errors.append(f"Non-HTTPS source: {source['id']}")
+    host = urlparse(source['url']).hostname or ''
+    if not (host == 'microsoft.com' or host.endswith('.microsoft.com')):
+        errors.append(f"Non-Microsoft source: {source['id']}")
+    try:
+        verified = datetime.strptime(source['last_verified'], '%Y-%m-%d').date()
+        if verified > datetime.now(timezone.utc).date():
+            errors.append(f"Future source date: {source['id']}")
+    except (ValueError, KeyError, TypeError):
+        errors.append(f"Invalid source date: {source['id']}")
 
 scenarios_path = ROOT / "tests" / "scenarios.json"
 if scenarios_path.exists():

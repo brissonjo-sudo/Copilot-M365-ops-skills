@@ -20,3 +20,5 @@ jobs:
         run: python scripts/validate_repo.py
       - name: Enforce critical source freshness
         run: python scripts/check_freshness.py
+      - name: Tooling regression tests
+        run: python -m unittest discover -s tests -p 'test_*.py' -v

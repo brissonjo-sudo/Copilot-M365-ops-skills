@@ -12,6 +12,8 @@ description: >-
 
 # Copilot M365 Ops
 
+This skill runs primarily in ChatGPT and provides advice about Microsoft 365 Copilot. Microsoft Copilot Studio and Microsoft Copilot Cowork are subjects of the advice. Other Agent Skills hosts are secondary portability targets.
+
 ## Core operating rule
 
 Separate **stable architecture knowledge** from **volatile Microsoft facts**.
@@ -53,12 +55,14 @@ For any proposed solution, determine in this order:
 3. **Trigger** — manual, agent-called flow, scheduled/event-driven, or autonomous.
 4. **Identity** — user identity, service identity, or anonymous/external.
 5. **Data** — Microsoft 365 tenant data, SharePoint, Graph, external APIs, premium connectors, local files.
-6. **Harness/runtime** — standard Copilot Studio harness, GitHub Copilot harness, Cowork, Power Automate, or another service.
+6. **Harness/runtime** — Copilot Chat harness for extending Microsoft 365 Copilot, standard Copilot Studio harness, GitHub Copilot harness, Cowork, Power Automate, or another service.
 7. **Cost path** — included/zero-rated, Copilot Credits, Power Platform/Azure, third-party/API.
 8. **Governance** — admin approval, DLP, permissions, environment, publishing, auditability.
 9. **Recommendation** — prefer the simplest, lowest-cost, governable design that fully meets the requirement.
 
 Never assume that "Copilot Studio" is one billing model. Explicitly distinguish the **standard harness** from the **GitHub Copilot harness** when relevant.
+
+Microsoft also documents the **Copilot Chat harness**. Verify its own capabilities and entitlements; do not transfer billing conditions between harnesses. Distinguish Copilot Studio agent flows from Power Automate cloud flows: the agent-flow Copilot Credit trigger rules are not cloud-flow licensing rules.
 
 ## Cost answers
 

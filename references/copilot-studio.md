@@ -10,6 +10,10 @@ Use for many conventional Copilot Studio agents and agent flows.
 
 Billing can be feature-based in Copilot Credits. Qualifying Microsoft 365 Copilot licensed-user scenarios can be zero-rated for documented capabilities.
 
+### Copilot Chat harness
+
+Microsoft's harness overview also describes a third path for extending Microsoft 365 Copilot. Verify that path's capabilities and entitlement independently; standard and GitHub billing statements are scoped to their own harnesses. See the `copilot-studio-harnesses` source in the registry.
+
 ### GitHub Copilot harness
 
 Use for reasoning-heavy agents/workflows powered by the newer harness.

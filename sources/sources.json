@@ -46,7 +46,7 @@
       "id": "usage-based-billing",
       "category": "cowork_billing",
       "authority": "Microsoft Learn",
-      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/copilot-credits-overview",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-overview-copilot-credits",
       "last_verified": "2026-09-30",
       "notes": "Usage-based billing services, spending policies and cost management."
     },
@@ -62,7 +62,7 @@
       "id": "copilot-controls-overview",
       "category": "governance",
       "authority": "Microsoft Learn",
-      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-control-system/overview",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-controls/overview",
       "last_verified": "2026-09-30",
       "notes": "Copilot controls framework."
     },
@@ -78,7 +78,7 @@
       "id": "copilot-controls-management",
       "category": "governance",
       "authority": "Microsoft Learn",
-      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-control-system/management-controls",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-controls/management-controls",
       "last_verified": "2026-09-30",
       "notes": "Licensing, metering, agent lifecycle and customization controls."
     },
@@ -109,8 +109,8 @@
     {
       "id": "ai-at-work-roadmap",
       "category": "roadmap",
-      "authority": "Microsoft Learn",
-      "url": "https://learn.microsoft.com/en-us/power-platform/release-plan/2026wave1/microsoft-copilot-studio/",
+      "authority": "Microsoft",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=%5B%22Microsoft%20Copilot%20Studio%22%5D",
       "last_verified": "2026-09-30",
       "notes": "Forward-looking roadmap; dates are estimates and not commitments."
     },

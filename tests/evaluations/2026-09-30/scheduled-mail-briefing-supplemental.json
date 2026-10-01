@@ -1,0 +1,37 @@
+{
+  "scenario_id": "scheduled-mail-briefing",
+  "supplemental": true,
+  "exact_prompt": "A Microsoft 365 Copilot licensed director needs an automatic 08:00 briefing without user action. For this cost-only example, choose Copilot Studio Standard harness with a scheduled agent flow, 22 executions per month, 2 billable agent-flow actions per execution, one Standard AI tool call per execution with 1000 input and 250 output tokens. Assume no separately metered Graph grounding, agent responses or other tools; mailbox retrieval permissions and completeness are validated separately. Estimate monthly Copilot Credits for the listed components, state exclusions, verify current Microsoft rates and compare the manual alternative. Do not present this component subtotal as the complete deployed solution cost.",
+  "thread_id": "6abd5317-3524-83ed-b795-1dfd6a0d14af",
+  "url": "https://chatgpt.com/c/6abd5317-3524-83ed-b795-1dfd6a0d14af",
+  "observed_citation_urls": [
+    "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management"
+  ],
+  "turns": [
+    {
+      "id": "b69d76aa-067b-45ee-8009-d26b2faf340d",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1790792471.371,
+      "completedAt": 1790792491.330044,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "b69d76aa-067b-45ee-8009-d26b2faf340d",
+          "content": [
+            {
+              "type": "text",
+              "text": "Lis intégralement la pièce jointe et applique son skill copilot-m365-ops. Réponds uniquement à la DEMANDE finale ID scheduled-mail-briefing-supplemental. Confirme la lecture du corpus, consulte les sources officielles actuelles pour les faits volatils et réponds de façon concise en français.\n\n[User attached 1 file; file contents were not included]"
+            }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "913179b4-b2a5-461e-abd1-b230824b396a",
+          "text": "Corpus lu intégralement et skill **copilot-m365-ops** appliqué. :chatgpt-content-reference{index=\"0\"}\n\n## scheduled-mail-briefing-supplemental\n\nPour le scénario imposé, le **briefing automatique à 08:00** utilise un **Copilot Studio Standard harness** avec un **agent flow planifié**. Ce déclenchement n’est pas couvert par le « No charge » réservé aux flows appelés via **When an agent calls the flow** : il consomme donc des Copilot Credits. Microsoft confirme actuellement **13 crédits / 100 actions d’agent flow** et, pour un **Standard AI tool**, **1,5 crédit / 1 000 tokens**. :chatgpt-content-reference{index=\"1\"}\n\n| Composant | Calcul mensuel | Crédits |\n|---|---:|---:|\n| Agent flow | 22 exécutions × 2 actions = 44 actions × 13/100 | **5,72** |\n| Standard AI tool | 22 × (1 000 + 250 tokens) × 1,5/1 000 | **41,25** |\n| **Sous-total** | | **46,97 Copilot Credits/mois** |\n\nSoit environ **47 Copilot Credits par mois** pour **les seuls composants explicitement indiqués**.\n\n**Exclusions :** ce chiffre n’inclut notamment ni éventuel grounding Graph/Work IQ, ni réponses génératives supplémentaires de l’agent, ni autres actions/outils, ni coûts Power Platform/Azure ou connecteurs éventuels. Il ne doit donc **pas être présenté comme le coût complet de la solution déployée**. Le corpus impose précisément de séparer ces postes. :chatgpt-content-reference{index=\"2\"}\n\n**Alternative manuelle :** si le directeur licencié déclenche lui-même le briefing et que le flow est invoqué via **When an agent calls the flow**, Microsoft indique actuellement que les agent-flow actions et les AI tools concernés peuvent être **sans consommation de Copilot Credits** dans ce scénario employee-facing authentifié, sous réserve des conditions et limites de fair use. :chatgpt-content-reference{index=\"3\"}\n\nEn coût incrémental Copilot Credits, l’écart est donc approximativement **47 crédits/mois pour l’automatisation planifiée contre 0 crédit pour l’alternative manuelle admissible au zero-rating**, sur le périmètre strictement modélisé ici."
+        }
+      ]
+    }
+  ]
+}

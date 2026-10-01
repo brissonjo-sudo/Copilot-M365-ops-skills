@@ -1,0 +1,33 @@
+{
+  "scenario_id": "unlicensed-internal-user",
+  "replay": 1,
+  "thread_id": "6abd5019-03d0-83ed-b413-94205e10af2f",
+  "url": "https://chatgpt.com/c/6abd5019-03d0-83ed-b413-94205e10af2f",
+  "turns": [
+    {
+      "id": "271eb0e6-151e-42ff-8ba7-d675f5af97be",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1790791757.031,
+      "completedAt": 1790791768.202094,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "271eb0e6-151e-42ff-8ba7-d675f5af97be",
+          "content": [
+            {
+              "type": "text",
+              "text": "Lis intégralement la pièce jointe et applique son skill copilot-m365-ops. Réponds uniquement à la DEMANDE finale ID unlicensed-internal-user. Confirme la lecture du corpus, consulte les sources officielles actuelles pour les faits volatils et réponds de façon concise en français.\n\n[User attached 1 file; file contents were not included]"
+            }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "feeed1ab-7396-4671-b78f-c41f0573b4ce",
+          "text": "Lecture intégrale du corpus `copilot-m365-ops` confirmée. :chatgpt-content-reference{index=\"0\"}\n\n## unlicensed-internal-user\n\nUn salarié **sans licence Microsoft 365 Copilot** peut utiliser un agent Copilot Studio publié dans Teams, mais son usage **n’est pas couvert par le mécanisme de “no charge” réservé aux utilisateurs licenciés Microsoft 365 Copilot**. :chatgpt-content-reference{index=\"1\"}\n\n- **Architecture** : agent Copilot Studio standard, authentifié avec l’identité Entra de l’employé, publié dans Teams.\n- **Coût** : l’usage peut être **facturé en Copilot Credits**, notamment lorsque l’agent exploite des données du tenant comme SharePoint ou d’autres données Microsoft 365. Microsoft indique explicitement que les utilisateurs non licenciés peuvent entraîner une facturation basée sur l’usage. :chatgpt-content-reference{index=\"2\"}\n- **Licence utilisateur** : il n’est donc pas nécessaire d’acheter Microsoft 365 Copilot à chaque utilisateur uniquement pour qu’il accède à ce type d’agent, sous réserve que le tenant dispose de l’architecture/licence Copilot Studio et de la capacité nécessaires. :chatgpt-content-reference{index=\"3\"}\n- **À prévoir côté DSI** : capacité ou facturation Copilot Studio, publication Teams, authentification Entra, permissions sur les sources, DLP et suivi de consommation.\n\n**En synthèse :** pour un utilisateur interne non licencié M365 Copilot, l’agent Teams est techniquement possible, mais on bascule généralement vers une logique **Copilot Studio + consommation en Copilot Credits**, plutôt que vers l’inclusion liée à la licence Microsoft 365 Copilot."
+        }
+      ]
+    }
+  ]
+}

@@ -14,6 +14,8 @@ Microsoft also states that Computer-Using Agents are not included in that Micros
 
 Never copy cached numeric rates into an answer without a current source check.
 
+These trigger rules concern **Copilot Studio agent flows**. Power Automate cloud flows use their own licensing; do not assign Copilot Credits to a cloud flow merely because it is scheduled. Connected AI/services may have separate charges. Verify each component.
+
 ## GitHub Copilot harness
 
 Microsoft documents a separate usage-based billing model for agents and workflows powered by the GitHub Copilot harness.
