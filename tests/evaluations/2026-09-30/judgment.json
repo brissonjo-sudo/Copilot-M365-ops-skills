@@ -1,0 +1,1669 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-09-30",
+  "judge": {
+    "model": "GPT-6.1 Sol",
+    "reasoning": "High",
+    "role": "independent_content_judge"
+  },
+  "responder": {
+    "host": "ChatGPT",
+    "reported_setting": "Moyen 2/5",
+    "exact_model": null
+  },
+  "scope": "17 originals +3 separate replays +1 explicitly identified supplemental test; no originals replaced. Content, provenance and protocol limits separated.",
+  "corpus": {
+    "path": "tests/evaluations/2026-09-30/corpus.txt",
+    "sha256_normalized_utf8_lf_verified": "ef89cfef6e9edc05ae31dcd66250aa2be3df425e3789123455b94df77b1f3a8c",
+    "normalized_chars": 32093,
+    "sha256_file_bytes_verified": "26165d309abb8376fcc04c10195e43b208bd3edacdce31155800447b8dfc9380",
+    "file_bytes": 32964,
+    "hash_note": "Le hash operateur porte sur texte UTF8 sans BOM et newlines LF ; il correspond apres normalisation du fichier actuel.",
+    "loading": "15 fichiers concatenes en piece jointe Texte colle ; chargement explicite, pas activation native",
+    "corrected_chat_harness_and_cloud_flow_rules": true
+  },
+  "method": {
+    "content_verdicts": [
+      "PASS",
+      "PARTIAL",
+      "FAIL",
+      "AMBIGUOUS"
+    ],
+    "invariant_verdicts": [
+      "PASS",
+      "PARTIAL",
+      "FAIL",
+      "UNVERIFIED",
+      "NA"
+    ],
+    "freshness_rule": "Citations officielles visibles confirmees pour20chats et contenu verifie independamment. References opaques = artefact extraction, aucune absence de recherche inferee. La non-exhaustivite de la trace retrieval est une limite documentaire, pas un echec de contenu ou un gate de recherche rate.",
+    "attribution_rule": "Ne pas attribuer une lacune de modele au skill sans instruction manquante/contradictoire. Un manque de trace est une limite de preuve, pas une source obsolete.",
+    "protocol_evidence": "17 original distinct chats +3 fresh-context replays +1 supplemental precise-workload chat. Completed captures,20chat sources-observed artifact and supplemental citation URL.15file corpus with verified LFhash; native activation untested, exact model unexposed. Prior snapshots preserved outside repo."
+  },
+  "summary": {
+    "reviewed": 17,
+    "content_pass": 13,
+    "content_partial": 3,
+    "content_fail": 1,
+    "content_ambiguous": 0,
+    "ambiguous_test_cases_retained": [
+      "scheduled-mail-briefing: quantitative_cost_input_gap",
+      "roadmap-feature: feature_not_named",
+      "cost-estimate: architecture_workload_unspecified"
+    ],
+    "original_failures_preserved": true,
+    "replays_requested": [
+      "unlicensed-internal-user",
+      "cost-estimate",
+      "cheapest-architecture"
+    ],
+    "confirmed_skill_defects": 0,
+    "confirmed_stale_source_defects": 0,
+    "release_certified": false,
+    "gate": "NOT_PASSED: quality residuals in cases4/14/16 only (actual harness verification, complete cost inventory, governance). Visible source provenance completed21/21; exhaustive retrieval trace limitation is not a failed search or blocking gate.",
+    "freshness_note": "DOM official citations now recorded for all20. Opaque read_thread references were extraction artifacts. Full retrieval traces unavailable; no inference that responder failed to browse.",
+    "original_scenarios_reviewed": 17,
+    "replays_reviewed": 3,
+    "original_content": {
+      "pass_count": 13,
+      "partial_count": 3,
+      "fail_count": 1
+    },
+    "replay_content": {
+      "pass_count": 0,
+      "partial_count": 3,
+      "fail_count": 0
+    },
+    "visible_official_citation_provenance": {
+      "present": 21,
+      "total": 21,
+      "verdict": "PASS visible references only;20chat sources artifact plus1supplemental capture"
+    },
+    "all_invariants_gate": "NOT_PASSED",
+    "no_best_of_replacement": true,
+    "skill_modification_justified_by_model_failures": false,
+    "source_freshness_content": "No stale source defect confirmed; all numerical claims checked independently against official sources.",
+    "open_original_cases": [
+      "unlicensed-internal-user",
+      "cost-estimate",
+      "cheapest-architecture"
+    ],
+    "no_replay_until_pass_required": true,
+    "supplemental_tests_reviewed": 1,
+    "supplemental_content": {
+      "pass_count": 1,
+      "partial_count": 0,
+      "fail_count": 0
+    },
+    "total_chat_outputs_reviewed": 21,
+    "quality_residual_cases": [
+      "unlicensed-internal-user",
+      "cost-estimate",
+      "cheapest-architecture"
+    ],
+    "recorded_nonpass_original_cases": [
+      "scheduled-mail-briefing",
+      "unlicensed-internal-user",
+      "cost-estimate",
+      "cheapest-architecture"
+    ],
+    "calculation_clarification_closed_for": "scheduled-mail-briefing-supplemental"
+  },
+  "results": [
+    {
+      "scenario_id": "licensed-manual-mail-briefing",
+      "capture": "tests/evaluations/2026-09-30/licensed-manual-mail-briefing.json",
+      "thread_id": "6abd4845-0bf4-83ed-a9ff-8f58373d34b7",
+      "content_verdict": "PASS",
+      "invariants": [
+        {
+          "id": "standard_internal_candidate",
+          "verdict": "PASS",
+          "evidence": "Un agent interne Copilot Studio, standard harness"
+        },
+        {
+          "id": "zero_rating_conditions",
+          "verdict": "PASS",
+          "evidence": "Licence Microsoft 365 Copilot, identite du directeur, utilisateur authentifie, employee-facing, fair use ; trigger agent flow specifique si flow ajoute."
+        },
+        {
+          "id": "manual_trigger_preferred",
+          "verdict": "PASS",
+          "evidence": "Chaque matin, il clique sur Generer mon briefing."
+        },
+        {
+          "id": "no_unlimited_claim",
+          "verdict": "PASS",
+          "evidence": "Inclusion conditionnelle et limites de fair use ; pas de volume illimite annonce."
+        },
+        {
+          "id": "live_official_verification",
+          "verdict": "UNVERIFIED_RETRIEVAL_TRACE",
+          "evidence": "Citations Microsoft visibles confirmees via sources-observed.json ; pas absence de recherche. Contenu controle independamment par juge. La trace exhaustive de retrieval n est pas disponible."
+        }
+      ],
+      "attribution": [],
+      "notes": [
+        "Le choix standard est un candidat valide. La regle preferer natif pour un besoin simple ne permet pas d'imposer un echec ici : le prompt exige un clic recurrent et le corpus comporte cet exemple."
+      ],
+      "replay": {
+        "required": false,
+        "evidence_completion_required": false,
+        "request": "Enregistrer URL officielles associees aux references 1-3 et trace de consultation ; conserver piece jointe contenant le prompt exact.",
+        "visible_source_evidence_completed": true
+      },
+      "responder_source_provenance": {
+        "verdict": "PASS_VISIBLE_OFFICIAL_CITATIONS",
+        "artifact": "tests/evaluations/2026-09-30/sources-observed.json",
+        "recorded_urls": [
+          "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management",
+          "https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing"
+        ],
+        "scope": "Microsoft citation URLs observed in completed response DOM. Non exhaustive, grouped citations can hide links.",
+        "not_certified": "Every retrieval call, every claim-to-source mapping, source publication time at retrieval, native skill activation."
+      },
+      "provenance_note": "Full retrieval operations not certified; visible official citations are PASS provenance and no missing-search failure is assigned."
+    },
+    {
+      "scenario_id": "scheduled-mail-briefing",
+      "capture": "tests/evaluations/2026-09-30/scheduled-mail-briefing.json",
+      "thread_id": "6abd48b1-4dfc-83eb-9679-effbbd7b859e",
+      "content_verdict": "PARTIAL",
+      "invariants": [
+        {
+          "id": "scheduled_trigger",
+          "verdict": "PASS",
+          "evidence": "Flux cloud Power Automate planifie a 08:00 sans action de l'utilisateur."
+        },
+        {
+          "id": "no_automatic_licensed_zero_rating",
+          "verdict": "PASS",
+          "evidence": "La licence Microsoft 365 Copilot du directeur ne suffit pas a conclure que l'automatisation est incluse."
+        },
+        {
+          "id": "workflow_credit_exposure_calculation",
+          "verdict": "PARTIAL",
+          "evidence": "Deux chemins distingues, licence Power Automate/composant IA separables, agent flow planifie soumis aux credits ; pas de runs/mois, nombre d'actions, formule ou taux applicables."
+        },
+        {
+          "id": "manual_alternative",
+          "verdict": "PASS",
+          "evidence": "Alternative manuel en un clic, avec mention explicite qu'elle ne satisfait pas le briefing deja pret a 08:00."
+        },
+        {
+          "id": "cloud_flow_not_agent_flow",
+          "verdict": "PASS",
+          "evidence": "Power Automate avec droits standards et IA verifiee separement distingue des agent flows Copilot Studio."
+        },
+        {
+          "id": "live_official_verification",
+          "verdict": "UNVERIFIED_RETRIEVAL_TRACE",
+          "evidence": "Citations Microsoft visibles confirmees via sources-observed.json ; pas absence de recherche. Contenu controle independamment par juge. La trace exhaustive de retrieval n est pas disponible."
+        }
+      ],
+      "attribution": [
+        {
+          "classification": "ambiguous_test_case",
+          "severity": "non_blocking_content_gap",
+          "confidence": "high",
+          "reason": "L'attendu demande calculate workflow/credit exposure, alors que le prompt ne fixe ni composants IA, actions, volume de mails ou jours d'execution. La reponse apporte une cartographie des couts valide mais pas un calcul. Ne pas modifier le skill pour imposer un nombre arbitraire."
+        }
+      ],
+      "notes": [
+        "Contexte licensed director rapporte ajoute au prompt : ambiguity same briefing levee selon operateur, a conserver dans la piece jointe envoyee.",
+        "La licence du proprietaire pour scheduled cloud flows est correcte sous contexte de licence utilisateur ; une licence Process affectee au flow serait un autre cas."
+      ],
+      "replay": {
+        "required": false,
+        "conditional": "Si le gate exige un calcul numerique, lancer un scenario complementaire precisant composant IA, actions/run, jours/mois et volume, en conservant ce resultat initial.",
+        "evidence_completion_required": false,
+        "request": "Conserver prompt annexe et URL de licence Power Automate, billing Copilot Studio et permission Graph.",
+        "visible_source_evidence_completed": true
+      },
+      "responder_source_provenance": {
+        "verdict": "PASS_VISIBLE_OFFICIAL_CITATIONS",
+        "artifact": "tests/evaluations/2026-09-30/sources-observed.json",
+        "recorded_urls": [
+          "https://learn.microsoft.com/en-us/power-platform/admin/power-automate-licensing/faqs",
+          "https://learn.microsoft.com/en-gb/power-platform/admin/power-automate-licensing/faqs",
+          "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management",
+          "https://learn.microsoft.com/fr-fr/graph/api/resources/mail-api-overview"
+        ],
+        "scope": "Microsoft citation URLs observed in completed response DOM. Non exhaustive, grouped citations can hide links.",
+        "not_certified": "Every retrieval call, every claim-to-source mapping, source publication time at retrieval, native skill activation."
+      },
+      "provenance_note": "Full retrieval operations not certified; visible official citations are PASS provenance and no missing-search failure is assigned."
+    },
+    {
+      "scenario_id": "agent-called-flow",
+      "capture": "tests/evaluations/2026-09-30/agent-called-flow.json",
+      "thread_id": "6abd48b9-f048-83ed-9178-4f62753d25e2",
+      "content_verdict": "PASS",
+      "invariants": [
+        {
+          "id": "exact_agent_flow_trigger",
+          "verdict": "PASS",
+          "evidence": "When an agent calls the flow ; Respond to the agent ajoute comme prerequis."
+        },
+        {
+          "id": "standard_harness",
+          "verdict": "PASS",
+          "evidence": "Agent et agent flow sur le standard harness."
+        },
+        {
+          "id": "licensed_authenticated_identity",
+          "verdict": "PASS",
+          "evidence": "Utilisateur authentifie disposant d'une licence Microsoft 365 Copilot ; fair use."
+        },
+        {
+          "id": "scoped_billing_rule",
+          "verdict": "PASS",
+          "evidence": "No charge uniquement pour trigger agent-specific ; pas transposition au planifie/evenement/autre harness."
+        },
+        {
+          "id": "live_official_verification",
+          "verdict": "UNVERIFIED_RETRIEVAL_TRACE",
+          "evidence": "Citations Microsoft visibles confirmees via sources-observed.json ; pas absence de recherche. Contenu controle independamment par juge. La trace exhaustive de retrieval n est pas disponible."
+        }
+      ],
+      "attribution": [],
+      "notes": [
+        "La reponse choisit explicitement un agent flow pour lever la nature non precisee du flow. Les prerequis rendent la recommandation conditionnelle et governable.",
+        "La reponse ne confirme pas textuellement la lecture integrale ; la reference au corpus et la trace UI rapportee ne suffisent pas seules a prouver chaque fichier lu."
+      ],
+      "replay": {
+        "required": false,
+        "evidence_completion_required": false,
+        "request": "URL billing rates et source trigger/Respond to agent ; completer trace chargement si la confirmation integrale est un critere de validite.",
+        "visible_source_evidence_completed": true
+      },
+      "responder_source_provenance": {
+        "verdict": "PASS_VISIBLE_OFFICIAL_CITATIONS",
+        "artifact": "tests/evaluations/2026-09-30/sources-observed.json",
+        "recorded_urls": [
+          "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management",
+          "https://learn.microsoft.com/en-us/microsoft-copilot-studio/flows-faqs"
+        ],
+        "scope": "Microsoft citation URLs observed in completed response DOM. Non exhaustive, grouped citations can hide links.",
+        "not_certified": "Every retrieval call, every claim-to-source mapping, source publication time at retrieval, native skill activation."
+      },
+      "provenance_note": "Full retrieval operations not certified; visible official citations are PASS provenance and no missing-search failure is assigned."
+    },
+    {
+      "scenario_id": "unlicensed-internal-user",
+      "capture": "tests/evaluations/2026-09-30/unlicensed-internal-user.json",
+      "thread_id": "6abd48c3-5a30-83ed-b9ba-b5b62fcba235",
+      "content_verdict": "PARTIAL",
+      "invariants": [
+        {
+          "id": "potential_credit_metering",
+          "verdict": "PASS",
+          "evidence": "Utilisateur sans add-on : credits selon fonctions et type de creation, capacite tenant/PAYG."
+        },
+        {
+          "id": "exact_agent_type_and_harness_verification",
+          "verdict": "PARTIAL",
+          "evidence": "Distingue standalone publie Teams de Teams plan, et conclusion conditionnee a un agent standard ; ne demande pas le harness reel et n'explicite pas le cas GitHub."
+        },
+        {
+          "id": "no_licensed_inclusion_generalization",
+          "verdict": "PASS",
+          "evidence": "No charge reserve aux licencies non applique au salarie sans licence ; exception Teams plan delimitee."
+        },
+        {
+          "id": "teams_plan_exception_accuracy",
+          "verdict": "PASS",
+          "evidence": "Copilot Studio for Teams ne consomme pas de credits dans Teams, quel que soit utilisateur ; confirme independamment par FAQ Microsoft."
+        },
+        {
+          "id": "live_official_verification",
+          "verdict": "UNVERIFIED_RETRIEVAL_TRACE",
+          "evidence": "Citations Microsoft visibles confirmees via sources-observed.json ; pas absence de recherche. Contenu controle independamment par juge. La trace exhaustive de retrieval n est pas disponible."
+        }
+      ],
+      "attribution": [
+        {
+          "classification": "responder_model_defect",
+          "severity": "non_blocking_instruction_omission",
+          "confidence": "medium",
+          "reason": "Le skill corrige exige determiner le harness ; la reponse identifie les plans et le standard en conclusion mais ne verifie pas le harness reel. Ce constat ne justifie pas une modification du skill ni une erreur de facturation : la recommandation tenant/credits reste correcte pour le cas standard suppose."
+        }
+      ],
+      "notes": [
+        "Ne pas penaliser l'exception Teams plan comme hallucination : source Microsoft explicite disponible.",
+        "Le terme Copilot Studio autonome semble designer standalone, pas trigger autonomous ; clarifier dans un replay si besoin."
+      ],
+      "replay": {
+        "required": true,
+        "request": "Rejouer le prompt original dans un nouveau chat sans attendu, une fois, pour voir si le harness reel est demande ou conditionne clairement. Conserver le PARTIAL original ; pas de correction du skill pour obtenir un PASS.",
+        "evidence_completion_required": false,
+        "evidence": "URL FAQ billing/licensing, type/plan/credits et annexes prompt.",
+        "visible_source_evidence_completed": true
+      },
+      "responder_source_provenance": {
+        "verdict": "PASS_VISIBLE_OFFICIAL_CITATIONS",
+        "artifact": "tests/evaluations/2026-09-30/sources-observed.json",
+        "recorded_urls": [
+          "https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing",
+          "https://learn.microsoft.com/vi-vn/microsoft-copilot-studio/faq-billing-licensing",
+          "https://learn.microsoft.com/fr-fr/power-platform/admin/manage-copilot-studio-copilot-credits-capacity",
+          "https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/cost-considerations"
+        ],
+        "scope": "Microsoft citation URLs observed in completed response DOM. Non exhaustive, grouped citations can hide links.",
+        "not_certified": "Every retrieval call, every claim-to-source mapping, source publication time at retrieval, native skill activation."
+      },
+      "provenance_note": "Full retrieval operations not certified; visible official citations are PASS provenance and no missing-search failure is assigned."
+    },
+    {
+      "scenario_id": "external-website-agent",
+      "capture": "tests/evaluations/2026-09-30/external-website-agent.json",
+      "thread_id": "6abd48e0-3d38-83eb-a545-eacb0ab464cb",
+      "content_verdict": "PASS",
+      "invariants": [
+        {
+          "id": "external_channel",
+          "verdict": "PASS",
+          "evidence": "Standard harness via Custom Website ; demo non destinee production."
+        },
+        {
+          "id": "studio_capacity_payg",
+          "verdict": "PASS",
+          "evidence": "Capacite Copilot Credits preachetee ou PAYG ; pas inclusion via licence interne."
+        },
+        {
+          "id": "anonymous_authentication_risk",
+          "verdict": "PASS",
+          "evidence": "Anonyme seulement contenus/ressources publics ; user auth pour droits utilisateur ; aucun acces anonyme donnees internes/sensibles."
+        },
+        {
+          "id": "web_secret_protection",
+          "verdict": "PASS",
+          "evidence": "Jetons generes serveur ; secret Direct Line non expose dans navigateur."
+        },
+        {
+          "id": "live_official_verification",
+          "verdict": "UNVERIFIED_RETRIEVAL_TRACE",
+          "evidence": "Citations Microsoft visibles confirmees via sources-observed.json ; pas absence de recherche. Contenu controle independamment par juge. La trace exhaustive de retrieval n est pas disponible."
+        }
+      ],
+      "attribution": [],
+      "notes": [
+        "Auth outils sur Custom Website et token serveur confirmes independamment par Microsoft Learn."
+      ],
+      "replay": {
+        "required": false,
+        "evidence_completion_required": false,
+        "request": "URL publication-connect-bot-to-web-channels, configure-enduser-authentication, configure-web-security et billing.",
+        "visible_source_evidence_completed": true
+      },
+      "responder_source_provenance": {
+        "verdict": "PASS_VISIBLE_OFFICIAL_CITATIONS",
+        "artifact": "tests/evaluations/2026-09-30/sources-observed.json",
+        "recorded_urls": [
+          "https://learn.microsoft.com/microsoft-copilot-studio/publication-fundamentals-publish-channels",
+          "https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/configuration-end-user-authentication",
+          "https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-enduser-authentication",
+          "https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/configure-web-security",
+          "https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/agents-experience/billing-manage-buy-credits"
+        ],
+        "scope": "Microsoft citation URLs observed in completed response DOM. Non exhaustive, grouped citations can hide links.",
+        "not_certified": "Every retrieval call, every claim-to-source mapping, source publication time at retrieval, native skill activation."
+      },
+      "provenance_note": "Full retrieval operations not certified; visible official citations are PASS provenance and no missing-search failure is assigned."
+    },
+    {
+      "scenario_id": "github-harness-build",
+      "capture": "tests/evaluations/2026-09-30/github-harness-build.json",
+      "thread_id": "6abd491d-5200-83eb-9fd3-4ebff8938add",
+      "content_verdict": "PASS",
+      "invariants": [
+        {
+          "id": "build_test_usage_billing",
+          "verdict": "PASS",
+          "evidence": "Credits pendant build, preview, tests, evaluations puis production ; tokens/outils/harness."
+        },
+        {
+          "id": "no_standard_zero_rating",
+          "verdict": "PASS",
+          "evidence": "Licence M365 Copilot ne rend pas cette consommation gratuite."
+        },
+        {
+          "id": "spending_controls",
+          "verdict": "PASS",
+          "evidence": "Limite mensuelle agent ; suivi PPAC et gouvernance environnement des developpement ; owners/DLP."
+        },
+        {
+          "id": "harness_choice_and_conversion",
+          "verdict": "PASS",
+          "evidence": "Nouveau GitHub harness pour raisonnement multi-etapes ; pas conversion vers standard ; confirme independamment dans overview GitHub."
+        },
+        {
+          "id": "live_official_verification",
+          "verdict": "UNVERIFIED_RETRIEVAL_TRACE",
+          "evidence": "Citations Microsoft visibles confirmees via sources-observed.json ; pas absence de recherche. Contenu controle independamment par juge. La trace exhaustive de retrieval n est pas disponible."
+        }
+      ],
+      "attribution": [],
+      "notes": [
+        "Aucune confusion avec service GitHub Copilot detectee ; recommandations couts des conception conformes. Pas de fausse promesse qu'un budget Azure bloque la consommation."
+      ],
+      "replay": {
+        "required": false,
+        "evidence_completion_required": false,
+        "request": "URL overview GitHub, billing-credit-overview et govern-credit-consumption.",
+        "visible_source_evidence_completed": true
+      },
+      "responder_source_provenance": {
+        "verdict": "PASS_VISIBLE_OFFICIAL_CITATIONS",
+        "artifact": "tests/evaluations/2026-09-30/sources-observed.json",
+        "recorded_urls": [
+          "https://learn.microsoft.com/en-us/microsoft-copilot-studio/harnesses-overview",
+          "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/build-overview",
+          "https://learn.microsoft.com/mt-mt/microsoft-copilot-studio/agents-experience/billing-credit-overview",
+          "https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/govern-credit-consumption"
+        ],
+        "scope": "Microsoft citation URLs observed in completed response DOM. Non exhaustive, grouped citations can hide links.",
+        "not_certified": "Every retrieval call, every claim-to-source mapping, source publication time at retrieval, native skill activation."
+      },
+      "provenance_note": "Full retrieval operations not certified; visible official citations are PASS provenance and no missing-search failure is assigned."
+    },
+    {
+      "scenario_id": "cowork-simple-email",
+      "capture": "tests/evaluations/2026-09-30/cowork-simple-email.json",
+      "thread_id": "6abd494e-1800-83eb-88f7-7538be5d05ee",
+      "content_verdict": "PASS",
+      "invariants": [
+        {
+          "id": "cowork_necessity",
+          "verdict": "PASS",
+          "evidence": "Ne pas utiliser Cowork pour une seule reponse ordinaire ; surcout sans avantage architectural identifiable."
+        },
+        {
+          "id": "native_lower_cost_path",
+          "verdict": "PASS",
+          "evidence": "Copilot Outlook ou Chat ; relire avant envoyer."
+        },
+        {
+          "id": "cowork_usage_based",
+          "verdict": "PASS",
+          "evidence": "Credits/UBB explicites ; aucune promesse inclusion illimitee."
+        },
+        {
+          "id": "live_official_verification",
+          "verdict": "UNVERIFIED_RETRIEVAL_TRACE",
+          "evidence": "Citations Microsoft visibles confirmees via sources-observed.json ; pas absence de recherche. Contenu controle independamment par juge. La trace exhaustive de retrieval n est pas disponible."
+        }
+      ],
+      "judge_official_sources": [
+        "https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-overview-copilot-credits",
+        "https://learn.microsoft.com/en-us/microsoft-365/copilot/user-subscription-license-usage-based-billing",
+        "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-faq"
+      ],
+      "attribution": [],
+      "notes": [
+        "Licences Outlook/Copilot natives non detaillees, mais aucune inclusion tenant certaine ou tarif numerique annonce."
+      ],
+      "replay": {
+        "required": false,
+        "evidence_completion_required": false,
+        "request": "Rattacher citations aux URL DOM et conserver la piece jointe avec le prompt exact.",
+        "visible_source_evidence_completed": true
+      },
+      "responder_source_provenance": {
+        "verdict": "PASS_VISIBLE_OFFICIAL_CITATIONS",
+        "artifact": "tests/evaluations/2026-09-30/sources-observed.json",
+        "recorded_urls": [
+          "https://learn.microsoft.com/en-us/microsoft-365/copilot/user-subscription-license-usage-based-billing",
+          "https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-copilot-credits-cost",
+          "https://learn.microsoft.com/microsoft-365/copilot/cowork/cowork-faq"
+        ],
+        "scope": "Microsoft citation URLs observed in completed response DOM. Non exhaustive, grouped citations can hide links.",
+        "not_certified": "Every retrieval call, every claim-to-source mapping, source publication time at retrieval, native skill activation."
+      },
+      "provenance_note": "Full retrieval operations not certified; visible official citations are PASS provenance and no missing-search failure is assigned."
+    },
+    {
+      "scenario_id": "cowork-multistep",
+      "capture": "tests/evaluations/2026-09-30/cowork-multistep.json",
+      "thread_id": "6abd4950-3a20-83eb-8f93-216ef8879aec",
+      "content_verdict": "PASS",
+      "invariants": [
+        {
+          "id": "cowork_candidate",
+          "verdict": "PASS",
+          "evidence": "Travail multi-source et multi-etape entre e-mails/documents/reunions, note et preparation actions."
+        },
+        {
+          "id": "usage_cost",
+          "verdict": "PASS",
+          "evidence": "UBB et /cost approximation task/month ; pas inclusion automatique."
+        },
+        {
+          "id": "pilot_cost_limits",
+          "verdict": "PASS",
+          "evidence": "Pilote, credits reels, limites dans admin M365, droits minimaux."
+        },
+        {
+          "id": "sensitive_actions_approval",
+          "verdict": "PASS",
+          "evidence": "Envoi/planification soumis a accord utilisateur ; documentation confirme le mecanisme, avec possibilite de consentement session pour actions similaires."
+        },
+        {
+          "id": "live_official_verification",
+          "verdict": "UNVERIFIED_RETRIEVAL_TRACE",
+          "evidence": "Citations Microsoft visibles confirmees via sources-observed.json ; pas absence de recherche. Contenu controle independamment par juge. La trace exhaustive de retrieval n est pas disponible."
+        }
+      ],
+      "judge_official_sources": [
+        "https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-overview-copilot-credits",
+        "https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-copilot-credits-cost",
+        "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/use-cowork",
+        "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-faq"
+      ],
+      "attribution": [],
+      "notes": [
+        "Il serait utile de preciser la licence d acces, mais prerequis acces Cowork conditionnel ; pas affirmation activation tenant."
+      ],
+      "replay": {
+        "required": false,
+        "evidence_completion_required": false,
+        "request": "Rattacher citations aux URL DOM et conserver la piece jointe avec le prompt exact.",
+        "visible_source_evidence_completed": true
+      },
+      "responder_source_provenance": {
+        "verdict": "PASS_VISIBLE_OFFICIAL_CITATIONS",
+        "artifact": "tests/evaluations/2026-09-30/sources-observed.json",
+        "recorded_urls": [
+          "https://learn.microsoft.com/fr-fr/microsoft-365/copilot/cowork/cowork-faq",
+          "https://learn.microsoft.com/fr-fr/microsoft-365/copilot/cowork/",
+          "https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-copilot-credits-cost",
+          "https://learn.microsoft.com/microsoft-365/copilot/usage-based-billing-overview-copilot-credits"
+        ],
+        "scope": "Microsoft citation URLs observed in completed response DOM. Non exhaustive, grouped citations can hide links.",
+        "not_certified": "Every retrieval call, every claim-to-source mapping, source publication time at retrieval, native skill activation."
+      },
+      "provenance_note": "Full retrieval operations not certified; visible official citations are PASS provenance and no missing-search failure is assigned."
+    },
+    {
+      "scenario_id": "business-premium-confusion",
+      "capture": "tests/evaluations/2026-09-30/business-premium-confusion.json",
+      "thread_id": "6abd4954-fd34-83eb-a2ed-79223e1da910",
+      "content_verdict": "PASS",
+      "invariants": [
+        {
+          "id": "base_plan_vs_addon",
+          "verdict": "PASS",
+          "evidence": "Business Premium separe du Copilot add-on ; aucune inference de Copilot assigne au tenant."
+        },
+        {
+          "id": "verify_entitlement_before_cost",
+          "verdict": "PASS",
+          "evidence": "Expose scenarios conditionnels selon licence, canal, harness et trigger au lieu d affirmer des droits du tenant."
+        },
+        {
+          "id": "no_universal_inclusion",
+          "verdict": "PASS",
+          "evidence": "Certaines capacites seulement incluses/zero-rated ; autonome et GitHub peuvent consommer credits."
+        },
+        {
+          "id": "live_official_verification",
+          "verdict": "UNVERIFIED_RETRIEVAL_TRACE",
+          "evidence": "Citations Microsoft visibles confirmees via sources-observed.json ; pas absence de recherche. Contenu controle independamment par juge. La trace exhaustive de retrieval n est pas disponible."
+        }
+      ],
+      "judge_official_sources": [
+        "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-licensing",
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing",
+        "https://www.microsoft.com/fr-fr/microsoft-365-copilot/pricing/copilot-studio"
+      ],
+      "attribution": [],
+      "notes": [
+        "Business Premium seul -> non doit etre lu comme correction d inclusion generale. Des capacites Copilot Chat/Teams plan peuvent exister avec base licence ; la reponse ne les detaille pas. Pas faux zero-rating ici."
+      ],
+      "replay": {
+        "required": false,
+        "evidence_completion_required": false,
+        "request": "Rattacher citations aux URL DOM et conserver la piece jointe avec le prompt exact.",
+        "visible_source_evidence_completed": true
+      },
+      "responder_source_provenance": {
+        "verdict": "PASS_VISIBLE_OFFICIAL_CITATIONS",
+        "artifact": "tests/evaluations/2026-09-30/sources-observed.json",
+        "recorded_urls": [
+          "https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing",
+          "https://www.microsoft.com/en-us/copilot/pricing/copilot-studio"
+        ],
+        "scope": "Microsoft citation URLs observed in completed response DOM. Non exhaustive, grouped citations can hide links.",
+        "not_certified": "Every retrieval call, every claim-to-source mapping, source publication time at retrieval, native skill activation."
+      },
+      "provenance_note": "Full retrieval operations not certified; visible official citations are PASS provenance and no missing-search failure is assigned."
+    },
+    {
+      "scenario_id": "fair-use-limit",
+      "capture": "tests/evaluations/2026-09-30/fair-use-limit.json",
+      "thread_id": "6abd497d-5104-83eb-aff8-a0eb322c0b46",
+      "content_verdict": "PASS",
+      "invariants": [
+        {
+          "id": "numeric_general_quota",
+          "verdict": "PASS",
+          "evidence": "Pas de nombre mensuel general invente ; distingue limites par feature/model."
+        },
+        {
+          "id": "fair_use",
+          "verdict": "PASS",
+          "evidence": "Fair use GPT-5.6/Sonnet et Copilot Studio decrit ; aucune promesse unlimited."
+        },
+        {
+          "id": "published_feature_specific_limit",
+          "verdict": "PASS",
+          "evidence": "Researcher 25 requetes/utilisateur/mois est confirme dans FAQ Microsoft Researcher."
+        },
+        {
+          "id": "live_official_verification",
+          "verdict": "UNVERIFIED_RETRIEVAL_TRACE",
+          "evidence": "Citations Microsoft visibles confirmees via sources-observed.json ; pas absence de recherche. Contenu controle independamment par juge. La trace exhaustive de retrieval n est pas disponible."
+        }
+      ],
+      "judge_official_sources": [
+        "https://learn.microsoft.com/en-us/microsoft-365/copilot/user-subscription-license-usage-based-billing",
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management",
+        "https://learn.microsoft.com/en-us/microsoft-365/copilot/faq-researcher"
+      ],
+      "attribution": [],
+      "notes": [
+        "Absence de quota general public traitee comme constat de la documentation actuelle, pas preuve d absence de toute limitation."
+      ],
+      "replay": {
+        "required": false,
+        "evidence_completion_required": false,
+        "request": "Rattacher citations aux URL DOM et conserver la piece jointe avec le prompt exact.",
+        "visible_source_evidence_completed": true
+      },
+      "responder_source_provenance": {
+        "verdict": "PASS_VISIBLE_OFFICIAL_CITATIONS",
+        "artifact": "tests/evaluations/2026-09-30/sources-observed.json",
+        "recorded_urls": [
+          "https://learn.microsoft.com/en-us/microsoft-365/copilot/user-subscription-license-usage-based-billing",
+          "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management",
+          "https://learn.microsoft.com/fr-fr/microsoft-365/copilot/faq-researcher"
+        ],
+        "scope": "Microsoft citation URLs observed in completed response DOM. Non exhaustive, grouped citations can hide links.",
+        "not_certified": "Every retrieval call, every claim-to-source mapping, source publication time at retrieval, native skill activation."
+      },
+      "provenance_note": "Full retrieval operations not certified; visible official citations are PASS provenance and no missing-search failure is assigned."
+    },
+    {
+      "scenario_id": "roadmap-feature",
+      "capture": "tests/evaluations/2026-09-30/roadmap-feature.json",
+      "thread_id": "6abd4acb-8eb8-83ed-aff2-40687e6b441b",
+      "content_verdict": "PASS",
+      "invariants": [
+        {
+          "id": "identify_feature",
+          "verdict": "PASS",
+          "evidence": "Signale qu il manque la fonctionnalite precise et demande son nom."
+        },
+        {
+          "id": "roadmap_and_release_checks",
+          "verdict": "UNVERIFIED",
+          "evidence": "Affirme mise a jour Microsoft et cite released versions/What s new ; URL DOM attendues. Feature non specifiee : aucune disponibilite feature n est verifiable."
+        },
+        {
+          "id": "preview_rollout_ga",
+          "verdict": "NA",
+          "evidence": "Rollout regional distingue, mais preview/GA non explicites. Statut exact indeterminable avec le prompt."
+        },
+        {
+          "id": "dates_not_guarantees",
+          "verdict": "PASS",
+          "evidence": "Date octobre hypothetical cible seulement ; aucune garantie France."
+        },
+        {
+          "id": "live_official_verification",
+          "verdict": "UNVERIFIED_RETRIEVAL_TRACE",
+          "evidence": "Citations Microsoft visibles confirmees via sources-observed.json ; pas absence de recherche. Contenu controle independamment par juge. La trace exhaustive de retrieval n est pas disponible."
+        },
+        {
+          "id": "safe_clarification_instead_of_invented_status",
+          "verdict": "PASS",
+          "evidence": "Nom exact demande ; disponibilite France non confirmee et octobre seulement cible hypothetical."
+        }
+      ],
+      "judge_official_sources": [
+        "https://www.microsoft.com/en-us/microsoft-365/roadmap",
+        "https://learn.microsoft.com/en-us/power-platform/released-versions/copilotstudio",
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new"
+      ],
+      "attribution": [
+        {
+          "classification": "ambiguous_test_case",
+          "confidence": "high",
+          "severity": "test_definition_gap",
+          "reason": "Le prompt ne nomme aucune feature ; on ne peut certifier sa disponibilite ni son statut preview/GA. La clarification apportee est correcte. Ne pas inventer une feature ni modifier le skill pour forcer PASS."
+        }
+      ],
+      "notes": [
+        "DOM visible cite blog produit Microsoft seulement ; ne prouve pas controle roadmap + released-versions. La demande de feature exacte reste correcte et aucune date feature concrete n est certifiee."
+      ],
+      "replay": {
+        "required": false,
+        "conditional": "Ajouter un test complementaire avec nom/ID roadmap, cloud, region et date exacte pour tester un statut concret ; conserver ce resultat ambigu.",
+        "evidence_completion_required": false,
+        "visible_source_evidence_completed": true
+      },
+      "previous_content_verdict": "AMBIGUOUS",
+      "pass_scope": "Correct handling of an underspecified question, not verification of a feature availability.",
+      "test_ambiguity_retained": true,
+      "judge_reassessment": "Le verdict de reponse passe sous scope clarification car elle identifie le manque de feature, explique regional rollout et refuse une date garantie. Les attendus de verification feature precise et preview/GA restent non evaluables ; aucun resultat oui/non impossible ajoute. Ancien verdict conserve dans judge-15.json. La certification du scenario concret reste impossible sans un test complementaire nomme.",
+      "responder_source_provenance": {
+        "verdict": "PASS_VISIBLE_OFFICIAL_CITATIONS",
+        "artifact": "tests/evaluations/2026-09-30/sources-observed.json",
+        "recorded_urls": [
+          "https://www.microsoft.com/en-us/copilot/blog/copilot-studio/new-and-improved-github-copilot-harness-agent-skills-and-richer-context/"
+        ],
+        "scope": "Microsoft citation URLs observed in completed response DOM. Non exhaustive, grouped citations can hide links.",
+        "not_certified": "Every retrieval call, every claim-to-source mapping, source publication time at retrieval, native skill activation."
+      },
+      "provenance_note": "Full retrieval operations not certified; visible official citations are PASS provenance and no missing-search failure is assigned."
+    },
+    {
+      "scenario_id": "sensitive-send-email-action",
+      "capture": "tests/evaluations/2026-09-30/sensitive-send-email-action.json",
+      "thread_id": "6abd4c2e-f36c-83eb-8957-f31c3c44d0f1",
+      "content_verdict": "PASS",
+      "invariants": [
+        {
+          "id": "governance_risk",
+          "verdict": "PASS",
+          "evidence": "Courriers officiels sensibles/engageants sans revue deconseilles ; cas faibles risques deterministes distingue."
+        },
+        {
+          "id": "human_approval",
+          "verdict": "PASS",
+          "evidence": "Preparation -> controle/accord -> envoi ; pas interdiction absolue de tout envoi automatique."
+        },
+        {
+          "id": "least_privilege_audit",
+          "verdict": "PASS",
+          "evidence": "Identite controlee, permissions minimales, DLP, logs/audit et disable path."
+        },
+        {
+          "id": "live_official_verification",
+          "verdict": "UNVERIFIED_RETRIEVAL_TRACE",
+          "evidence": "Citations Microsoft visibles confirmees via sources-observed.json ; pas absence de recherche. Contenu controle independamment par juge. La trace exhaustive de retrieval n est pas disponible."
+        }
+      ],
+      "judge_official_sources": [
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/autonomous-agents",
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-orchestration",
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/add-tools-custom-agent"
+      ],
+      "attribution": [],
+      "notes": [],
+      "replay": {
+        "required": false,
+        "evidence_completion_required": false,
+        "request": "Rattacher citations aux URL DOM et conserver la piece jointe avec le prompt exact.",
+        "visible_source_evidence_completed": true
+      },
+      "responder_source_provenance": {
+        "verdict": "PASS_VISIBLE_OFFICIAL_CITATIONS",
+        "artifact": "tests/evaluations/2026-09-30/sources-observed.json",
+        "recorded_urls": [
+          "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-plugin-actions",
+          "https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/autonomous-agents",
+          "https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/guidance/generative-orchestration"
+        ],
+        "scope": "Microsoft citation URLs observed in completed response DOM. Non exhaustive, grouped citations can hide links.",
+        "not_certified": "Every retrieval call, every claim-to-source mapping, source publication time at retrieval, native skill activation."
+      },
+      "provenance_note": "Full retrieval operations not certified; visible official citations are PASS provenance and no missing-search failure is assigned."
+    },
+    {
+      "scenario_id": "sharepoint-grounding",
+      "capture": "tests/evaluations/2026-09-30/sharepoint-grounding.json",
+      "thread_id": "6abd4c51-a848-83eb-b75a-58fe6ac86d80",
+      "content_verdict": "PASS",
+      "invariants": [
+        {
+          "id": "oversharing_permissions",
+          "verdict": "PASS",
+          "evidence": "Audite groupes/heritages/partages, cible bibliotheques/dossiers ; agent ne corrige pas oversharing."
+        },
+        {
+          "id": "source_acls_preserved",
+          "verdict": "PASS",
+          "evidence": "Droits utilisateur/permission trimming et labels ; tests plusieurs profils."
+        },
+        {
+          "id": "governance_checks",
+          "verdict": "PASS",
+          "evidence": "Entra, privilege minimal, permissions revue avant publication."
+        },
+        {
+          "id": "protected_content_limitation",
+          "verdict": "PASS",
+          "evidence": "Chiffrement/DKE/password non exploitables en connaissance agent-level ; confirme source Microsoft."
+        },
+        {
+          "id": "live_official_verification",
+          "verdict": "UNVERIFIED_RETRIEVAL_TRACE",
+          "evidence": "Citations Microsoft visibles confirmees via sources-observed.json ; pas absence de recherche. Contenu controle independamment par juge. La trace exhaustive de retrieval n est pas disponible."
+        }
+      ],
+      "judge_official_sources": [
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-add-sharepoint",
+        "https://learn.microsoft.com/en-us/troubleshoot/power-platform/copilot-studio/generative-answers/sharepoint-no-response",
+        "https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-controls/security-governance"
+      ],
+      "attribution": [],
+      "notes": [],
+      "replay": {
+        "required": false,
+        "evidence_completion_required": false,
+        "request": "Rattacher citations aux URL DOM et conserver la piece jointe avec le prompt exact.",
+        "visible_source_evidence_completed": true
+      },
+      "responder_source_provenance": {
+        "verdict": "PASS_VISIBLE_OFFICIAL_CITATIONS",
+        "artifact": "tests/evaluations/2026-09-30/sources-observed.json",
+        "recorded_urls": [
+          "https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-add-sharepoint"
+        ],
+        "scope": "Microsoft citation URLs observed in completed response DOM. Non exhaustive, grouped citations can hide links.",
+        "not_certified": "Every retrieval call, every claim-to-source mapping, source publication time at retrieval, native skill activation."
+      },
+      "provenance_note": "Full retrieval operations not certified; visible official citations are PASS provenance and no missing-search failure is assigned."
+    },
+    {
+      "scenario_id": "cost-estimate",
+      "capture": "tests/evaluations/2026-09-30/cost-estimate.json",
+      "thread_id": "6abd4cb4-7fa4-83eb-9bc4-bab4b6b15387",
+      "content_verdict": "FAIL",
+      "invariants": [
+        {
+          "id": "workload_assumptions",
+          "verdict": "PARTIAL",
+          "evidence": "150 x 22 = 3300 emails/mois ; 500/1000/2000 tokens/email declares. Hypothese briefing automatise et outil standard annoncee mais identite/lecteur/licence, sortie/contexte/retries et fonctions payantes non etablis."
+        },
+        {
+          "id": "architecture_harness_trigger_first",
+          "verdict": "PARTIAL",
+          "evidence": "Standard et automated nommes, mais la voie precise de retrieval/flow et ses compteurs ne sont pas identifies avant la recommandation budget."
+        },
+        {
+          "id": "current_rates",
+          "verdict": "PASS",
+          "evidence": "1.5 credits/1000 tokens standard et France pack 25000 credits/173.30 euros HT confirmes officiellement."
+        },
+        {
+          "id": "table_arithmetic",
+          "verdict": "PASS",
+          "evidence": "3300 x [500,1000,2000]/1000 x 1.5 = [2475,4950,9900] ; quotepart euros [17.157,34.313,68.627], arrondis [17,34,69] corrects."
+        },
+        {
+          "id": "currency_purchase_scope",
+          "verdict": "PASS",
+          "evidence": "Quotepart theorique pack tenant vs facture individuelle clairement distingues ; achat pack complet mentionne."
+        },
+        {
+          "id": "range_without_false_precision",
+          "verdict": "FAIL",
+          "evidence": "Budget final 30-50 euros utilisateur/mois non relie a scenario de tokens/counters/pilote ; tableau donne seulement [17,34,69] euros sous hypotheses."
+        },
+        {
+          "id": "complete_billable_components",
+          "verdict": "FAIL",
+          "evidence": "Pas de liste chiffrable actions/flow/grounding, sortie/contexte/retries ou autres services ; reponse recommande pourtant budget IA operationnel. Les compteurs a exclure doivent etre explicitement exclus apres identification architecture."
+        },
+        {
+          "id": "live_official_verification",
+          "verdict": "UNVERIFIED_RETRIEVAL_TRACE",
+          "evidence": "Citations Microsoft visibles confirmees via sources-observed.json ; pas absence de recherche. Contenu controle independamment par juge. La trace exhaustive de retrieval n est pas disponible."
+        }
+      ],
+      "judge_official_sources": [
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management",
+        "https://www.microsoft.com/fr-fr/microsoft-365-copilot/pricing/copilot-studio"
+      ],
+      "attribution": [
+        {
+          "classification": "responder_model_defect",
+          "severity": "billing_estimate_failure",
+          "confidence": "high",
+          "reason": "Skill existant demande decomposition fonctions payantes, hypotheses et absence de fausse precision. Le modele ajoute fourchette finale sans base explicite ; sources et arithmetic du tableau correctes. Ne pas changer skill pour absorber ce FAIL."
+        },
+        {
+          "classification": "ambiguous_test_case",
+          "severity": "secondary_input_gap",
+          "confidence": "high",
+          "reason": "Prompt ne decrit ni traitement des mails, architecture, licence ou jours. Des hypotheses illustratives sont recevables, un budget recommande non trace ne l est pas."
+        }
+      ],
+      "notes": [
+        "Ce FAIL ne signifie pas que 30-50 euros est impossible : ce montant n est simplement pas justifie par les informations presentes.",
+        "La valeur du token standard n est pas un taux universel par mail ; seules les fonctions reellement choisies autorisent ce compteur.",
+        "Tableau interpretable comme sous-total IA sous hypotheses ; il ne doit pas devenir cout total ni budget fiable.",
+        "Montants faible/moyen/haut de tableau valides sous ces seules hypotheses ; le skill ne doit pas etre affaibli pour faire passer la recommandation finale."
+      ],
+      "replay": {
+        "required": true,
+        "request": "Rejouer prompt original une fois avec meme corpus sans donner resultat attendu ; conserver FAIL initial. Puis test complementaire explicitant licence, trigger, harness, composants retrieval/IA/flow, input+output+context tokens, actions/run et jours/mois. Exiger que chaque sous-total soit calcule ou marque exclu/inconnu, sans injecter une reponse cible.",
+        "evidence_completion_required": false,
+        "visible_source_evidence_completed": true
+      },
+      "responder_source_provenance": {
+        "verdict": "PASS_VISIBLE_OFFICIAL_CITATIONS",
+        "artifact": "tests/evaluations/2026-09-30/sources-observed.json",
+        "recorded_urls": [
+          "https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-messages-management",
+          "https://www.microsoft.com/fr-fr/microsoft-365-copilot/pricing/copilot-studio",
+          "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management"
+        ],
+        "scope": "Microsoft citation URLs observed in completed response DOM. Non exhaustive, grouped citations can hide links.",
+        "not_certified": "Every retrieval call, every claim-to-source mapping, source publication time at retrieval, native skill activation."
+      },
+      "provenance_note": "Full retrieval operations not certified; visible official citations are PASS provenance and no missing-search failure is assigned."
+    },
+    {
+      "scenario_id": "computer-use",
+      "capture": "tests/evaluations/2026-09-30/computer-use.json",
+      "thread_id": "6abd4cc7-d2ac-83ed-95c9-5e7ec834f6d0",
+      "content_verdict": "PASS",
+      "invariants": [
+        {
+          "id": "current_cua_billing",
+          "verdict": "PASS",
+          "evidence": "5 credits/etape standard, 15 premium ; une etape != chaque clic ; exemple 4 etapes ->20/60 confirme Microsoft."
+        },
+        {
+          "id": "no_m365_usl_inclusion",
+          "verdict": "PASS",
+          "evidence": "CUA explicitement exclu USL/zero-rating ; capacite Copilot Studio tenant requise."
+        },
+        {
+          "id": "security_approval",
+          "verdict": "PASS",
+          "evidence": "Privileges minimaux/DLP/environment/journalisation/validation actions sensibles ; API/flow prefere si disponible."
+        },
+        {
+          "id": "live_official_verification",
+          "verdict": "UNVERIFIED_RETRIEVAL_TRACE",
+          "evidence": "Citations Microsoft visibles confirmees via sources-observed.json ; pas absence de recherche. Contenu controle independamment par juge. La trace exhaustive de retrieval n est pas disponible."
+        }
+      ],
+      "judge_official_sources": [
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/computer-use",
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management"
+      ],
+      "attribution": [],
+      "notes": [
+        "Generative orchestration requise pour Computer use, non mentionnee mais ce test ne demande pas pas-a-pas deployment. Pas suffisant pour un FAIL.",
+        "Le modele dit utilisateur peut utiliser CUA : interpretation de possibilite architecturale sous prerequis tenant, pas preuve activation de ce tenant."
+      ],
+      "replay": {
+        "required": false,
+        "evidence_completion_required": false,
+        "request": "Rattacher citations aux URL DOM et conserver la piece jointe avec le prompt exact.",
+        "visible_source_evidence_completed": true
+      },
+      "responder_source_provenance": {
+        "verdict": "PASS_VISIBLE_OFFICIAL_CITATIONS",
+        "artifact": "tests/evaluations/2026-09-30/sources-observed.json",
+        "recorded_urls": [
+          "https://learn.microsoft.com/en-us/microsoft-copilot-studio/computer-use",
+          "https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/computer-use"
+        ],
+        "scope": "Microsoft citation URLs observed in completed response DOM. Non exhaustive, grouped citations can hide links.",
+        "not_certified": "Every retrieval call, every claim-to-source mapping, source publication time at retrieval, native skill activation."
+      },
+      "provenance_note": "Full retrieval operations not certified; visible official citations are PASS provenance and no missing-search failure is assigned."
+    },
+    {
+      "scenario_id": "cheapest-architecture",
+      "capture": "tests/evaluations/2026-09-30/cheapest-architecture.json",
+      "thread_id": "6abd4f78-e7b8-83eb-842a-f9e9ef26af69",
+      "content_verdict": "PARTIAL",
+      "invariants": [
+        {
+          "id": "deterministic_workflow_preferred",
+          "verdict": "PASS",
+          "evidence": "Planifie/event cloud flow Power Automate sans IA pour logique deterministe."
+        },
+        {
+          "id": "avoid_unnecessary_reasoning",
+          "verdict": "PASS",
+          "evidence": "Cowork/GitHub/autonomous reasoning deconseilles pour ce besoin."
+        },
+        {
+          "id": "licensing_and_trigger_scope",
+          "verdict": "PASS",
+          "evidence": "Licences/connecteurs Premium pertinents ; alternative clic licensed + exact agent flow trigger sous conditions/fair use ; pas gratuit automations."
+        },
+        {
+          "id": "governance_requirements",
+          "verdict": "FAIL",
+          "evidence": "Aucune mention du owner, identite, droits minimaux, DLP, logs, supervision, validations sensibles ou arret/rollback."
+        },
+        {
+          "id": "live_official_verification",
+          "verdict": "UNVERIFIED_RETRIEVAL_TRACE",
+          "evidence": "Citations Microsoft visibles confirmees via sources-observed.json ; pas absence de recherche. Contenu controle independamment par juge. La trace exhaustive de retrieval n est pas disponible."
+        }
+      ],
+      "judge_official_sources": [
+        "https://learn.microsoft.com/en-us/power-platform/admin/power-automate-licensing/faqs",
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management",
+        "https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-overview-copilot-credits"
+      ],
+      "attribution": [
+        {
+          "classification": "responder_model_defect",
+          "confidence": "high",
+          "severity": "governance_omission",
+          "reason": "Expected include governance requirements non satisfait. Le skill demande deja une analyse governance pour toute solution ; la reponse la saute. Pas correction skill justifiee sur ce seul constat."
+        }
+      ],
+      "notes": [
+        "La licence du proprietaire est valide sous contexte utilisateur ; Process licence serait autre variante, non specifiee ici.",
+        "Aucune architecture ne peut etre prouvee cheapest universelle sans tache/licences/volumes. La reponse exprime des conditions et alternatives, donc cet aspect ne justifie pas FAIL."
+      ],
+      "replay": {
+        "required": true,
+        "request": "Rejouer le meme prompt original dans un nouveau chat, meme corpus et sans fournir les attendus ; conserver PARTIAL original. Verifier au moins identite/droits, DLP/connecteurs, owner et supervision/disable adapte au workflow.",
+        "evidence_completion_required": false,
+        "visible_source_evidence_completed": true
+      },
+      "responder_source_provenance": {
+        "verdict": "PASS_VISIBLE_OFFICIAL_CITATIONS",
+        "artifact": "tests/evaluations/2026-09-30/sources-observed.json",
+        "recorded_urls": [
+          "https://learn.microsoft.com/en-us/microsoft-365/copilot/user-subscription-license-usage-based-billing",
+          "https://learn.microsoft.com/en-us/power-platform/admin/power-automate-licensing/faqs",
+          "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management"
+        ],
+        "scope": "Microsoft citation URLs observed in completed response DOM. Non exhaustive, grouped citations can hide links.",
+        "not_certified": "Every retrieval call, every claim-to-source mapping, source publication time at retrieval, native skill activation."
+      },
+      "provenance_note": "Full retrieval operations not certified; visible official citations are PASS provenance and no missing-search failure is assigned."
+    },
+    {
+      "scenario_id": "usl-plus-ubb",
+      "capture": "tests/evaluations/2026-09-30/usl-plus-ubb.json",
+      "thread_id": "6abd4fea-4820-83ed-85c7-7d53078dd20a",
+      "content_verdict": "PASS",
+      "invariants": [
+        {
+          "id": "usl_vs_ubb",
+          "verdict": "PASS",
+          "evidence": "USL experience principale ; UBB credits en parallele, pas contradiction."
+        },
+        {
+          "id": "exact_feature_needed",
+          "verdict": "PASS",
+          "evidence": "Exige controle fonction par fonction avec produit exact/harness/trigger/licence ; ne declare pas une fonction non nommee incluse."
+        },
+        {
+          "id": "advanced_usage_plus_access_license",
+          "verdict": "PASS",
+          "evidence": "Service peut exiger licence pour acces + credits pour utilisation ; exemple Cowork."
+        },
+        {
+          "id": "current_microsoft_rule_content",
+          "verdict": "PASS",
+          "evidence": "Cowork UBB et licence acces confirmes par pages USL/UBB et overview current ; pas extrapolation requirement USL a tout Copilot Studio."
+        },
+        {
+          "id": "live_official_verification",
+          "verdict": "UNVERIFIED_RETRIEVAL_TRACE",
+          "evidence": "Citations Microsoft visibles confirmees via sources-observed.json ; pas absence de recherche. Contenu controle independamment par juge. La trace exhaustive de retrieval n est pas disponible."
+        }
+      ],
+      "judge_official_sources": [
+        "https://learn.microsoft.com/en-us/microsoft-365/copilot/user-subscription-license-usage-based-billing",
+        "https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-overview-copilot-credits",
+        "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/cost-considerations"
+      ],
+      "attribution": [],
+      "notes": [
+        "La phrase finale licence de base designe le socle Copilot USL dans ce contexte ; elle ne doit pas etre confondue avec licence Microsoft 365 Business Premium, et le corps distingue deja l experience principale."
+      ],
+      "replay": {
+        "required": false,
+        "evidence_completion_required": false,
+        "visible_source_evidence_completed": true
+      },
+      "responder_source_provenance": {
+        "verdict": "PASS_VISIBLE_OFFICIAL_CITATIONS",
+        "artifact": "tests/evaluations/2026-09-30/sources-observed.json",
+        "recorded_urls": [
+          "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/cost-considerations",
+          "https://www.microsoft.com/en-us/copilot/blog/2026/06/16/copilot-cowork-is-now-generally-available/"
+        ],
+        "scope": "Microsoft citation URLs observed in completed response DOM. Non exhaustive, grouped citations can hide links.",
+        "not_certified": "Every retrieval call, every claim-to-source mapping, source publication time at retrieval, native skill activation."
+      },
+      "provenance_note": "Full retrieval operations not certified; visible official citations are PASS provenance and no missing-search failure is assigned."
+    }
+  ],
+  "judge_independent_source_checks": [
+    {
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management",
+      "supports": "B2E licensed user identity, agent-specific flow trigger, other triggers credits, cloud flow Power Automate separate"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing",
+      "supports": "Standard tenant licensing/capacity and qualifying licensed inclusion"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/power-platform/admin/power-automate-licensing/faqs",
+      "supports": "Scheduled/automated user context owner's license, Process alternative"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/faq-billing-licensing",
+      "supports": "Teams plan vs standalone Teams credits exception"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-enduser-authentication",
+      "supports": "User authentication for tools on Custom Website"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-web-security",
+      "supports": "Direct Line secured access, server token exchange, no browser secret"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-connect-bot-to-web-channels",
+      "supports": "Live website standard harness, demo not production"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview",
+      "supports": "No conversion between GitHub and standard; Build/Preview/Evaluate/Monitor"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/billing-credit-overview",
+      "supports": "GitHub harness build/test/evaluation/runtime credit billing"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/govern-credit-consumption",
+      "supports": "Environment governance, agent limits, no GitHub USL inclusion"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-controls/security-governance",
+      "checked_on": "2026-09-30",
+      "supports": "Voir invariants du scenario associe",
+      "scope": "Source primaire Microsoft consultee independamment par juge ; ce n est pas preuve de consultation par repondant."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-faq",
+      "checked_on": "2026-09-30",
+      "supports": "Voir invariants du scenario associe",
+      "scope": "Source primaire Microsoft consultee independamment par juge ; ce n est pas preuve de consultation par repondant."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/use-cowork",
+      "checked_on": "2026-09-30",
+      "supports": "Voir invariants du scenario associe",
+      "scope": "Source primaire Microsoft consultee independamment par juge ; ce n est pas preuve de consultation par repondant."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/faq-researcher",
+      "checked_on": "2026-09-30",
+      "supports": "Voir invariants du scenario associe",
+      "scope": "Source primaire Microsoft consultee independamment par juge ; ce n est pas preuve de consultation par repondant."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-licensing",
+      "checked_on": "2026-09-30",
+      "supports": "Voir invariants du scenario associe",
+      "scope": "Source primaire Microsoft consultee independamment par juge ; ce n est pas preuve de consultation par repondant."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-copilot-credits-cost",
+      "checked_on": "2026-09-30",
+      "supports": "Voir invariants du scenario associe",
+      "scope": "Source primaire Microsoft consultee independamment par juge ; ce n est pas preuve de consultation par repondant."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-overview-copilot-credits",
+      "checked_on": "2026-09-30",
+      "supports": "Voir invariants du scenario associe",
+      "scope": "Source primaire Microsoft consultee independamment par juge ; ce n est pas preuve de consultation par repondant."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/user-subscription-license-usage-based-billing",
+      "checked_on": "2026-09-30",
+      "supports": "Voir invariants du scenario associe",
+      "scope": "Source primaire Microsoft consultee independamment par juge ; ce n est pas preuve de consultation par repondant."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/add-tools-custom-agent",
+      "checked_on": "2026-09-30",
+      "supports": "Voir invariants du scenario associe",
+      "scope": "Source primaire Microsoft consultee independamment par juge ; ce n est pas preuve de consultation par repondant."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/computer-use",
+      "checked_on": "2026-09-30",
+      "supports": "Voir invariants du scenario associe",
+      "scope": "Source primaire Microsoft consultee independamment par juge ; ce n est pas preuve de consultation par repondant."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/autonomous-agents",
+      "checked_on": "2026-09-30",
+      "supports": "Voir invariants du scenario associe",
+      "scope": "Source primaire Microsoft consultee independamment par juge ; ce n est pas preuve de consultation par repondant."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-orchestration",
+      "checked_on": "2026-09-30",
+      "supports": "Voir invariants du scenario associe",
+      "scope": "Source primaire Microsoft consultee independamment par juge ; ce n est pas preuve de consultation par repondant."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-add-sharepoint",
+      "checked_on": "2026-09-30",
+      "supports": "Voir invariants du scenario associe",
+      "scope": "Source primaire Microsoft consultee independamment par juge ; ce n est pas preuve de consultation par repondant."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new",
+      "checked_on": "2026-09-30",
+      "supports": "Voir invariants du scenario associe",
+      "scope": "Source primaire Microsoft consultee independamment par juge ; ce n est pas preuve de consultation par repondant."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/power-platform/released-versions/copilotstudio",
+      "checked_on": "2026-09-30",
+      "supports": "Voir invariants du scenario associe",
+      "scope": "Source primaire Microsoft consultee independamment par juge ; ce n est pas preuve de consultation par repondant."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/troubleshoot/power-platform/copilot-studio/generative-answers/sharepoint-no-response",
+      "checked_on": "2026-09-30",
+      "supports": "Voir invariants du scenario associe",
+      "scope": "Source primaire Microsoft consultee independamment par juge ; ce n est pas preuve de consultation par repondant."
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/roadmap",
+      "checked_on": "2026-09-30",
+      "supports": "Voir invariants du scenario associe",
+      "scope": "Source primaire Microsoft consultee independamment par juge ; ce n est pas preuve de consultation par repondant."
+    },
+    {
+      "url": "https://www.microsoft.com/fr-fr/microsoft-365-copilot/pricing/copilot-studio",
+      "checked_on": "2026-09-30",
+      "supports": "Voir invariants du scenario associe",
+      "scope": "Source primaire Microsoft consultee independamment par juge ; ce n est pas preuve de consultation par repondant."
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/copilot/blog/2026/06/16/copilot-cowork-is-now-generally-available/",
+      "checked_on": "2026-09-30",
+      "supports": "Cowork USL+UBB or generic product rollout; no feature-specific France availability certified."
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/copilot/blog/copilot-studio/new-and-improved-github-copilot-harness-agent-skills-and-richer-context/",
+      "checked_on": "2026-09-30",
+      "supports": "Cowork USL+UBB or generic product rollout; no feature-specific France availability certified."
+    }
+  ],
+  "protocol_evidence_updates": [
+    {
+      "scenario_id": "licensed-manual-mail-briefing",
+      "status": "operator_reports_DOM_official_links",
+      "urls": [
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management",
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing"
+      ],
+      "note": "URL reliees au premier chat selon operateur ; artefact DOM source avec index a conserver pour certification. Les captures read_thread opaques sont un artefact extraction, pas un echec de recherche."
+    }
+  ],
+  "replays": [
+    {
+      "scenario_id": "unlicensed-internal-user",
+      "replay": 1,
+      "capture": "tests/evaluations/2026-09-30/unlicensed-internal-user-replay-1.json",
+      "thread_id": "6abd5019-03d0-83ed-b413-94205e10af2f",
+      "content_verdict": "PARTIAL",
+      "invariants": [
+        {
+          "id": "potential_credit_metering",
+          "verdict": "PASS",
+          "evidence": "Peut etre facture credits selon tenant-data/fonctions ; licence/capacite tenant conditionnelles."
+        },
+        {
+          "id": "exact_agent_type_and_harness_verification",
+          "verdict": "FAIL",
+          "evidence": "Architecture standard proposee/assumee pour un agent deja existant ; aucun controle ou question sur son harness reel ou plan de creation. Nommer standard ne verifie pas le runtime de cet agent."
+        },
+        {
+          "id": "no_licensed_inclusion_generalization",
+          "verdict": "PASS",
+          "evidence": "No charge utilisateur licencié non applique au salarie sans licence."
+        },
+        {
+          "id": "governance",
+          "verdict": "PASS",
+          "evidence": "Entra, permissions sources, DLP et suivi credits explicites."
+        },
+        {
+          "id": "live_official_verification",
+          "verdict": "UNVERIFIED_RETRIEVAL_TRACE",
+          "evidence": "Citations Microsoft visibles confirmees via sources-observed.json ; pas absence de recherche. Contenu controle independamment par juge. La trace exhaustive de retrieval n est pas disponible."
+        }
+      ],
+      "attribution": [
+        {
+          "classification": "responder_model_defect",
+          "severity": "runtime_verification_omission",
+          "confidence": "high",
+          "reason": "Skill exige runtime/harness avant application des droits. Meme omission que l original, pas raison d editer skill."
+        }
+      ],
+      "change_from_original": "Gouvernance plus explicite ; pas remediation de la verification du harness reel. Origine PARTIAL conservee.",
+      "judge_official_sources": [
+        "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/cost-considerations",
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/faq-billing-licensing",
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management"
+      ],
+      "residual": "Demander/etablir voie creation, type et harness de l agent utilise avant classification definitive. Pas besoin de promettre toujours credits, certains cas peuvent differer.",
+      "responder_source_provenance": {
+        "verdict": "PASS_VISIBLE_OFFICIAL_CITATIONS",
+        "artifact": "tests/evaluations/2026-09-30/sources-observed.json",
+        "recorded_urls": [
+          "https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/cost-considerations"
+        ],
+        "scope": "Microsoft citation URLs observed in completed response DOM. Non exhaustive, grouped citations can hide links.",
+        "not_certified": "Every retrieval call, every claim-to-source mapping, source publication time at retrieval, native skill activation."
+      },
+      "provenance_note": "Full retrieval operations not certified; visible official citations are PASS provenance and no missing-search failure is assigned."
+    },
+    {
+      "scenario_id": "cost-estimate",
+      "replay": 1,
+      "capture": "tests/evaluations/2026-09-30/cost-estimate-replay-1.json",
+      "thread_id": "6abd5082-1ce4-83eb-9502-4f5ca64f2a79",
+      "content_verdict": "PARTIAL",
+      "invariants": [
+        {
+          "id": "workload_assumptions",
+          "verdict": "PASS",
+          "evidence": "Un briefing/jour, 30 runs/mois, 1/2/5 cycles Graph+generation declares ; email count pas assimile a prompts."
+        },
+        {
+          "id": "architecture_harness_trigger_first",
+          "verdict": "PARTIAL",
+          "evidence": "Standard et option planifiee vs interactive nommes. Voie retrieval/flow et identite pas determinees ; hypothese Graph peut ne pas recuperer exhaustivement les 150 emails."
+        },
+        {
+          "id": "current_rates",
+          "verdict": "PASS",
+          "evidence": "Ancrage tenant Graph10 + reponse generative2 =12 pour cette combinaison de fonctions ; ce tarif n est pas un prix universel de toute requete Microsoft Graph/API."
+        },
+        {
+          "id": "table_arithmetic",
+          "verdict": "PASS",
+          "evidence": "12 x [1,2,5] x30=[360,720,1800] ; conversion pack 173.30/25000 donne 2.49552/4.99104/12.4776 euros, arrondis coherents."
+        },
+        {
+          "id": "currency_purchase_scope",
+          "verdict": "PASS",
+          "evidence": "Equivalence quote-part pack clairement distinguee tarif PAYG ; achat bloc mentionne."
+        },
+        {
+          "id": "range_without_false_precision",
+          "verdict": "PASS",
+          "evidence": "5 euros =2 cycles par jour, plage1-5 cycles explicite ; hypothese pilote avec mesure, pas 30-50 arbitraire. Prouve le sous-total, pas un cout complet."
+        },
+        {
+          "id": "complete_billable_components",
+          "verdict": "FAIL",
+          "evidence": "Pas inventaire/exclusion explicite d agent actions, agent flow actions, AI tools, premiums ou autres frais. Sous-total Graph+reponses utilise comme budget briefing sans definir les fonctions necessaires a ce briefing."
+        },
+        {
+          "id": "live_official_verification",
+          "verdict": "UNVERIFIED_RETRIEVAL_TRACE",
+          "evidence": "Citations Microsoft visibles confirmees via sources-observed.json ; pas absence de recherche. Contenu controle independamment par juge. La trace exhaustive de retrieval n est pas disponible."
+        }
+      ],
+      "attribution": [
+        {
+          "classification": "responder_model_defect",
+          "severity": "incomplete_cost_inventory",
+          "confidence": "high",
+          "reason": "Skill demande deja decomposition des fonctions/action et couts separes. Replay repare plage non tracee mais laisse inventaire et exclusions indetermines."
+        },
+        {
+          "classification": "ambiguous_test_case",
+          "severity": "input_gap",
+          "confidence": "high",
+          "reason": "Prompt original donne seulement emails/jour, pas workload/licence/architecture : hypotheses possibles, cout complet indeterminable sans preciser ces choix."
+        }
+      ],
+      "change_from_original": "Original FAIL preserve. Defaut faux budget non derive corrige, replay PARTIAL car sous-total seulement.",
+      "judge_official_sources": [
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management",
+        "https://www.microsoft.com/fr-fr/microsoft-365-copilot/pricing/copilot-studio"
+      ],
+      "residual": "Qualifier formule comme sous-total Graph+generation ; etablir architecture/identite, liste fonctions et leurs exclusions, puis calculer cout complet ou laisser les postes indeterminables explicites.",
+      "responder_source_provenance": {
+        "verdict": "PASS_VISIBLE_OFFICIAL_CITATIONS",
+        "artifact": "tests/evaluations/2026-09-30/sources-observed.json",
+        "recorded_urls": [
+          "https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-messages-management",
+          "https://www.microsoft.com/fr-fr/microsoft-365-copilot/pricing/copilot-studio"
+        ],
+        "scope": "Microsoft citation URLs observed in completed response DOM. Non exhaustive, grouped citations can hide links.",
+        "not_certified": "Every retrieval call, every claim-to-source mapping, source publication time at retrieval, native skill activation."
+      },
+      "provenance_note": "Full retrieval operations not certified; visible official citations are PASS provenance and no missing-search failure is assigned."
+    },
+    {
+      "scenario_id": "cheapest-architecture",
+      "replay": 1,
+      "capture": "tests/evaluations/2026-09-30/cheapest-architecture-replay-1.json",
+      "thread_id": "6abd50fb-960c-83eb-89a0-e9fdfbc2cca1",
+      "content_verdict": "PARTIAL",
+      "invariants": [
+        {
+          "id": "deterministic_workflow_preferred",
+          "verdict": "PASS",
+          "evidence": "Cloud flow Power Automate deterministe sans Copilot si pas raisonnement."
+        },
+        {
+          "id": "avoid_unnecessary_reasoning",
+          "verdict": "PASS",
+          "evidence": "Cowork/GitHub/autonomous reasoning sans benefice deconseilles."
+        },
+        {
+          "id": "licensing_and_trigger_scope",
+          "verdict": "PASS",
+          "evidence": "Cloud flow ne consomme pas credits lui-meme ; licences/connecteurs standard vs Premium/Process conditionnels ; agent-flow exact trigger distinction correcte."
+        },
+        {
+          "id": "governance_requirements",
+          "verdict": "FAIL",
+          "evidence": "Toujours aucune exigence identite/permissions, DLP, owner, logs, supervision ou disable path. Meme omission que l original."
+        },
+        {
+          "id": "live_official_verification",
+          "verdict": "UNVERIFIED_RETRIEVAL_TRACE",
+          "evidence": "Citations Microsoft visibles confirmees via sources-observed.json ; pas absence de recherche. Contenu controle independamment par juge. La trace exhaustive de retrieval n est pas disponible."
+        }
+      ],
+      "attribution": [
+        {
+          "classification": "responder_model_defect",
+          "confidence": "high",
+          "severity": "repeated_governance_omission",
+          "reason": "Skill et expected demandent deja governance. Omission dans original et replay ; pas ajouter/affaiblir skill pour faire passer ce modele."
+        }
+      ],
+      "judge_official_sources": [
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management",
+        "https://learn.microsoft.com/en-us/power-platform/admin/power-automate-licensing/faqs"
+      ],
+      "change_from_original": "Facturation cloud flow plus explicite ; governance toujours non satisfaite. Original PARTIAL preserve.",
+      "residual": "Ajouter dans une reponse complete gouvernance adaptee au workflow : owner, identite/droits, DLP/connecteurs, supervision et arret. La lacune est dans la reponse du modele.",
+      "responder_source_provenance": {
+        "verdict": "PASS_VISIBLE_OFFICIAL_CITATIONS",
+        "artifact": "tests/evaluations/2026-09-30/sources-observed.json",
+        "recorded_urls": [
+          "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management",
+          "https://learn.microsoft.com/fr-fr/power-platform/admin/power-automate-licensing/types",
+          "https://learn.microsoft.com/en-us/power-platform/admin/power-automate-licensing/faqs",
+          "https://learn.microsoft.com/es-mx/microsoft-copilot-studio/requirements-messages-management"
+        ],
+        "scope": "Microsoft citation URLs observed in completed response DOM. Non exhaustive, grouped citations can hide links.",
+        "not_certified": "Every retrieval call, every claim-to-source mapping, source publication time at retrieval, native skill activation."
+      },
+      "provenance_note": "Full retrieval operations not certified; visible official citations are PASS provenance and no missing-search failure is assigned."
+    }
+  ],
+  "gates": {
+    "real_chatgpt_responder": "PASS: 17 distinct original chats, 3 fresh-context replays, completed response captures.",
+    "explicit_loaded_corpus": "PASS based on operator capture and normalized verified hash; exact15-file manifest. File loading route, not native installation.",
+    "expected_outcomes_not_provided": "PASS based on campaign input/corpus report; prompts preserved in attachment setup and no expected arrays supplied.",
+    "native_skill_activation": "NOT_TESTED; no claim of native installation or auto activation.",
+    "exact_responder_model": "NOT_EXPOSED by UI; recorded Moyen2/5, no fabricated exact model label.",
+    "independent_judge": "GPT-6.1 Sol High; separate content/source audit.",
+    "official_visible_citations": "PASS: sources-observed artifact for20 chats; grouped links nonexhaustive.",
+    "complete_retrieval_trace": "NOT_EXHAUSTIVE and disclosed; adequate visible official citation provenance recorded. This limitation is not a failed search or an additional blocking gate.",
+    "factual_numeric_rates": "PASS: 1.5 standard tokens, Graph10+generation2, Researcher25, CUA5/15 and FR pack173.30/25000 checked independently.",
+    "all_relevant_content_invariants": "NOT_PASSED: original cost-estimate FAIL, replay incomplete; harness verification and governance omissions repeat.",
+    "significant_release_regression_gate": "NOT_PASSED; do not label 17/17 or claim production-ready validation."
+  },
+  "residual_findings": [
+    {
+      "id": "R1",
+      "scenarios": [
+        "cost-estimate",
+        "cost-estimate-replay-1"
+      ],
+      "classification": "responder_model_defect",
+      "status": "OPEN",
+      "severity": "billing_estimate",
+      "reason": "Original recommended30-50 euros without derivation. Replay ties5 euros to Graph+generation cycles, but leaves billable components and identity/retrieval architecture indeterminate.",
+      "needed": "A complete response must identify actual components and explicit exclusions. Existing skill already demands this; do not alter it to hide model failure."
+    },
+    {
+      "id": "R2",
+      "scenarios": [
+        "unlicensed-internal-user",
+        "unlicensed-internal-user-replay-1"
+      ],
+      "classification": "responder_model_defect",
+      "status": "OPEN",
+      "severity": "runtime_verification",
+      "reason": "Existing agent real harness/type not verified; standard presumed/proposed. The advice remains conditional, not a dangerous universal free claim.",
+      "needed": "Establish actual harness/type/creation path before definitive classification."
+    },
+    {
+      "id": "R3",
+      "scenarios": [
+        "cheapest-architecture",
+        "cheapest-architecture-replay-1"
+      ],
+      "classification": "responder_model_defect",
+      "status": "OPEN",
+      "severity": "governance",
+      "reason": "Governance required but absent in both independent answers.",
+      "needed": "Response needs identity/least privilege, DLP/connectors, owner, monitoring/disable appropriate to flow. No new skill instruction needed."
+    },
+    {
+      "id": "T1",
+      "scenarios": [
+        "scheduled-mail-briefing"
+      ],
+      "classification": "ambiguous_test_case",
+      "status": "CLARIFIED_BY_SUPPLEMENTAL_PASS",
+      "severity": "test_precision",
+      "reason": "Quantitative cost expected without workload/component details. Valid exposure map provided; no arbitrary exact amount required.",
+      "needed": "No repeated replay needed. Supplemental fixed-workload calculation passed; original ambiguity/PARTIAL retained transparently."
+    },
+    {
+      "id": "T2",
+      "scenarios": [
+        "roadmap-feature"
+      ],
+      "classification": "ambiguous_test_case",
+      "status": "SAFE_HANDLING_PASS",
+      "severity": "test_precision",
+      "reason": "No feature named; clarification and rollout caveat correct. Concrete preview/GA/France verification remains NA.",
+      "needed": "Named feature/roadmap ID needed for an actual availability test."
+    },
+    {
+      "id": "P1",
+      "classification": "evidence_limitation",
+      "status": "DISCLOSED",
+      "reason": "Exact responder model, native activation and exhaustive retrieval traces not exposed/tested. DOM citation provenance captured and corpus loading method recorded."
+    }
+  ],
+  "final_judge_statement": "Campagne reelle completee:17originaux,3replays,1complement transparent. Gate tous invariants non atteint:3lacunes modele restent ouvertes (harness reel, cout complet, governance). Ambiguite calcul cas2 levee par complement PASS sans remplacer original. Aucun defaut restant du skill ni source obsolete confirme par ces reponses; citations Microsoft visibles documentees, pas echec recherche infere des references opaques.",
+  "supplemental_tests": [
+    {
+      "scenario_id": "scheduled-mail-briefing",
+      "supplemental": true,
+      "capture": "tests/evaluations/2026-09-30/scheduled-mail-briefing-supplemental.json",
+      "thread_id": "6abd5317-3524-83ed-b795-1dfd6a0d14af",
+      "exact_prompt": "A Microsoft 365 Copilot licensed director needs an automatic 08:00 briefing without user action. For this cost-only example, choose Copilot Studio Standard harness with a scheduled agent flow, 22 executions per month, 2 billable agent-flow actions per execution, one Standard AI tool call per execution with 1000 input and 250 output tokens. Assume no separately metered Graph grounding, agent responses or other tools; mailbox retrieval permissions and completeness are validated separately. Estimate monthly Copilot Credits for the listed components, state exclusions, verify current Microsoft rates and compare the manual alternative. Do not present this component subtotal as the complete deployed solution cost.",
+      "content_verdict": "PASS",
+      "scope": "Component cost subtotal only, not deployed solution architecture/cost.",
+      "invariants": [
+        {
+          "id": "fixed_harness_and_scheduled_trigger",
+          "verdict": "PASS",
+          "evidence": "Standard + agent flow planifie explicitement imposes et reconnus, pas zero-rating automatique."
+        },
+        {
+          "id": "current_component_rates",
+          "verdict": "PASS",
+          "evidence": "Agent-flow13 credits/100actions et Standard AI tool1.5/1000tokens confirmes Microsoft billing rates."
+        },
+        {
+          "id": "flow_calculation",
+          "verdict": "PASS",
+          "evidence": "22x2x13/100=5.72 credits."
+        },
+        {
+          "id": "ai_calculation",
+          "verdict": "PASS",
+          "evidence": "22x(1000input+250output)x1.5/1000=41.25credits."
+        },
+        {
+          "id": "subtotal",
+          "verdict": "PASS",
+          "evidence": "5.72+41.25=46.97credits/mois; environ47 coherent."
+        },
+        {
+          "id": "scope_and_exclusions",
+          "verdict": "PASS",
+          "evidence": "Graph/WorkIQ, autres reponses/actions/outils/PowerPlatform/Azure/connecteurs exclus explicitement; pas cout complet revendique."
+        },
+        {
+          "id": "manual_alternative_scope",
+          "verdict": "PASS",
+          "evidence": "Licensed authenticated B2E + exact agent trigger + fairuse conditions ; zero credits conditionnels pour memes composants."
+        },
+        {
+          "id": "source_provenance",
+          "verdict": "PASS_VISIBLE_OFFICIAL_CITATION",
+          "evidence": "observed_citation_urls dans capture supplementale = Microsoft billing rates ; pas trace retrieval exhaustive."
+        }
+      ],
+      "attribution": [],
+      "closes": "T1 quantitative calculation ambiguity for explicit workload only",
+      "does_not_replace": "Original scheduled-mail-briefing PARTIAL remains as recorded; supplemental prompt explicitly fixes components and excludes other costs.",
+      "responder_source_provenance": {
+        "verdict": "PASS_VISIBLE_OFFICIAL_CITATIONS",
+        "recorded_urls": [
+          "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management"
+        ],
+        "scope": "Supplemental capture separate from20chat sources-observed artifact."
+      },
+      "judge_official_sources": [
+        "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+name: validate
+
+on:
+  push:
+    branches: ["main", "feat/**", "fix/**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: "3.12"
+      - name: Validate repository
+        run: python scripts/validate_repo.py
+      - name: Enforce critical source freshness
+        run: python scripts/check_freshness.py
+      - name: Tooling regression tests
+        run: python -m unittest discover -s tests -p 'test_*.py' -v

@@ -1,0 +1,32 @@
+{
+  "scenario_id": "fair-use-limit",
+  "thread_id": "6abd497d-5104-83eb-aff8-a0eb322c0b46",
+  "url": "https://chatgpt.com/c/6abd497d-5104-83eb-aff8-a0eb322c0b46",
+  "turns": [
+    {
+      "id": "303c5d9e-20f7-47cb-a1e5-4efec3459cd8",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1790790011.645,
+      "completedAt": 1790790029.304709,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "303c5d9e-20f7-47cb-a1e5-4efec3459cd8",
+          "content": [
+            {
+              "type": "text",
+              "text": "Lis intégralement le fichier Texte collé(9).txt et applique son skill copilot-m365-ops. Réponds uniquement à la DEMANDE finale ID fair-use-limit. Confirme la lecture du corpus, consulte les sources officielles actuelles pour les faits volatils et réponds de façon concise en français.\n\n[User attached 1 file; file contents were not included]"
+            }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "ba295174-4d62-4181-b4e3-9352cd8dfdc4",
+          "text": "Corpus lu intégralement et skill `copilot-m365-ops` appliqué. :chatgpt-content-reference{index=\"0\"}\n\n## fair-use-limit\n\n**Microsoft ne publie pas, à ce jour, un nombre fixe de prompts mensuels inclus pour une licence Microsoft 365 Copilot.**\n\nPour l’usage courant couvert par la licence utilisateur, Microsoft parle d’un **usage soumis à des limites de fair use**, et non d’un quota du type « 2 000 prompts/mois ». Sa documentation actuelle précise notamment que certains modèles, comme GPT-5.6 et Sonnet, sont inclus sous régime de *fair use*, tandis que certaines fonctionnalités/modèles peuvent avoir leurs propres limites. :chatgpt-content-reference{index=\"1\"}\n\nMême principe pour les usages Copilot Studio pouvant être inclus avec la licence Microsoft 365 Copilot : Microsoft indique **« usage is limited to fair usage limits »** et se réserve le droit de modifier ces limites, sans publier sur cette page un quota mensuel chiffré universel. :chatgpt-content-reference{index=\"2\"}\n\nDonc, pour budgéter un déploiement interne, **il ne faut pas retenir un nombre arbitraire de prompts par utilisateur et par mois**. Certaines fonctions ont en revanche des plafonds spécifiques publiés séparément, par exemple **Researcher : 25 requêtes par utilisateur et par mois** actuellement. :chatgpt-content-reference{index=\"3\"}\n\n**Conclusion : prompts Copilot généralistes = pas de quota mensuel public fixe actuellement ; fair use.**"
+        }
+      ]
+    }
+  ]
+}

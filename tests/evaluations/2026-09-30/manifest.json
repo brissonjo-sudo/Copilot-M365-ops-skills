@@ -1,0 +1,48 @@
+{
+  "date": "2026-09-30",
+  "protocol": "Fresh ChatGPT conversation for each original and replay; no expected invariants supplied; final skill plus companions loaded as a text attachment.",
+  "responder": {
+    "host": "ChatGPT Chat mode",
+    "visible_setting": "Moyen 2/5",
+    "exact_model_id": null,
+    "native_skill_activation_tested": false
+  },
+  "judge": {
+    "model": "GPT-6.1 Sol",
+    "reasoning": "High",
+    "independent_subagent": true
+  },
+  "corpus": {
+    "path": "corpus.txt",
+    "sha256_utf8_lf": "ef89cfef6e9edc05ae31dcd66250aa2be3df425e3789123455b94df77b1f3a8c",
+    "characters": 32093,
+    "loading": "Explicit complete corpus attachment, 15 files. Contains no tests or expected outcomes."
+  },
+  "prompt_template": "Lis et applique intégralement le corpus du skill copilot-m365-ops ci-dessous (SKILL.md et fichiers compagnons). Confirme sa lecture en une phrase. Tu es le répondant, ne fais aucune auto-évaluation. Réponds en français de façon concise mais substantielle à la demande finale, avec consultation réelle des sources officielles en ligne pour les faits volatils. Ne tiens compte d’aucun autre test ou conversation. Date: 30 septembre 2026.\n\n<CORPUS>\n{corpus}\n</CORPUS>\n\nID: {scenario_id}\nDEMANDE: {prompt}",
+  "original_prompts": {
+    "licensed-manual-mail-briefing": "A Microsoft 365 Copilot licensed director clicks a button each morning to summarize yesterday's email.",
+    "scheduled-mail-briefing": "Context: A Microsoft 365 Copilot licensed director needs a daily briefing of yesterday's email. The same briefing must run automatically at 08:00 without user action.",
+    "agent-called-flow": "A licensed user asks an internal agent to call a flow.",
+    "unlicensed-internal-user": "An employee without Microsoft 365 Copilot uses a Copilot Studio agent in Teams.",
+    "external-website-agent": "Publish a Copilot Studio agent on a public website.",
+    "github-harness-build": "Build and test a reasoning-heavy agent using the GitHub Copilot harness.",
+    "cowork-simple-email": "Use Cowork to draft one ordinary reply email.",
+    "cowork-multistep": "Analyze multiple emails, documents and meetings, produce a decision note and prepare follow-up actions.",
+    "business-premium-confusion": "We have Microsoft 365 Business Premium, so Copilot Studio usage is included.",
+    "fair-use-limit": "How many prompts per month are included in Microsoft 365 Copilot?",
+    "roadmap-feature": "Will a Copilot Studio feature be available in France next month?",
+    "sensitive-send-email-action": "An autonomous agent should send official emails without review.",
+    "sharepoint-grounding": "Ground an internal agent on a broad SharePoint site.",
+    "cost-estimate": "Estimate monthly cost for 150 emails/day per user.",
+    "computer-use": "A licensed user wants a Computer-Using Agent.",
+    "cheapest-architecture": "Choose the cheapest way to automate a deterministic repetitive task.",
+    "usl-plus-ubb": "A user already has Microsoft 365 Copilot. Does that mean every advanced Copilot feature is included?"
+  },
+  "replay_policy": "Original prompt and unchanged corpus in fresh context, no hint about failed expected invariant. Original response retained.",
+  "supplemental_policy": "Explicit additional workload inputs resolve an ambiguous test; supplemental outcome never replaces the original.",
+  "exclusions": [
+    "Initial 17-in-one-context batch was a pretest and is excluded from the gate.",
+    "No Microsoft tenant capability, invoice or deployed architecture was exercised.",
+    "Visible citations and independent source review do not expose hidden retrieval traces."
+  ]
+}

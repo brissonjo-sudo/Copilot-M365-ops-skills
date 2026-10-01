@@ -1,0 +1,32 @@
+{
+  "scenario_id": "agent-called-flow",
+  "thread_id": "6abd48b9-f048-83ed-9178-4f62753d25e2",
+  "url": "https://chatgpt.com/c/6abd48b9-f048-83ed-9178-4f62753d25e2",
+  "turns": [
+    {
+      "id": "c15b0955-a38c-4b85-b26b-9dbeca60b2e4",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1790789822.064,
+      "completedAt": 1790789832.285922,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "c15b0955-a38c-4b85-b26b-9dbeca60b2e4",
+          "content": [
+            {
+              "type": "text",
+              "text": "Lis intégralement Texte collé.txt et applique son skill copilot-m365-ops. Réponds uniquement à la DEMANDE finale ID agent-called-flow. Confirme la lecture du corpus, consulte les sources officielles actuelles pour les faits volatils et réponds de façon concise en français.\n\n[User attached 1 file; file contents were not included]"
+            }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "cbc5a36d-2e50-42eb-b340-b16d69d7b8b3",
+          "text": "### agent-called-flow\n\n**Architecture recommandée**  \nAgent interne **Copilot Studio, harness standard**, appelant un **agent flow** avec le déclencheur **“When an agent calls the flow”**. Le corpus identifie précisément ce scénario comme celui à distinguer des déclenchements planifiés ou événementiels. :chatgpt-content-reference{index=\"0\"}\n\n**Coût**  \nPour un utilisateur **authentifié disposant d’une licence Microsoft 365 Copilot**, Microsoft indique actuellement **“No charge”** pour l’exécution de l’agent flow lorsqu’elle est déclenchée par **“When an agent calls the flow”**, sous réserve des limites de fair use. Les autres déclencheurs consomment des Copilot Credits. Vérifié sur la documentation Microsoft actuelle. :chatgpt-content-reference{index=\"1\"}\n\n**Prérequis**\n- utilisateur authentifié avec **Microsoft 365 Copilot** ;\n- agent et agent flow sur le **standard harness** ;\n- flow contenant **When an agent calls the flow** et **Respond to the agent** ; :chatgpt-content-reference{index=\"2\"}\n- droits/connecteurs nécessaires, avec politiques DLP et moindre privilège ;\n- ne pas transposer cette gratuité à un flow planifié, événementiel ou à un autre harness.\n\n**Conclusion :** dans ce scénario précis, l’appel du flow par l’agent est actuellement la voie appropriée pour bénéficier du **zero-rating Copilot Credits** du licencié Microsoft 365 Copilot."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "scenario_id": "cowork-multistep",
+  "thread_id": "6abd4950-3a20-83eb-8f93-216ef8879aec",
+  "url": "https://chatgpt.com/c/6abd4950-3a20-83eb-8f93-216ef8879aec",
+  "turns": [
+    {
+      "id": "7e487de9-9141-4a90-a9a5-c879e3ac7c2e",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1790790003.257,
+      "completedAt": 1790790018.507447,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "7e487de9-9141-4a90-a9a5-c879e3ac7c2e",
+          "content": [
+            {
+              "type": "text",
+              "text": "Lis intégralement le fichier Texte collé(7).txt et applique son skill copilot-m365-ops. Réponds uniquement à la DEMANDE finale ID cowork-multistep. Confirme la lecture du corpus, consulte les sources officielles actuelles pour les faits volatils et réponds de façon concise en français.\n\n[User attached 1 file; file contents were not included]"
+            }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "7ff276c5-3127-46d8-af27-523117aba432",
+          "text": "Lecture intégrale du corpus `copilot-m365-ops` confirmée. :chatgpt-content-reference{index=\"0\"}\n\n## cowork-multistep\n\n**Architecture recommandée**  \nUtiliser **Microsoft Copilot Cowork** : le besoin est précisément un travail **multisource et multietape** combinant e-mails, documents et réunions, puis production d’une note de décision et préparation d’actions de suivi. Microsoft positionne Cowork pour ce type de travail de bout en bout entre plusieurs applications et sources Microsoft 365. :chatgpt-content-reference{index=\"1\"}\n\n**Pourquoi**\n- Cowork peut exploiter plusieurs sources Microsoft 365 et coordonner plusieurs étapes dans une même tâche. :chatgpt-content-reference{index=\"2\"}\n- Il dispose notamment de compétences liées aux **e-mails, réunions, Word, PDF, calendrier et recherche d’entreprise**. :chatgpt-content-reference{index=\"3\"}\n- Les actions telles que l’envoi d’e-mails ou la planification de réunions restent soumises à **approbation de l’utilisateur avant exécution**. :chatgpt-content-reference{index=\"4\"}\n\n**Coût**  \nCowork relève actuellement de la **facturation à l’usage en Copilot Credits**. Ce n’est donc pas à considérer comme automatiquement inclus sans coût marginal dans une licence Microsoft 365 Copilot. L’utilisateur peut saisir `/cost` pour voir la consommation approximative de crédits de la tâche et son solde mensuel. :chatgpt-content-reference{index=\"5\"}\n\n**Prérequis DSI**\n- accès à Cowork pour les utilisateurs concernés ;\n- stratégie de facturation et limite de dépenses dans le centre d’administration Microsoft 365 ;\n- permissions minimales nécessaires sur les mails, réunions et documents ;\n- contrôle des sources SharePoint/OneDrive accessibles ;\n- pilote avec suivi réel des Copilot Credits avant généralisation. :chatgpt-content-reference{index=\"6\"}\n\n**Alternative**  \nSi l’analyse suit en réalité une procédure très répétitive et prédictible, un agent standard + Power Automate peut être moins coûteux. Pour une analyse transversale variable nécessitant de relier plusieurs documents, réunions et fils de mails avant de produire des décisions et actions, **Cowork correspond directement au cas d’usage décrit**."
+        }
+      ]
+    }
+  ]
+}
