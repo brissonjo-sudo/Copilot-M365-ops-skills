@@ -43,3 +43,13 @@ test('repeated reviews update the same issue rather than creating duplicates', a
   assert.equal(m.calls.filter(c => c[0] === 'create').length, 1);
   assert.equal(m.calls.filter(c => c[0] === 'update').length, 1);
 });
+
+test('manual diagnostic uses its own issue and never replaces a real maintenance issue', async () => {
+  const m = mock([{title, number: 10}]);
+  const result = await maintain({github: m.github, context, diagnostic: true});
+  assert.equal(result.action, 'created');
+  const params = m.calls.find(c => c[0] === 'create')[1];
+  assert.equal(params.title, 'Maintenance issue self-test (pilot)');
+  assert.match(params.body, /No source defect/);
+  assert.equal(m.calls.some(c => c[0] === 'update'), false);
+});

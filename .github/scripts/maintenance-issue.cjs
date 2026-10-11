@@ -1,7 +1,7 @@
 const fs = require('node:fs');
 
-module.exports = async ({ github, context }) => {
-  const title = 'Weekly Microsoft Copilot source review required';
+module.exports = async ({ github, context, diagnostic = false }) => {
+  const title = diagnostic ? 'Maintenance issue self-test (pilot)' : 'Weekly Microsoft Copilot source review required';
   const { owner, repo } = context.repo;
   const issues = await github.paginate(github.rest.issues.listForRepo, {
     owner, repo, state: 'open', per_page: 100,
@@ -9,7 +9,9 @@ module.exports = async ({ github, context }) => {
   const existing = issues.find(i => !i.pull_request && i.title === title);
   const read = path => fs.existsSync(path) ? fs.readFileSync(path, 'utf8') : 'Report unavailable.';
   const body = [
-    'The source maintenance checks require review.',
+    diagnostic
+      ? 'Diagnostic self-test: verifies issue write permission and reuse. No source defect or expired verification date is asserted by this test.'
+      : 'The source maintenance checks require review.',
     '',
     `Run: https://github.com/${owner}/${repo}/actions/runs/${context.runId}`,
     `Commit: ${context.sha}`,

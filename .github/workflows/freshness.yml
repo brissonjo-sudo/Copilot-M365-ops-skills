@@ -2,6 +2,11 @@ name: freshness
 
 on:
   workflow_dispatch:
+    inputs:
+      issue_self_test:
+        description: "Exercise issue creation/reuse with a separate diagnostic issue (no source dates changed)"
+        type: boolean
+        default: false
   schedule:
     - cron: "30 6 * * 3"
 
@@ -39,12 +44,12 @@ jobs:
           python scripts/check_sources.py --report reachability.json 2>&1 | tee reachability.txt
 
       - name: Create or update maintenance issue
-        if: steps.freshness.outcome == 'failure' || steps.reachability.outcome == 'failure'
+        if: steps.freshness.outcome == 'failure' || steps.reachability.outcome == 'failure' || inputs.issue_self_test == true
         uses: actions/github-script@v9.0.0
         with:
           script: |
             const maintain = require('./.github/scripts/maintenance-issue.cjs');
-            const result = await maintain({ github, context });
+            const result = await maintain({ github, context, diagnostic: ${{ inputs.issue_self_test == true }} });
             core.info(JSON.stringify(result));
 
       - name: Fail workflow when review is required

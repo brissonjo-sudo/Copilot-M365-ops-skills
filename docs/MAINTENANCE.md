@@ -26,6 +26,8 @@ HTTP access and source freshness are independent gates. `check_sources.py --repo
 
 When review is required, the workflow records the exact run/commit and both check outputs in one maintenance issue. It searches all open issues, excludes PRs, updates the existing issue body instead of creating duplicates, and serializes concurrent runs. Closing the issue after review is a maintainer action; an issue is not closed automatically merely because HTTP access recovers.
 
+For a manual permissions/reuse check, dispatch the prepared branch with `issue_self_test: true`. This uses a separate `Maintenance issue self-test (pilot)` issue and clearly labels it diagnostic. Dispatch twice to verify creation then reuse. It does not alter source dates, suppress check failures or assert that a real source is obsolete. The default is false and scheduled runs do not enable it.
+
 ## Immediate review triggers
 
 Do not wait for the weekly cycle after:
