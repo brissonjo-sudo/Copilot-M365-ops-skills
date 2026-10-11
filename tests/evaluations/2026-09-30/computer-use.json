@@ -1,0 +1,32 @@
+{
+  "scenario_id": "computer-use",
+  "thread_id": "6abd4cc7-d2ac-83ed-95c9-5e7ec834f6d0",
+  "url": "https://chatgpt.com/c/6abd4cc7-d2ac-83ed-95c9-5e7ec834f6d0",
+  "turns": [
+    {
+      "id": "e21f426a-3d21-4eed-b3d8-c322ac761127",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1790790914.024,
+      "completedAt": 1790790923.46864,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "e21f426a-3d21-4eed-b3d8-c322ac761127",
+          "content": [
+            {
+              "type": "text",
+              "text": "Lis intégralement Texte collé(20260930-175408).txt et applique son skill copilot-m365-ops. Réponds uniquement à la DEMANDE finale ID computer-use. Confirme la lecture du corpus, consulte les sources officielles actuelles pour les faits volatils et réponds de façon concise en français.\n\n[User attached 1 file; file contents were not included]"
+            }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "da9b0e90-1c90-4b88-9013-d9ba76705aeb",
+          "text": "Corpus **copilot-m365-ops** lu intégralement et appliqué. :chatgpt-content-reference{index=\"0\"}\n\n## computer-use\n\nUn utilisateur disposant de **Microsoft 365 Copilot** peut utiliser un **Computer-Using Agent (CUA)** dans Copilot Studio, mais **l’usage de l’ordinateur n’est pas inclus ni “zero-rated” par sa licence Microsoft 365 Copilot**. Le corpus l’exclut explicitement des cas de gratuité applicables aux utilisateurs licenciés. :chatgpt-content-reference{index=\"1\"} :chatgpt-content-reference{index=\"2\"}\n\n**Architecture recommandée**  \nAgent **Copilot Studio, harnais standard**, auquel on ajoute l’outil **Computer use**. Microsoft le destine à l’automatisation d’applications web ou Windows, notamment lorsqu’aucune API adaptée n’existe. :chatgpt-content-reference{index=\"3\"}\n\n**Coût vérifié au 30 septembre 2026 :**\n- modèle standard : **5 Copilot Credits par étape** ;\n- modèle Premium : **15 Copilot Credits par étape** ;\n- une étape peut comprendre plusieurs actions élémentaires telles que clic, saisie ou navigation. :chatgpt-content-reference{index=\"4\"}\n- Exemple Microsoft : une opération en **4 étapes** coûte **20 crédits** avec un modèle standard ou **60 crédits** avec un modèle Premium. :chatgpt-content-reference{index=\"5\"}\n\nLa licence Microsoft 365 Copilot de l’utilisateur ne supprime donc **pas** cette consommation de crédits. Il faut prévoir côté tenant la capacité/facturation Copilot Studio appropriée et appliquer les contrôles habituels : Entra ID, moindre privilège, DLP, environnement contrôlé, journalisation et validation humaine pour les actions sensibles. :chatgpt-content-reference{index=\"6\"}\n\n**Alternative à privilégier lorsqu’elle existe :** utiliser une API, un connecteur ou un flow déterministe plutôt que Computer use ; le CUA est surtout pertinent lorsque l’application cible n’offre pas d’interface exploitable directement. :chatgpt-content-reference{index=\"7\"}"
+        }
+      ]
+    }
+  ]
+}

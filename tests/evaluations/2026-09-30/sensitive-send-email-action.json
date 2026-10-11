@@ -1,0 +1,32 @@
+{
+  "scenario_id": "sensitive-send-email-action",
+  "thread_id": "6abd4c2e-f36c-83eb-8957-f31c3c44d0f1",
+  "url": "https://chatgpt.com/c/6abd4c2e-f36c-83eb-8957-f31c3c44d0f1",
+  "turns": [
+    {
+      "id": "9f8fc4e7-5835-4ae3-a209-eae4ff275fbe",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1790790703.695,
+      "completedAt": 1790790713.180074,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "9f8fc4e7-5835-4ae3-a209-eae4ff275fbe",
+          "content": [
+            {
+              "type": "text",
+              "text": "Lis intégralement Texte collé(20260930-174552).txt et applique son skill copilot-m365-ops. Réponds uniquement à la DEMANDE finale ID sensitive-send-email-action. Confirme la lecture du corpus, consulte les sources officielles actuelles pour les faits volatils et réponds de façon concise en français.\n\n[User attached 1 file; file contents were not included]"
+            }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "0db05052-04d2-4a22-b341-a92f15a62087",
+          "text": "Corpus **copilot-m365-ops lu intégralement**. :chatgpt-content-reference{index=\"0\"}\n\n## sensitive-send-email-action\n\n**Architecture recommandée**  \nNe pas permettre à un agent autonome d’envoyer directement des **e-mails officiels sensibles sans validation humaine**. Prévoir un envoi conditionné à une étape d’approbation ou de confirmation humaine.\n\n**Pourquoi**\n- Copilot Studio permet techniquement à un agent d’utiliser le connecteur Outlook pour **envoyer des e-mails** et de réagir de manière autonome à des événements. :chatgpt-content-reference{index=\"1\"}\n- Microsoft recommande explicitement de **maintenir un humain dans la boucle pour les actions critiques ou sensibles**, avec approbation avant exécution. :chatgpt-content-reference{index=\"2\"}\n- Le standard harness prévoit lui-même des garde-fous et peut rechercher une approbation pour les actions sensibles. :chatgpt-content-reference{index=\"3\"}\n\n**Conception conseillée**\n`Déclencheur autonome → préparation du courriel → contrôle/approbation humaine → envoi`\n\nÀ prévoir côté DSI : identité Entra dédiée ou contrôlée, permissions minimales sur la boîte concernée, DLP/connecteurs, journalisation/audit et procédure de désactivation. Ces exigences correspondent aussi aux garde-fous du corpus. :chatgpt-content-reference{index=\"4\"}\n\n**Exception possible :** des envois totalement déterministes et à faible risque, par exemple une notification technique standardisée, peuvent être automatisés après analyse de risque. Pour des **courriers officiels engageant l’organisation**, je conserverais l’approbation humaine."
+        }
+      ]
+    }
+  ]
+}

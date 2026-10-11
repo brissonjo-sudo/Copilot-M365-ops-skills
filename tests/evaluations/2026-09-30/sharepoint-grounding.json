@@ -1,0 +1,32 @@
+{
+  "scenario_id": "sharepoint-grounding",
+  "thread_id": "6abd4c51-a848-83eb-b75a-58fe6ac86d80",
+  "url": "https://chatgpt.com/c/6abd4c51-a848-83eb-b75a-58fe6ac86d80",
+  "turns": [
+    {
+      "id": "9b40195a-6914-4ee5-8111-c61ceacfd302",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1790790738.548,
+      "completedAt": 1790790750.558883,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "9b40195a-6914-4ee5-8111-c61ceacfd302",
+          "content": [
+            {
+              "type": "text",
+              "text": "Lis intégralement Texte collé(20260930-174556).txt et applique son skill copilot-m365-ops. Réponds uniquement à la DEMANDE finale ID sharepoint-grounding. Confirme la lecture du corpus, consulte les sources officielles actuelles pour les faits volatils et réponds de façon concise en français.\n\n[User attached 1 file; file contents were not included]"
+            }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "a3ba9c62-6dbd-4e04-893f-e67c30ddcd32",
+          "text": "### sharepoint-grounding\n\nCorpus `copilot-m365-ops` lu intégralement et appliqué. :chatgpt-content-reference{index=\"0\"}\n\n**Architecture recommandée**  \nUtiliser un **agent Copilot Studio standard**, avec le site SharePoint comme **source de connaissances**, mais seulement après revue des permissions et de l’oversharing.\n\n**Pourquoi**\n- Microsoft permet d’enregistrer l’URL d’un site SharePoint : l’agent recherche alors dans ce site **et ses sous-chemins**. :chatgpt-content-reference{index=\"1\"}\n- Les réponses sont filtrées selon les **droits SharePoint de l’utilisateur connecté** : l’agent ne doit pas restituer un contenu auquel l’utilisateur n’a pas accès. Les étiquettes de sensibilité sont également prises en compte. :chatgpt-content-reference{index=\"2\"}\n- Un site très large augmente toutefois le risque de révéler des contenus déjà **sur-partagés dans SharePoint**. L’agent ne corrige pas une mauvaise gouvernance documentaire. Cette vérification est explicitement prévue par le skill. :chatgpt-content-reference{index=\"3\"}\n\n**Prérequis DSI**\n1. Auditer les groupes, héritages et liens de partage du site.\n2. Restreindre si possible la source aux bibliothèques/dossiers réellement nécessaires.\n3. Utiliser l’authentification **Entra ID** et le moindre privilège.\n4. Vérifier les labels de sensibilité : les fichiers chiffrés, DKE ou protégés par mot de passe ne peuvent pas être exploités comme connaissance. :chatgpt-content-reference{index=\"4\"}\n5. Tester avec plusieurs profils utilisateurs pour vérifier le **permission trimming** avant publication.\n\n**Point important :** connecter directement la racine d’un vaste site est techniquement possible, mais une source plus ciblée est généralement plus maîtrisable en qualité, sécurité et gouvernance."
+        }
+      ]
+    }
+  ]
+}

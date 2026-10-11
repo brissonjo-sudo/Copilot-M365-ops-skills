@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "scenarios": [
+    {
+      "id": "licensed-manual-mail-briefing",
+      "prompt": "A Microsoft 365 Copilot licensed director clicks a button each morning to summarize yesterday's email.",
+      "expected": [
+        "identify standard-harness internal agent as a candidate",
+        "verify current zero-rating conditions",
+        "prefer manual trigger if acceptable",
+        "do not claim unlimited usage"
+      ]
+    },
+    {
+      "id": "scheduled-mail-briefing",
+      "prompt": "The same briefing must run automatically at 08:00 without user action.",
+      "expected": [
+        "classify as scheduled trigger",
+        "do not automatically apply licensed-user zero-rating",
+        "calculate workflow/credit exposure",
+        "compare manual alternative"
+      ]
+    },
+    {
+      "id": "agent-called-flow",
+      "prompt": "A licensed user asks an internal agent to call a flow.",
+      "expected": [
+        "check When an agent calls the flow trigger",
+        "verify standard harness",
+        "verify current Microsoft billing rule"
+      ]
+    },
+    {
+      "id": "unlicensed-internal-user",
+      "prompt": "An employee without Microsoft 365 Copilot uses a Copilot Studio agent in Teams.",
+      "expected": [
+        "identify potential Copilot Credit metering",
+        "verify exact agent type and harness",
+        "do not generalize licensed-user inclusion"
+      ]
+    },
+    {
+      "id": "external-website-agent",
+      "prompt": "Publish a Copilot Studio agent on a public website.",
+      "expected": [
+        "classify external channel",
+        "model Copilot Studio capacity/pay-as-you-go",
+        "review anonymous authentication risk"
+      ]
+    },
+    {
+      "id": "github-harness-build",
+      "prompt": "Build and test a reasoning-heavy agent using the GitHub Copilot harness.",
+      "expected": [
+        "identify usage-based billing during build/test",
+        "do not apply standard-harness zero-rating",
+        "recommend spending controls"
+      ]
+    },
+    {
+      "id": "cowork-simple-email",
+      "prompt": "Use Cowork to draft one ordinary reply email.",
+      "expected": [
+        "question whether Cowork is necessary",
+        "suggest lower-cost native Copilot path",
+        "state Cowork is usage-based"
+      ]
+    },
+    {
+      "id": "cowork-multistep",
+      "prompt": "Analyze multiple emails, documents and meetings, produce a decision note and prepare follow-up actions.",
+      "expected": [
+        "consider Cowork",
+        "state usage-based cost",
+        "recommend pilot telemetry and cost limits"
+      ]
+    },
+    {
+      "id": "business-premium-confusion",
+      "prompt": "We have Microsoft 365 Business Premium, so Copilot Studio usage is included.",
+      "expected": [
+        "separate Business Premium from Microsoft 365 Copilot add-on",
+        "ask/verify actual entitlement before cost claim"
+      ]
+    },
+    {
+      "id": "fair-use-limit",
+      "prompt": "How many prompts per month are included in Microsoft 365 Copilot?",
+      "expected": [
+        "verify whether a numeric limit is currently published",
+        "explain fair-use without inventing a number"
+      ]
+    },
+    {
+      "id": "roadmap-feature",
+      "prompt": "Will a Copilot Studio feature be available in France next month?",
+      "expected": [
+        "check roadmap and released versions",
+        "distinguish preview/rollout/GA",
+        "state roadmap dates are not guarantees"
+      ]
+    },
+    {
+      "id": "sensitive-send-email-action",
+      "prompt": "An autonomous agent should send official emails without review.",
+      "expected": [
+        "flag governance risk",
+        "consider human approval",
+        "apply least privilege and auditability"
+      ]
+    },
+    {
+      "id": "sharepoint-grounding",
+      "prompt": "Ground an internal agent on a broad SharePoint site.",
+      "expected": [
+        "review oversharing and permissions",
+        "preserve source ACLs",
+        "include governance checks"
+      ]
+    },
+    {
+      "id": "cost-estimate",
+      "prompt": "Estimate monthly cost for 150 emails/day per user.",
+      "expected": [
+        "state workload assumptions",
+        "identify architecture/harness/trigger first",
+        "use current rates",
+        "give range instead of false precision"
+      ]
+    },
+    {
+      "id": "computer-use",
+      "prompt": "A licensed user wants a Computer-Using Agent.",
+      "expected": [
+        "verify current CUA billing",
+        "do not assume Microsoft 365 Copilot inclusion",
+        "review security and approval controls"
+      ]
+    },
+    {
+      "id": "cheapest-architecture",
+      "prompt": "Choose the cheapest way to automate a deterministic repetitive task.",
+      "expected": [
+        "prefer deterministic workflow where suitable",
+        "avoid unnecessary reasoning harness",
+        "include governance requirements"
+      ]
+    },
+    {
+      "id": "usl-plus-ubb",
+      "prompt": "A user already has Microsoft 365 Copilot. Does that mean every advanced Copilot feature is included?",
+      "expected": [
+        "distinguish user subscription licensing from usage-based billing",
+        "identify the exact advanced feature before answering",
+        "explain that some advanced experiences can require Copilot Credits in addition to license access",
+        "verify current Microsoft rules"
+      ]
+    }
+  ]
+}

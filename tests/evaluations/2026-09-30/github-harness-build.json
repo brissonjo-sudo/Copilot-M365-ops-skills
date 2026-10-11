@@ -1,0 +1,32 @@
+{
+  "scenario_id": "github-harness-build",
+  "thread_id": "6abd491d-5200-83eb-9fd3-4ebff8938add",
+  "url": "https://chatgpt.com/c/6abd491d-5200-83eb-9fd3-4ebff8938add",
+  "turns": [
+    {
+      "id": "efb50d4c-9d41-4f86-b85c-69e89865a772",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1790789963.588,
+      "completedAt": 1790789983.404588,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "efb50d4c-9d41-4f86-b85c-69e89865a772",
+          "content": [
+            {
+              "type": "text",
+              "text": "Lis intégralement le fichier Texte collé(5).txt et applique son skill copilot-m365-ops. Réponds uniquement à la DEMANDE finale ID github-harness-build. Confirme la lecture du corpus, consulte les sources officielles actuelles pour les faits volatils et réponds de façon concise en français.\n\n[User attached 1 file; file contents were not included]"
+            }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "190d3405-096d-447f-84be-d5782a31bc46",
+          "text": "Corpus `copilot-m365-ops` lu intégralement et appliqué. :chatgpt-content-reference{index=\"0\"}\n\n## github-harness-build\n\n**Architecture recommandée**  \nUtiliser un **agent Copilot Studio basé sur le GitHub Copilot harness**. C’est précisément le harnais que Microsoft destine aux agents à **raisonnement important, tâches longues et processus multi-étapes**, avec orchestration de connaissances, connecteurs, MCP, autres agents, fichiers, skills et mémoire. :chatgpt-content-reference{index=\"1\"}\n\n**Construction et test**\n- Créer explicitement un nouvel agent avec le **GitHub Copilot harness** : un agent créé sur ce harnais ne peut pas ensuite être converti vers le harnais standard. :chatgpt-content-reference{index=\"2\"}\n- Configurer dans **Build** : identité/instructions, connaissances, outils, skills, modèle et mémoire.\n- Tester dans **Preview**, puis constituer des jeux de tests dans **Evaluate**.\n- Après publication, suivre qualité et consommation dans **Monitor**. :chatgpt-content-reference{index=\"3\"}\n\n**Coût**  \nPoint important : ce scénario est **facturé dès la construction**. Microsoft indique que le GitHub Copilot harness peut consommer des **Copilot Credits pendant le build, le preview, les tests et les évaluations**, puis en production. Les crédits couvrent notamment les tokens LLM, les outils/knowledge/MCP et le fonctionnement du harnais. :chatgpt-content-reference{index=\"4\"}\n\nLa licence Microsoft 365 Copilot d’un utilisateur **ne rend pas cette consommation gratuite** : Microsoft précise que l’usage du GitHub Copilot harness n’est pas inclus dans cette licence utilisateur. :chatgpt-content-reference{index=\"5\"}\n\n**Prérequis DSI**\n- environnement Power Platform dédié au pilote ;\n- capacité **Copilot Credits** disponible ou mécanisme de facturation configuré ;\n- propriétaire métier et propriétaire technique identifiés ;\n- DLP et droits des connecteurs/MCP limités au nécessaire ;\n- limite mensuelle de consommation au niveau de l’agent et suivi dans Power Platform Admin Center. Microsoft recommande de gouverner également **l’environnement dès la phase de développement**, car les essais consomment déjà des crédits. :chatgpt-content-reference{index=\"6\"}\n\n**Alternative**  \nSi les tests montrent que le besoin est finalement déterministe ou principalement fondé sur des règles, le **standard harness** sera plus simple et peut bénéficier de conditions de facturation plus favorables pour certains utilisateurs Microsoft 365 Copilot. Ne retenir le GitHub Copilot harness que si le raisonnement multi-étapes apporte réellement de la valeur. :chatgpt-content-reference{index=\"7\"}"
+        }
+      ]
+    }
+  ]
+}

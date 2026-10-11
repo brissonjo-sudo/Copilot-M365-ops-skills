@@ -1,0 +1,32 @@
+{
+  "scenario_id": "cowork-simple-email",
+  "thread_id": "6abd494e-1800-83eb-88f7-7538be5d05ee",
+  "url": "https://chatgpt.com/c/6abd494e-1800-83eb-88f7-7538be5d05ee",
+  "turns": [
+    {
+      "id": "ec110710-b406-4900-a1ad-68ff57806cf4",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1790789999.094,
+      "completedAt": 1790790008.604194,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "ec110710-b406-4900-a1ad-68ff57806cf4",
+          "content": [
+            {
+              "type": "text",
+              "text": "Lis intégralement le fichier Texte collé(6).txt et applique son skill copilot-m365-ops. Réponds uniquement à la DEMANDE finale ID cowork-simple-email. Confirme la lecture du corpus, consulte les sources officielles actuelles pour les faits volatils et réponds de façon concise en français.\n\n[User attached 1 file; file contents were not included]"
+            }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "b6beeb09-7577-429e-906b-f3e53c9a3b0c",
+          "text": "Corpus `copilot-m365-ops` lu intégralement et appliqué. :chatgpt-content-reference{index=\"0\"}\n\n## cowork-simple-email\n\n**Architecture recommandée**  \nNe pas utiliser **Cowork** pour rédiger une seule réponse e-mail ordinaire. Utiliser directement **Microsoft 365 Copilot dans Outlook** ou Copilot Chat.\n\n**Pourquoi**\n- Le corpus réserve Cowork aux travaux **multietapes, longs ou nécessitant plusieurs outils** ; un simple brouillon d’e-mail fait explicitement partie des cas où il faut comparer d’abord avec le Copilot M365 classique. :chatgpt-content-reference{index=\"1\"}\n- Microsoft classe aujourd’hui Cowork parmi les expériences d’**IA avancée** à facturation à l’usage. :chatgpt-content-reference{index=\"2\"}\n- Une tâche Cowork consomme des **Copilot Credits**, selon notamment le modèle, le contexte et les outils appelés. :chatgpt-content-reference{index=\"3\"}\n\n**Coût**  \nCowork : **Copilot Credits / usage-based billing**. Pour ce besoin simple, ce surcoût n’apporte pas d’avantage architectural identifiable. :chatgpt-content-reference{index=\"4\"}\n\n**Alternative**  \nDans Outlook : ouvrir le mail → demander à Copilot de **rédiger la réponse** → relire et envoyer."
+        }
+      ]
+    }
+  ]
+}

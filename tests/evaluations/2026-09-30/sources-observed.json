@@ -1,0 +1,101 @@
+{
+  "captured_at": "2026-09-30",
+  "method": "Visible Microsoft citation links captured from completed ChatGPT response DOM. Deduplicated; query strings removed to exclude tracking/session parameters. Non-exhaustive: grouped citations can hide additional links. This proves visible citation provenance, not every retrieval operation.",
+  "sources": {
+    "licensed-manual-mail-briefing": [
+      "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management",
+      "https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing"
+    ],
+    "scheduled-mail-briefing": [
+      "https://learn.microsoft.com/en-us/power-platform/admin/power-automate-licensing/faqs",
+      "https://learn.microsoft.com/en-gb/power-platform/admin/power-automate-licensing/faqs",
+      "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management",
+      "https://learn.microsoft.com/fr-fr/graph/api/resources/mail-api-overview"
+    ],
+    "agent-called-flow": [
+      "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management",
+      "https://learn.microsoft.com/en-us/microsoft-copilot-studio/flows-faqs"
+    ],
+    "unlicensed-internal-user": [
+      "https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing",
+      "https://learn.microsoft.com/vi-vn/microsoft-copilot-studio/faq-billing-licensing",
+      "https://learn.microsoft.com/fr-fr/power-platform/admin/manage-copilot-studio-copilot-credits-capacity",
+      "https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/cost-considerations"
+    ],
+    "external-website-agent": [
+      "https://learn.microsoft.com/microsoft-copilot-studio/publication-fundamentals-publish-channels",
+      "https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/configuration-end-user-authentication",
+      "https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-enduser-authentication",
+      "https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/configure-web-security",
+      "https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/agents-experience/billing-manage-buy-credits"
+    ],
+    "github-harness-build": [
+      "https://learn.microsoft.com/en-us/microsoft-copilot-studio/harnesses-overview",
+      "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/build-overview",
+      "https://learn.microsoft.com/mt-mt/microsoft-copilot-studio/agents-experience/billing-credit-overview",
+      "https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/govern-credit-consumption"
+    ],
+    "cowork-simple-email": [
+      "https://learn.microsoft.com/en-us/microsoft-365/copilot/user-subscription-license-usage-based-billing",
+      "https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-copilot-credits-cost",
+      "https://learn.microsoft.com/microsoft-365/copilot/cowork/cowork-faq"
+    ],
+    "cowork-multistep": [
+      "https://learn.microsoft.com/fr-fr/microsoft-365/copilot/cowork/cowork-faq",
+      "https://learn.microsoft.com/fr-fr/microsoft-365/copilot/cowork/",
+      "https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-copilot-credits-cost",
+      "https://learn.microsoft.com/microsoft-365/copilot/usage-based-billing-overview-copilot-credits"
+    ],
+    "business-premium-confusion": [
+      "https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing",
+      "https://www.microsoft.com/en-us/copilot/pricing/copilot-studio"
+    ],
+    "fair-use-limit": [
+      "https://learn.microsoft.com/en-us/microsoft-365/copilot/user-subscription-license-usage-based-billing",
+      "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management",
+      "https://learn.microsoft.com/fr-fr/microsoft-365/copilot/faq-researcher"
+    ],
+    "roadmap-feature": [
+      "https://www.microsoft.com/en-us/copilot/blog/copilot-studio/new-and-improved-github-copilot-harness-agent-skills-and-richer-context/"
+    ],
+    "sensitive-send-email-action": [
+      "https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-plugin-actions",
+      "https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/autonomous-agents",
+      "https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/guidance/generative-orchestration"
+    ],
+    "sharepoint-grounding": [
+      "https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-add-sharepoint"
+    ],
+    "cost-estimate": [
+      "https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-messages-management",
+      "https://www.microsoft.com/fr-fr/microsoft-365-copilot/pricing/copilot-studio",
+      "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management"
+    ],
+    "computer-use": [
+      "https://learn.microsoft.com/en-us/microsoft-copilot-studio/computer-use",
+      "https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/computer-use"
+    ],
+    "cheapest-architecture": [
+      "https://learn.microsoft.com/en-us/microsoft-365/copilot/user-subscription-license-usage-based-billing",
+      "https://learn.microsoft.com/en-us/power-platform/admin/power-automate-licensing/faqs",
+      "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management"
+    ],
+    "usl-plus-ubb": [
+      "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/cost-considerations",
+      "https://www.microsoft.com/en-us/copilot/blog/2026/06/16/copilot-cowork-is-now-generally-available/"
+    ],
+    "unlicensed-internal-user-replay-1": [
+      "https://learn.microsoft.com/fr-fr/microsoft-365/copilot/extensibility/cost-considerations"
+    ],
+    "cost-estimate-replay-1": [
+      "https://learn.microsoft.com/fr-fr/microsoft-copilot-studio/requirements-messages-management",
+      "https://www.microsoft.com/fr-fr/microsoft-365-copilot/pricing/copilot-studio"
+    ],
+    "cheapest-architecture-replay-1": [
+      "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management",
+      "https://learn.microsoft.com/fr-fr/power-platform/admin/power-automate-licensing/types",
+      "https://learn.microsoft.com/en-us/power-platform/admin/power-automate-licensing/faqs",
+      "https://learn.microsoft.com/es-mx/microsoft-copilot-studio/requirements-messages-management"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "scenario_id": "scheduled-mail-briefing",
+  "thread_id": "6abd48b1-4dfc-83eb-9679-effbbd7b859e",
+  "url": "https://chatgpt.com/c/6abd48b1-4dfc-83eb-9679-effbbd7b859e",
+  "turns": [
+    {
+      "id": "a92b034c-e6fe-44f7-86c4-59b28b566271",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1790789813.264,
+      "completedAt": 1790789838.563438,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "a92b034c-e6fe-44f7-86c4-59b28b566271",
+          "content": [
+            {
+              "type": "text",
+              "text": "Lis intégralement Texte collé.txt et applique son skill copilot-m365-ops. Réponds uniquement à la DEMANDE finale ID scheduled-mail-briefing. Confirme la lecture du corpus, consulte les sources officielles actuelles pour les faits volatils et réponds de façon concise en français.\n\n[User attached 1 file; file contents were not included]"
+            }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "a31f661f-709b-4cb2-b472-1f9e94912a99",
+          "text": "Lecture intégrale du corpus `copilot-m365-ops` confirmée. :chatgpt-content-reference{index=\"0\"}\n\n## scheduled-mail-briefing\n\n**Architecture recommandée**  \nUtiliser un **flux cloud Power Automate planifié à 08:00**, chargé de récupérer les mails de la veille puis de produire et livrer le briefing. C’est plus adapté qu’un agent déclenché manuellement puisque l’exécution doit avoir lieu **sans action de l’utilisateur**. Le corpus lui-même classe ce cas comme une automatisation planifiée. :chatgpt-content-reference{index=\"1\"}\n\n**Pourquoi**\n- Power Automate prend officiellement en charge les **flux planifiés** ; pour un flux planifié, c’est le **contexte de licence du propriétaire du flux** qui s’applique. :chatgpt-content-reference{index=\"2\"}\n- Une licence Microsoft 365 peut inclure les flux planifiés et les **connecteurs standard**, mais elle n’inclut pas automatiquement les connecteurs Premium ni la capacité AI Builder. :chatgpt-content-reference{index=\"3\"}\n- Si la synthèse est réalisée via un **agent flow Copilot Studio** avec un déclencheur planifié, il ne faut pas appliquer le « no charge » lié à la licence Microsoft 365 Copilot : Microsoft réserve ce cas sans frais au déclencheur **“When an agent calls the flow”**. Les autres déclencheurs consomment des Copilot Credits. :chatgpt-content-reference{index=\"4\"}\n\n**Coût**  \nLa licence **Microsoft 365 Copilot du directeur ne suffit donc pas à conclure que l’automatisation de 08:00 est incluse**. Deux chemins sont à distinguer :\n\n1. **Power Automate + connecteurs standard Outlook/M365** : peut relever des droits Power Automate inclus dans certaines licences Microsoft 365 ; le composant IA utilisé pour résumer doit être vérifié séparément. :chatgpt-content-reference{index=\"5\"}  \n2. **Copilot Studio avec déclencheur planifié** : consommation de **Copilot Credits** selon les fonctions utilisées. :chatgpt-content-reference{index=\"6\"}\n\n**Prérequis DSI**\n- compte propriétaire du flux et licence Power Automate adéquate ;\n- accès à la boîte Outlook du directeur avec le principe du moindre privilège ;\n- choix explicite du composant IA de synthèse ;\n- politique DLP et environnement Power Platform ;\n- supervision des exécutions, erreurs et coûts.\n\nMicrosoft Graph permet également un accès automatisé aux messages avec des autorisations d’application, dont `Mail.Read`, mais ce mode exige un consentement administrateur et doit être limité autant que possible ; il n’est pas nécessaire si le connecteur Outlook du flux suffit. :chatgpt-content-reference{index=\"7\"}\n\n**Alternative moins coûteuse :** conserver le briefing **manuel en un clic** via l’agent, car le chemin « utilisateur Microsoft 365 Copilot licencié + agent + flow appelé par l’agent » peut bénéficier du cas documenté sans frais supplémentaires en Copilot Credits. Mais il ne répond pas à l’exigence d’un briefing déjà prêt automatiquement à 08:00. :chatgpt-content-reference{index=\"8\"}"
+        }
+      ]
+    }
+  ]
+}

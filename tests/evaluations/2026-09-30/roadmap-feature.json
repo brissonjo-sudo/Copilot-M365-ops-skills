@@ -1,0 +1,32 @@
+{
+  "scenario_id": "roadmap-feature",
+  "thread_id": "6abd4acb-8eb8-83ed-aff2-40687e6b441b",
+  "url": "https://chatgpt.com/c/6abd4acb-8eb8-83ed-aff2-40687e6b441b",
+  "turns": [
+    {
+      "id": "ce2b011a-635e-466b-a3ae-e9f4fe724ba1",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1790790393.225,
+      "completedAt": 1790790404.889809,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "ce2b011a-635e-466b-a3ae-e9f4fe724ba1",
+          "content": [
+            {
+              "type": "text",
+              "text": "Lis intégralement Texte collé(10).txt et applique son skill copilot-m365-ops. Réponds uniquement à la DEMANDE finale ID roadmap-feature. Confirme la lecture du corpus, consulte les sources officielles actuelles pour les faits volatils et réponds de façon concise en français.\n\n[User attached 1 file; file contents were not included]"
+            }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "03f283b7-547a-4052-930c-938d82474e26",
+          "text": "Corpus lu intégralement. :chatgpt-content-reference{index=\"0\"}\n\n### roadmap-feature\n\n**On ne peut pas confirmer la disponibilité en France le mois prochain sans connaître la fonctionnalité précise.**\n\nPour une fonctionnalité Copilot Studio annoncée sur la roadmap, il faut distinguer :\n\n- **Roadmap / date cible** : indication prévisionnelle, **pas une garantie de disponibilité**. Le corpus impose d’ailleurs de ne pas traiter une date de roadmap comme un engagement. :chatgpt-content-reference{index=\"1\"}\n- **Déploiement régional** : Copilot Studio est déployé progressivement selon les régions ; une disponibilité ailleurs ne prouve pas qu’elle est déjà disponible en France. :chatgpt-content-reference{index=\"2\"}\n- **Disponibilité réelle** : à confirmer dans la page Microsoft des **released versions** et, selon la fonctionnalité, dans **What’s new**. Les sources Microsoft actuelles continuent de publier des mises à jour Copilot Studio par vagues et régions. :chatgpt-content-reference{index=\"3\"}\n\nDonc : **si la roadmap indique octobre 2026, il faut le comprendre comme une cible de déploiement, pas comme l’assurance qu’elle sera utilisable en France en octobre.**\n\nAvec le **nom exact de la fonctionnalité**, on peut vérifier son statut France actuel ou prévu."
+        }
+      ]
+    }
+  ]
+}

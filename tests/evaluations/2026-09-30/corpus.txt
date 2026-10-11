@@ -1,0 +1,825 @@
+## FILE: SKILL.md
+---
+name: copilot-m365-ops
+description: >-
+  Use this skill whenever the user asks about Microsoft 365 Copilot, Copilot Chat,
+  Copilot Studio, Agent Builder, Copilot agents, Cowork, agent flows, Power
+  Automate integration, Microsoft Graph/Work IQ grounding, Copilot Credits,
+  licensing, pricing, deployment, governance, security, tenant administration,
+  or which Microsoft Copilot architecture to choose. Use it before giving
+  licensing, billing, availability, quota, roadmap, or cost claims because those
+  facts change frequently and require freshness checks.
+---
+
+# Copilot M365 Ops
+
+This skill runs primarily in ChatGPT and provides advice about Microsoft 365 Copilot. Microsoft Copilot Studio and Microsoft Copilot Cowork are subjects of the advice. Other Agent Skills hosts are secondary portability targets.
+
+## Core operating rule
+
+Separate **stable architecture knowledge** from **volatile Microsoft facts**.
+
+Before answering, classify the request:
+
+1. Product/capability explanation.
+2. Architecture choice.
+3. Licensing or entitlement.
+4. Cost or Copilot Credits.
+5. Deployment or tenant administration.
+6. Security/governance.
+7. Troubleshooting.
+8. Roadmap/availability/change.
+
+For categories 3, 4, 5, 7, and 8, treat current Microsoft documentation as authoritative and perform a live verification whenever tools allow it. Never present a cached price, quota, billing rate, preview status, regional availability, or licensing rule as current without checking freshness.
+
+## Source order
+
+Use this hierarchy:
+
+1. Microsoft Learn / Microsoft product documentation.
+2. Microsoft product pricing and licensing pages.
+3. Microsoft 365 admin / Power Platform admin documentation.
+4. Microsoft AI at Work Roadmap and Copilot Studio release pages.
+5. Microsoft-owned GitHub repositories.
+6. Community sources only for field reports, bugs, or workarounds; clearly label them as non-authoritative.
+
+Do not use community posts as the sole source for pricing, licensing, security, or compliance claims.
+
+Read `sources/sources.json` and `sources/freshness-policy.json` when a claim is time-sensitive.
+
+## Architecture decision sequence
+
+For any proposed solution, determine in this order:
+
+1. **Outcome** — information, drafting, action, automation, or autonomous work.
+2. **Actor** — licensed Microsoft 365 Copilot user, unlicensed internal user, maker, admin, or external user.
+3. **Trigger** — manual, agent-called flow, scheduled/event-driven, or autonomous.
+4. **Identity** — user identity, service identity, or anonymous/external.
+5. **Data** — Microsoft 365 tenant data, SharePoint, Graph, external APIs, premium connectors, local files.
+6. **Harness/runtime** — Copilot Chat harness for extending Microsoft 365 Copilot, standard Copilot Studio harness, GitHub Copilot harness, Cowork, Power Automate, or another service.
+7. **Cost path** — included/zero-rated, Copilot Credits, Power Platform/Azure, third-party/API.
+8. **Governance** — admin approval, DLP, permissions, environment, publishing, auditability.
+9. **Recommendation** — prefer the simplest, lowest-cost, governable design that fully meets the requirement.
+
+Never assume that "Copilot Studio" is one billing model. Explicitly distinguish the **standard harness** from the **GitHub Copilot harness** when relevant.
+
+Microsoft also documents the **Copilot Chat harness**. Verify its own capabilities and entitlements; do not transfer billing conditions between harnesses. Distinguish Copilot Studio agent flows from Power Automate cloud flows: the agent-flow Copilot Credit trigger rules are not cloud-flow licensing rules.
+
+## Cost answers
+
+For cost questions:
+
+1. Identify the billing surface.
+2. Identify whether the end user has Microsoft 365 Copilot.
+3. Identify the trigger type.
+4. Identify the harness.
+5. Break the workload into billable features/actions.
+6. Verify current billing rates live.
+7. Give:
+   - unit assumptions;
+   - low / realistic / high range when exact usage is unknown;
+   - monthly estimate;
+   - the biggest cost driver;
+   - a cheaper architecture if one exists.
+
+Never convert Copilot Credits to currency using an assumed universal fixed value unless the current Microsoft purchasing model supports that conversion for the specific service and region.
+
+## Important billing distinctions
+
+Consult `references/billing.md` before answering detailed billing questions.
+
+Key design distinction:
+- Standard-harness employee-facing agent usage can be zero-rated for a Microsoft 365 Copilot licensed user when Microsoft conditions are met.
+- Agent flows are zero-rated for that licensed-user scenario only when invoked through the agent-specific trigger documented by Microsoft; other triggers can consume Copilot Credits.
+- GitHub Copilot harness agents/workflows use usage-based billing and can consume Copilot Credits during build, preview, evaluation, and runtime.
+- Cowork is governed as a usage-based Copilot Credits experience.
+
+These statements are intentionally high-level. Verify the current Microsoft wording before applying them to a real tenant.
+
+## Governance
+
+For public-sector or enterprise deployments, always consider:
+
+- Entra ID authentication and least privilege;
+- tenant and environment boundaries;
+- Microsoft 365 admin center and Power Platform admin center controls;
+- agent inventory, approval, publishing and retirement;
+- DLP and connector controls;
+- SharePoint oversharing;
+- Purview / compliance controls where applicable;
+- logging, monitoring and cost limits;
+- human approval for sensitive actions;
+- rollback / disable path.
+
+Use `playbooks/prepare-dsi-request.md` when the user needs a request for IT/DSI.
+
+## Output modes
+
+Match the user's requested depth.
+
+- **Brief**: answer first, maximum 5 bullets, one cost/architecture verdict if applicable.
+- **Standard**: answer + concise rationale + prerequisites + cost implication.
+- **Deep**: decision matrix, assumptions, sources, implementation steps, risks and alternatives.
+
+If the user asks for ADHD/TDAH-friendly output, use:
+- the answer in the first sentence;
+- short sections;
+- one idea per bullet;
+- numbers and costs visually separated;
+- no long preamble.
+
+## Guardrails
+
+- Do not invent tenant settings, licenses, or admin permissions.
+- Do not claim a feature is enabled in the user's tenant without tenant evidence.
+- Do not conflate Microsoft 365 Business Premium with the Microsoft 365 Copilot add-on.
+- Do not conflate Copilot Studio standard harness with GitHub Copilot harness.
+- Do not call an automated/scheduled flow "included" merely because its user has Microsoft 365 Copilot; verify trigger and harness.
+- Do not treat roadmap dates as guarantees.
+- Do not present preview features as generally available.
+- Do not quote internal chain-of-thought or hidden reasoning.
+- When exact billing cannot be calculated, show assumptions rather than false precision.
+
+## Companion references
+
+Use the minimum relevant file:
+- `references/product-map.md`
+- `references/decision-tree.md`
+- `references/licensing.md`
+- `references/usl-vs-ubb.md`
+- `references/billing.md`
+- `references/cowork.md`
+- `references/copilot-studio.md`
+- `references/governance-security.md`
+- `playbooks/choose-architecture.md`
+- `playbooks/minimize-cost.md`
+- `playbooks/prepare-dsi-request.md`
+
+
+## FILE: references/billing.md
+# Billing and Copilot Credits
+
+**Volatility: CRITICAL. Live verification required.**
+
+## Standard harness
+
+As verified from Microsoft documentation on 2026-09-30, Copilot Studio publishes feature-level Copilot Credit rates for the standard harness. The same table identifies documented "No charge" cases for Microsoft 365 Copilot licensed users in qualifying employee-facing scenarios.
+
+Important trigger distinction:
+- for agent flows, the documented zero-rating for a Microsoft 365 Copilot licensed user applies to runs triggered through **When an agent calls the flow**;
+- other agent-flow triggers consume Copilot Credits at the standard rate.
+
+Microsoft also states that Computer-Using Agents are not included in that Microsoft 365 Copilot zero-rating.
+
+Never copy cached numeric rates into an answer without a current source check.
+
+These trigger rules concern **Copilot Studio agent flows**. Power Automate cloud flows use their own licensing; do not assign Copilot Credits to a cloud flow merely because it is scheduled. Connected AI/services may have separate charges. Verify each component.
+
+## GitHub Copilot harness
+
+Microsoft documents a separate usage-based billing model for agents and workflows powered by the GitHub Copilot harness.
+
+Key difference:
+- usage can consume Copilot Credits while building, previewing, testing, evaluating, and running;
+- Microsoft 365 Copilot user licensing should not be assumed to zero-rate this harness.
+
+## Cowork
+
+Cowork is listed by Microsoft among services managed through usage-based Copilot Credits billing. Users can use `/cost` in Cowork to inspect approximate task credit usage and monthly remaining allocation.
+
+## Purchasing
+
+Microsoft supports multiple purchasing approaches depending on product and scenario, including prepaid capacity and pay-as-you-go. Public list prices can change and can differ by market/contract.
+
+Always use the current Microsoft pricing or licensing page for monetary estimates.
+
+## Cost calculation template
+
+1. Count runs per day/month.
+2. Identify harness.
+3. Identify user license status.
+4. Identify trigger.
+5. Count billable feature types.
+6. Estimate tokens/pages/actions only where relevant.
+7. Apply current rates.
+8. Add Power Platform/Azure/third-party costs separately.
+9. Show low / expected / high range.
+
+
+## FILE: references/copilot-studio.md
+# Copilot Studio
+
+## First question: which harness?
+
+Copilot Studio now contains materially different execution/billing paths. Always establish the harness before discussing cost.
+
+### Standard harness
+
+Use for many conventional Copilot Studio agents and agent flows.
+
+Billing can be feature-based in Copilot Credits. Qualifying Microsoft 365 Copilot licensed-user scenarios can be zero-rated for documented capabilities.
+
+### Copilot Chat harness
+
+Microsoft's harness overview also describes a third path for extending Microsoft 365 Copilot. Verify that path's capabilities and entitlement independently; standard and GitHub billing statements are scoped to their own harnesses. See the `copilot-studio-harnesses` source in the registry.
+
+### GitHub Copilot harness
+
+Use for reasoning-heavy agents/workflows powered by the newer harness.
+
+Microsoft documents usage-based Copilot Credits from build and test through runtime. Do not apply standard-harness inclusion rules to this harness.
+
+## Release cadence
+
+Microsoft states that the Copilot Studio released-versions page is updated weekly on Tuesday and rollout is regional.
+
+Therefore:
+- do not infer France availability from US preview availability;
+- check the released-versions table and roadmap;
+- distinguish preview, targeted release, rollout, and GA.
+
+## Design rule
+
+For each agent record:
+- harness;
+- environment;
+- identity;
+- knowledge sources;
+- tools/connectors;
+- trigger types;
+- channels;
+- billing policy;
+- owner;
+- DLP policy;
+- approval requirements;
+- monitoring and retirement owner.
+
+
+## FILE: references/cowork.md
+# Cowork
+
+**Volatility: HIGH.**
+
+Cowork is intended for multistep work that can coordinate skills, integrations and enterprise context. It should not be the default for every simple drafting or lookup task.
+
+## Cost
+
+Microsoft manages Cowork through usage-based Copilot Credits billing. The user-visible `/cost` command can show approximate credits consumed by the current task plus monthly usage/remaining allocation.
+
+Use Cowork when the value of:
+- multistep orchestration;
+- long-running work;
+- cross-tool action;
+- richer planning/reasoning
+
+outweighs the usage-based cost.
+
+For simple:
+- email drafting;
+- single-document summarization;
+- straightforward lookup;
+- deterministic recurring automation,
+
+compare against ordinary Microsoft 365 Copilot, a standard-harness agent, or a flow first.
+
+## Governance
+
+Before enabling Cowork at scale:
+- define eligible users/groups;
+- define organization and user spending limits;
+- determine which supported usage-based services are covered by policies;
+- review whether automatic application to future services is acceptable;
+- monitor actual credits from pilot users.
+
+
+## FILE: references/decision-tree.md
+# Decision tree
+
+## 1. Is the task conversational only?
+
+If yes:
+- use Microsoft 365 Copilot / Copilot Chat where possible;
+- use a dedicated agent only when reusable instructions, tools, or scoped knowledge add value.
+
+## 2. Does it need reusable domain behavior?
+
+If yes:
+- consider an internal agent;
+- determine Copilot Chat, standard or GitHub Copilot harness from the actual authoring/runtime path;
+- verify user licensing and publishing path.
+
+## 3. Does it execute actions?
+
+If yes:
+- identify every connector/tool;
+- determine whether human approval is required;
+- apply least privilege and DLP;
+- calculate action/flow billing separately from the response generation.
+
+## 4. Is the trigger automatic?
+
+If scheduled or event-driven:
+- do not assume Microsoft 365 Copilot user licensing zero-rates the run;
+- check the documented trigger-specific billing rules;
+- compare with manual or agent-called execution.
+
+## 5. Is the work reasoning-heavy and multistep?
+
+If yes:
+- consider Cowork or GitHub Copilot harness;
+- model usage-based cost;
+- set spending limits before scale.
+
+## 6. Is it repetitive and deterministic?
+
+Prefer:
+1. agent-invoked deterministic flow when appropriate;
+2. Power Automate / agent flow;
+3. autonomous reasoning only when rules cannot reliably express the task.
+
+
+## FILE: references/governance-security.md
+# Governance and security
+
+## Baseline
+
+Microsoft's Copilot controls framework groups governance into:
+- security and governance;
+- management controls;
+- measurement and reporting.
+
+For enterprise/public-sector deployments, map every solution to these three areas.
+
+## Security checklist
+
+- Microsoft Entra authentication.
+- Least-privilege permissions.
+- Explicit connector inventory.
+- DLP policies for environments/connectors.
+- SharePoint permission/oversharing review.
+- Purview/compliance requirements where applicable.
+- Human approval for sensitive tool calls where supported/required.
+- No anonymous publishing unless explicitly justified.
+- Separate dev/test/prod environments where operationally appropriate.
+
+## Lifecycle checklist
+
+- named business owner;
+- named technical owner;
+- maker permissions;
+- approval before publication;
+- target groups;
+- cost policy;
+- monitoring;
+- change log;
+- incident/rollback procedure;
+- retirement criteria.
+
+## Public-sector note
+
+Do not treat Microsoft security controls as a substitute for the organization's own legal, records-management, data-protection, procurement, and information-security obligations.
+
+
+## FILE: references/licensing.md
+# Licensing reference
+
+**Volatility: HIGH. Live verification required for production decisions.**
+
+## Concepts to keep separate
+
+- Base Microsoft 365 plan (for example Business Premium, E3/E5, etc.).
+- Microsoft 365 Copilot user license/add-on.
+- Copilot Studio maker access.
+- Copilot Studio tenant capacity / Copilot Credits.
+- Power Platform / Power Automate entitlements.
+- Usage-based billing policies and Azure linkage.
+- Premium connectors and third-party service charges.
+
+A user being able to open Copilot Studio does not, by itself, prove every publishing or runtime scenario is included.
+
+## Current documented principles — verify before applying
+
+Microsoft documentation states that a Microsoft 365 Copilot license allows users to extend Microsoft 365 Copilot with agents. For standard-harness employee-facing scenarios, specific capabilities used by an authenticated Microsoft 365 Copilot licensed user can be zero-rated, subject to Microsoft conditions and fair-use limits.
+
+The same inclusion must not be generalized to:
+- unlicensed users;
+- external channels;
+- autonomous/scheduled triggers;
+- GitHub Copilot harness usage;
+- Computer-Using Agents;
+- unrelated Power Platform premium licensing.
+
+## Fair use
+
+Treat "fair use" as a contractual/product constraint, not as a known fixed request quota unless Microsoft publishes a current numeric limit for the exact feature.
+
+When asked "how many prompts are included?", answer with the documented rule and verify whether a numeric limit exists today.
+
+
+## FILE: references/product-map.md
+# Product map
+
+Use this file to identify the correct Microsoft surface before discussing implementation or cost.
+
+| Surface | Primary role | Typical trigger | Cost model to verify |
+|---|---|---|---|
+| Microsoft 365 Copilot | User productivity across M365 apps | Human prompt | User subscription / included capabilities |
+| Copilot Chat | Conversational Microsoft 365 entry point | Human prompt | License-dependent |
+| Agent Builder / M365 agents | Lightweight internal agent experiences | Human prompt | License / metering depends on scenario |
+| Copilot Studio — Copilot Chat harness | Extend Microsoft 365 Copilot | User interaction | Verify its own licensing and capabilities |
+| Copilot Studio — standard harness | Internal/external custom agents and agent flows | Human, flow, event | Copilot Credits, with documented zero-rating cases |
+| Copilot Studio — GitHub Copilot harness | Reasoning-heavy multistep agents/workflows | Build, test, human, autonomous | Usage-based Copilot Credits |
+| Cowork | Long-running / multistep work across tools and skills | User task / supported automation | Usage-based Copilot Credits |
+| Power Automate | Deterministic workflow automation | Manual, scheduled, event | Power Platform licensing + connected-service costs |
+| Microsoft Graph / Work IQ APIs | Programmatic enterprise data/intelligence | API call | Service/API-specific usage model |
+| SharePoint agents | Grounded M365 knowledge experiences | Human prompt | License / metering depends on user and scenario |
+
+## Rule
+
+Do not select a product because it sounds more "agentic." Select it based on:
+- need for reasoning;
+- trigger;
+- identity;
+- data scope;
+- action scope;
+- expected volume;
+- governance;
+- cost.
+
+For repetitive deterministic work, prefer a deterministic workflow before a reasoning-heavy autonomous agent.
+
+
+## FILE: references/usl-vs-ubb.md
+# User subscription licensing vs usage-based billing
+
+**Volatility: HIGH. Live verification required.**
+
+Microsoft uses both fixed per-user subscription licensing and usage-based billing.
+
+## User subscription license (USL)
+
+A Microsoft 365 Copilot user subscription covers the core licensed-user experience and documented included capabilities.
+
+Do not infer from the existence of a USL that every advanced or agentic feature is included.
+
+## Usage-based billing (UBB)
+
+Microsoft uses Copilot Credits for eligible advanced experiences and services. Current examples include Cowork and other advanced agentic capabilities documented by Microsoft.
+
+A service can therefore require:
+- a Microsoft 365 Copilot user license for access; and
+- Copilot Credits for the advanced usage itself.
+
+These are not contradictory billing models.
+
+## Decision rule
+
+Whenever the user asks whether something is "included in Copilot":
+
+1. identify the exact product/feature;
+2. identify the user's Microsoft 365 Copilot license status;
+3. identify the harness and trigger;
+4. check whether Microsoft classifies that feature as USL-included, zero-rated, or UBB;
+5. verify the current official source before giving a cost answer.
+
+## Limits
+
+Microsoft documentation can introduce usage limits or overage/UBB paths over time. Do not invent a numeric limit if none is published for the exact feature.
+
+
+## FILE: playbooks/choose-architecture.md
+# Playbook — choose the architecture
+
+Use this six-line summary first:
+
+1. **Need**: what outcome?
+2. **Trigger**: manual / agent-called / scheduled / event / autonomous?
+3. **Users**: licensed Microsoft 365 Copilot or not?
+4. **Data/actions**: M365 only / external / premium?
+5. **Reasoning**: deterministic or reasoning-heavy?
+6. **Constraint**: cost / latency / governance / scale?
+
+Then compare only viable options.
+
+## Default preference order
+
+For a licensed internal user:
+1. native Microsoft 365 Copilot;
+2. standard-harness internal agent;
+3. agent-called deterministic flow;
+4. scheduled/event workflow;
+5. Cowork / GitHub Copilot harness for genuinely reasoning-heavy multistep work.
+
+This is not a universal ranking. Change the order when the task requires capabilities unavailable at an earlier level.
+
+## Required answer format
+
+**Recommended architecture**  
+One sentence.
+
+**Why**  
+Maximum three bullets.
+
+**Cost path**  
+Included / zero-rated / credits / other — with live verification status.
+
+**DSI prerequisites**  
+Maximum five bullets.
+
+**Alternative**  
+One cheaper or simpler fallback.
+
+
+## FILE: playbooks/minimize-cost.md
+# Playbook — minimize cost
+
+## Optimization order
+
+1. Remove unnecessary autonomous reasoning.
+2. Use manual user initiation when operationally acceptable.
+3. Keep qualifying licensed-user work inside included/zero-rated Microsoft 365 Copilot paths where documented.
+4. Use deterministic flows for deterministic tasks.
+5. Batch work where technically and operationally safe.
+6. Reduce repeated retrieval of the same context.
+7. Use the lightest model/tool tier that meets quality requirements.
+8. Set spending limits before broad deployment.
+9. Measure real pilot consumption instead of extrapolating from worst cases.
+10. Re-check architecture after two weeks of telemetry.
+
+## Never optimize by
+
+- bypassing required security controls;
+- sharing one identity across users to avoid licensing;
+- turning off audit/logging that is required;
+- using stale pricing assumptions;
+- weakening output quality below the business requirement.
+
+
+## FILE: playbooks/prepare-dsi-request.md
+# Playbook — prepare a DSI request
+
+Generate a one-page request with these headings.
+
+## Objet
+What must be enabled or approved.
+
+## Cas d'usage
+Who uses it, how often, and what business problem it solves.
+
+## Architecture
+- Microsoft product(s);
+- harness/runtime;
+- trigger;
+- identity;
+- data sources;
+- tools/connectors;
+- target channel.
+
+## Licences et coût
+- user licenses assumed;
+- Copilot Credits exposure;
+- Power Platform/Azure exposure;
+- proposed pilot spending limit;
+- live sources and verification date.
+
+## Sécurité
+- Entra authentication;
+- least privilege;
+- DLP/connectors;
+- SharePoint/Purview considerations;
+- human approval for sensitive actions.
+
+## Administration demandée
+Exact toggles, policies, environments, groups, approvals or billing policies required.
+
+## Pilote
+Population, duration, success criteria, usage telemetry, cost ceiling.
+
+## Rollback
+How to disable access, unpublish the agent, unlink billing, or stop the flow.
+
+## Validation
+Business owner, technical owner, DSI/security/DPO checkpoints as applicable.
+
+
+## FILE: examples/mail-briefing.md
+# Example — executive mail briefing
+
+## Need
+
+A director wants a daily briefing of the previous day's email activity, including unread messages and meaningful updates to existing topics.
+
+## Option A — manual trigger
+
+User opens a dedicated internal agent and selects "Generate my morning briefing".
+
+Architecture:
+- authenticated licensed user;
+- standard-harness agent;
+- Microsoft 365 data access;
+- optional agent-called flow.
+
+Cost principle:
+- verify current zero-rating conditions for the licensed user;
+- if a flow is used, verify that it is invoked using the documented agent-call trigger.
+
+Use when:
+- a single click each morning is acceptable;
+- minimizing incremental consumption is important.
+
+## Option B — scheduled automation
+
+A scheduled/event trigger runs without the user starting it.
+
+Cost principle:
+- do not apply the manual licensed-user zero-rating automatically;
+- model Copilot Credits / Power Automate costs using current rules.
+
+Use when:
+- briefing must be ready before the user opens Copilot.
+
+## Option C — Cowork
+
+Use only when the briefing requires genuinely multistep reasoning or cross-tool work that materially exceeds the agent/flow design.
+
+Cost principle:
+- usage-based Copilot Credits;
+- validate with pilot telemetry and `/cost`.
+
+## Pilot metric
+
+For two weeks record:
+- emails scanned;
+- messages selected as material;
+- elapsed time;
+- user corrections;
+- credits consumed;
+- avoided manual time.
+
+
+## FILE: sources/sources.json
+{
+  "schema_version": 1,
+  "last_verified": "2026-09-30",
+  "sources": [
+    {
+      "id": "copilot-studio-billing-rates",
+      "category": "billing_rates",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-messages-management",
+      "last_verified": "2026-09-30",
+      "notes": "Standard-harness Copilot Credit rates, licensed-user zero-rating conditions, agent-flow trigger distinction, CUA exclusion."
+    },
+    {
+      "id": "copilot-studio-standard-licensing",
+      "category": "licensing",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/billing-licensing",
+      "last_verified": "2026-09-30",
+      "notes": "Standard harness licensing, Microsoft 365 Copilot inclusion, Copilot Studio access and capacity."
+    },
+    {
+      "id": "github-harness-billing",
+      "category": "harness_billing",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/billing-credit-overview",
+      "last_verified": "2026-09-30",
+      "notes": "Usage-based billing for GitHub Copilot harness agents/workflows including build, preview, evaluation and runtime."
+    },
+    {
+      "id": "github-harness-governance",
+      "category": "harness_billing",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/govern-credit-consumption",
+      "last_verified": "2026-09-30",
+      "notes": "Governance and capacity controls for GitHub Copilot harness credit consumption."
+    },
+    {
+      "id": "cowork-cost",
+      "category": "cowork_billing",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-copilot-credits-cost",
+      "last_verified": "2026-09-30",
+      "notes": "Cowork /cost command and monthly credit usage."
+    },
+    {
+      "id": "usage-based-billing",
+      "category": "cowork_billing",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/usage-based-billing-overview-copilot-credits",
+      "last_verified": "2026-09-30",
+      "notes": "Usage-based billing services, spending policies and cost management."
+    },
+    {
+      "id": "copilot-studio-pricing",
+      "category": "pricing",
+      "authority": "Microsoft",
+      "url": "https://www.microsoft.com/en-us/copilot/pricing/copilot-studio",
+      "last_verified": "2026-09-30",
+      "notes": "Public Copilot Studio plans/pricing. Recheck region and contract before quoting currency."
+    },
+    {
+      "id": "copilot-controls-overview",
+      "category": "governance",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-controls/overview",
+      "last_verified": "2026-09-30",
+      "notes": "Copilot controls framework."
+    },
+    {
+      "id": "copilot-controls-security",
+      "category": "governance",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-controls/security-governance",
+      "last_verified": "2026-09-30",
+      "notes": "Security, compliance, privacy and oversharing controls."
+    },
+    {
+      "id": "copilot-controls-management",
+      "category": "governance",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-controls/management-controls",
+      "last_verified": "2026-09-30",
+      "notes": "Licensing, metering, agent lifecycle and customization controls."
+    },
+    {
+      "id": "manage-m365-agents",
+      "category": "governance",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/manage",
+      "last_verified": "2026-09-30",
+      "notes": "Admin controls for agents built through different Microsoft 365 paths."
+    },
+    {
+      "id": "copilot-studio-whats-new",
+      "category": "availability",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/whats-new",
+      "last_verified": "2026-09-30",
+      "notes": "Notable product changes."
+    },
+    {
+      "id": "copilot-studio-released-versions",
+      "category": "released_versions",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/power-platform/released-versions/copilotstudio",
+      "last_verified": "2026-09-30",
+      "notes": "Weekly Tuesday update and regional version rollout, including France."
+    },
+    {
+      "id": "ai-at-work-roadmap",
+      "category": "roadmap",
+      "authority": "Microsoft",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=%5B%22Microsoft%20Copilot%20Studio%22%5D",
+      "last_verified": "2026-09-30",
+      "notes": "Forward-looking roadmap; dates are estimates and not commitments."
+    },
+    {
+      "id": "usl-vs-ubb",
+      "category": "licensing",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/user-subscription-license-usage-based-billing",
+      "last_verified": "2026-09-30",
+      "notes": "Distinguishes fixed user subscription licensing from usage-based billing for advanced experiences such as Cowork and newer agentic capabilities."
+    },
+    {
+      "id": "copilot-extensibility-costs",
+      "category": "licensing",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/cost-considerations",
+      "last_verified": "2026-09-30",
+      "notes": "Cost considerations for Microsoft 365 Copilot extensibility, licensed versus unlicensed users, tenant data and APIs."
+    },
+    {
+      "id": "copilot-studio-harnesses",
+      "category": "architecture",
+      "authority": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/harnesses-overview",
+      "last_verified": "2026-09-30",
+      "notes": "Official comparison of Copilot Studio harnesses and their implications for capability and billing."
+    }
+  ]
+}
+
+
+## FILE: sources/freshness-policy.json
+{
+  "schema_version": 1,
+  "policy": {
+    "pricing": {"max_age_days": 7, "live_check_required": true, "severity": "block"},
+    "billing_rates": {"max_age_days": 7, "live_check_required": true, "severity": "block"},
+    "licensing": {"max_age_days": 7, "live_check_required": true, "severity": "block"},
+    "cowork_billing": {"max_age_days": 7, "live_check_required": true, "severity": "block"},
+    "harness_billing": {"max_age_days": 7, "live_check_required": true, "severity": "block"},
+    "quotas_limits": {"max_age_days": 7, "live_check_required": true, "severity": "block"},
+    "availability": {"max_age_days": 7, "live_check_required": true, "severity": "warn"},
+    "roadmap": {"max_age_days": 7, "live_check_required": true, "severity": "warn"},
+    "released_versions": {"max_age_days": 7, "live_check_required": true, "severity": "warn"},
+    "governance": {"max_age_days": 30, "live_check_required": false, "severity": "warn"},
+    "architecture": {"max_age_days": 180, "live_check_required": false, "severity": "warn"}
+  },
+  "semantics": {
+    "max_age_days": "Maximum age of the repository's last human/source review. It is not permission to answer a live pricing/licensing question from cache.",
+    "live_check_required": "When true, re-check the current official source at answer time whenever live retrieval is available."
+  }
+}

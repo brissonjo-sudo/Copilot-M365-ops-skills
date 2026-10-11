@@ -1,0 +1,32 @@
+{
+  "scenario_id": "unlicensed-internal-user",
+  "thread_id": "6abd48c3-5a30-83ed-b9ba-b5b62fcba235",
+  "url": "https://chatgpt.com/c/6abd48c3-5a30-83ed-b9ba-b5b62fcba235",
+  "turns": [
+    {
+      "id": "10a62b6d-b4b9-4a82-bf69-64cd5e0bf38a",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1790789831.072,
+      "completedAt": 1790789840.921306,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "10a62b6d-b4b9-4a82-bf69-64cd5e0bf38a",
+          "content": [
+            {
+              "type": "text",
+              "text": "Lis intégralement Texte collé.txt et applique son skill copilot-m365-ops. Réponds uniquement à la DEMANDE finale ID unlicensed-internal-user. Confirme la lecture du corpus, consulte les sources officielles actuelles pour les faits volatils et réponds de façon concise en français.\n\n[User attached 1 file; file contents were not included]"
+            }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "ac1568bd-7d7b-471a-8a99-0d50d1e6a6aa",
+          "text": "### unlicensed-internal-user\n\nUn salarié **sans licence Microsoft 365 Copilot** peut utiliser dans Teams un agent Copilot Studio, mais son usage n’est pas couvert par le « no charge » réservé aux utilisateurs Microsoft 365 Copilot licenciés. :chatgpt-content-reference{index=\"0\"}\n\n- **Agent créé dans Copilot Studio autonome puis publié dans Teams** : l’usage par cet utilisateur consomme des **Copilot Credits** selon les fonctions utilisées par l’agent. :chatgpt-content-reference{index=\"1\"}\n- Le tenant doit donc disposer d’une capacité Copilot Studio, par exemple prépayée ou en **pay-as-you-go**. Microsoft indique que ce modèle permet de donner accès aux agents sans licence Copilot individuelle à chaque utilisateur. :chatgpt-content-reference{index=\"2\"}\n- Si l’agent accède aux **données partagées du tenant**, notamment SharePoint ou des connecteurs Copilot, l’usage d’un utilisateur non licencié est explicitement facturé à l’usage en Copilot Credits. :chatgpt-content-reference{index=\"3\"}\n- **Exception importante** : un agent créé avec l’ancien **Copilot Studio for Teams / Teams plan** ne consomme pas de Copilot Credits dans Teams, quel que soit l’utilisateur, mais ce périmètre est plus limité et ne doit pas être confondu avec un agent Copilot Studio standard publié dans Teams. :chatgpt-content-reference{index=\"4\"}\n\n**Conclusion :** pour un agent Copilot Studio standard destiné à des salariés non licenciés Microsoft 365 Copilot, prévoir une **facturation Copilot Studio au niveau du tenant** et dimensionner les Copilot Credits selon l’usage réel."
+        }
+      ]
+    }
+  ]
+}

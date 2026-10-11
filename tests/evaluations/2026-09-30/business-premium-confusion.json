@@ -1,0 +1,32 @@
+{
+  "scenario_id": "business-premium-confusion",
+  "thread_id": "6abd4954-fd34-83eb-a2ed-79223e1da910",
+  "url": "https://chatgpt.com/c/6abd4954-fd34-83eb-a2ed-79223e1da910",
+  "turns": [
+    {
+      "id": "202c6a82-dee3-49e3-822e-cd4e256a60a3",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1790790007.101,
+      "completedAt": 1790790020.332098,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "202c6a82-dee3-49e3-822e-cd4e256a60a3",
+          "content": [
+            {
+              "type": "text",
+              "text": "Lis intégralement le fichier Texte collé(8).txt et applique son skill copilot-m365-ops. Réponds uniquement à la DEMANDE finale ID business-premium-confusion. Confirme la lecture du corpus, consulte les sources officielles actuelles pour les faits volatils et réponds de façon concise en français.\n\n[User attached 1 file; file contents were not included]"
+            }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "27a34578-bc34-4d2c-b35a-9095a7c67b41",
+          "text": "Corpus `copilot-m365-ops` lu intégralement et appliqué. :chatgpt-content-reference{index=\"0\"}\n\n## business-premium-confusion\n\n**Non. Microsoft 365 Business Premium, à lui seul, ne signifie pas que l’usage de Copilot Studio est inclus.**\n\nIl faut distinguer :\n\n- **Microsoft 365 Business Premium** : licence Microsoft 365 de base.\n- **Microsoft 365 Copilot** : licence Copilot supplémentaire, compatible avec certains plans Business éligibles.\n- **Copilot Studio** : selon le scénario, l’usage peut être couvert par Microsoft 365 Copilot, facturé en **Copilot Credits**, ou nécessiter une offre Copilot Studio dédiée. Le corpus impose précisément de ne pas confondre Business Premium et l’add-on Microsoft 365 Copilot. :chatgpt-content-reference{index=\"1\"}\n\nMicrosoft confirme actuellement qu’une **licence Microsoft 365 Copilot** permet d’utiliser Copilot Studio pour étendre Microsoft 365 Copilot avec des agents. Certaines utilisations d’agents dans Copilot Chat, Teams ou SharePoint sont alors **zero-rated** pour l’utilisateur licencié. :chatgpt-content-reference{index=\"2\"}\n\nLa page tarifaire Microsoft distingue également clairement **Microsoft 365 Copilot** de l’offre **Copilot Studio** autonome et de ses mécanismes de facturation à l’usage. :chatgpt-content-reference{index=\"3\"}\n\n**Donc :**\n\n> **Business Premium seul → non.**  \n> **Business Premium + licence Microsoft 365 Copilot → certaines capacités Copilot Studio peuvent être incluses/zero-rated, selon le harness, le canal et le déclencheur.**  \n> Les scénarios autonomes, certains workflows avancés et notamment le GitHub Copilot harness peuvent rester facturés en Copilot Credits. :chatgpt-content-reference{index=\"4\"}"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "scenario_id": "external-website-agent",
+  "thread_id": "6abd48e0-3d38-83eb-a545-eacb0ab464cb",
+  "url": "https://chatgpt.com/c/6abd48e0-3d38-83eb-a545-eacb0ab464cb",
+  "turns": [
+    {
+      "id": "3d3667ac-6f53-41c3-b107-aecc9b492e56",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1790789914.55,
+      "completedAt": 1790789925.42395,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "3d3667ac-6f53-41c3-b107-aecc9b492e56",
+          "content": [
+            {
+              "type": "text",
+              "text": "Lis intégralement le fichier Texte collé(4).txt et applique son skill copilot-m365-ops. Réponds uniquement à la DEMANDE finale ID external-website-agent. Confirme la lecture du corpus, consulte les sources officielles actuelles pour les faits volatils et réponds de façon concise en français.\n\n[User attached 1 file; file contents were not included]"
+            }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "b296c037-a9f1-4d44-b0b6-1842b0615c33",
+          "text": "Corpus `copilot-m365-ops` lu intégralement et appliqué, y compris ses références de licence, facturation, sécurité et publication. :chatgpt-content-reference{index=\"0\"}\n\n### external-website-agent\n\n**Architecture recommandée**  \nPublier un **agent Copilot Studio standard harness** via le canal **Custom Website**, intégré au site public. Le site de démonstration Copilot Studio n’est pas destiné à la production. :chatgpt-content-reference{index=\"1\"}\n\n- **Utilisateurs externes anonymes** : possible avec `Aucune authentification`, mais l’agent ne doit alors accéder qu’à des informations et ressources publiques. Toute personne connaissant le lien peut l’utiliser. :chatgpt-content-reference{index=\"2\"}\n- **Utilisateurs identifiés** : le canal Custom Website prend en charge l’authentification utilisateur, notamment lorsqu’un outil doit agir avec les droits propres de l’utilisateur. :chatgpt-content-reference{index=\"3\"}\n- Pour un vrai site public, activer la **sécurité du canal Web / Direct Line** et générer côté serveur des jetons à partir du secret plutôt que d’exposer ce secret dans le navigateur. :chatgpt-content-reference{index=\"4\"}\n\n**Coût**  \nCe scénario externe **ne bénéficie pas de la gratuité liée à la licence Microsoft 365 Copilot d’un utilisateur interne**. L’usage de l’agent relève donc normalement de la capacité **Copilot Credits**, préachetée ou en paiement à l’utilisation selon la configuration du tenant. Les fonctions consommées sont facturées selon leur catégorie, par exemple réponse classique, réponse générative ou action. :chatgpt-content-reference{index=\"5\"}\n\n**Prérequis DSI**\n- environnement Copilot Studio autorisé et capacité/facturation configurée ;\n- publication du canal **Custom Website** ;\n- DLP et connecteurs adaptés à un canal externe ;\n- sécurisation Direct Line ;\n- absence d’accès anonyme à des données internes ou sensibles.\n\n**Alternative**  \nSi le besoin est uniquement un chatbot public fondé sur des contenus publics, conserver une architecture très simple : agent standard, sources web publiques, aucune donnée Microsoft 365 interne et aucun outil privilégié. C’est la configuration la plus facile à gouverner."
+        }
+      ]
+    }
+  ]
+}

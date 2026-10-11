@@ -1,0 +1,32 @@
+{
+  "scenario_id": "usl-plus-ubb",
+  "thread_id": "6abd4fea-4820-83ed-85c7-7d53078dd20a",
+  "url": "https://chatgpt.com/c/6abd4fea-4820-83ed-85c7-7d53078dd20a",
+  "turns": [
+    {
+      "id": "edc0215f-a3e9-40e9-ba02-751e3b749942",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1790791658.456,
+      "completedAt": 1790791667.043385,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "edc0215f-a3e9-40e9-ba02-751e3b749942",
+          "content": [
+            {
+              "type": "text",
+              "text": "Lis intégralement la pièce jointe et applique son skill copilot-m365-ops. Réponds uniquement à la DEMANDE finale ID usl-plus-ubb. Confirme la lecture du corpus, consulte les sources officielles actuelles pour les faits volatils et réponds de façon concise en français.\n\n[User attached 1 file; file contents were not included]"
+            }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "4ea86b95-4793-49b4-907d-bb78af933780",
+          "text": "Lecture intégrale du corpus **copilot-m365-ops** confirmée. :chatgpt-content-reference{index=\"0\"}\n\n## usl-plus-ubb\n\n**Non. Une licence Microsoft 365 Copilot ne signifie pas que toutes les fonctions avancées sont incluses sans coût supplémentaire.**\n\n- La **licence utilisateur Microsoft 365 Copilot (USL)** couvre l’expérience Copilot principale et certaines extensions/agents pour l’utilisateur licencié. Pour plusieurs scénarios d’extensibilité, Microsoft indique qu’il n’y a **pas de coût additionnel** pour l’utilisateur disposant de la licence Copilot. :chatgpt-content-reference{index=\"1\"}\n- D’autres capacités utilisent en parallèle une **facturation à l’usage (UBB)**, notamment via les **Copilot Credits**. Le corpus cite notamment **Cowork** et certaines capacités agentiques avancées. :chatgpt-content-reference{index=\"2\"}\n- Un même service peut donc nécessiter **la licence Microsoft 365 Copilot pour y accéder**, puis **des Copilot Credits pour son utilisation avancée**. Ce ne sont pas deux modèles contradictoires.\n- Exemple actuel : **Cowork** est accessible aux clients Microsoft 365 Copilot, mais Microsoft le gère avec une logique de consommation à l’usage/Copilot Credits. :chatgpt-content-reference{index=\"3\"}\n- Il faut donc vérifier **fonction par fonction** : produit exact, harness/runtime, type de déclenchement et statut de licence avant de conclure « inclus » ou « facturé à l’usage ». :chatgpt-content-reference{index=\"4\"}\n\n**En résumé : Microsoft 365 Copilot = licence de base ; certaines fonctions avancées peuvent ajouter une couche de facturation à l’usage.**"
+        }
+      ]
+    }
+  ]
+}

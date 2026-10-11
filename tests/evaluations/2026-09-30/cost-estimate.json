@@ -1,0 +1,32 @@
+{
+  "scenario_id": "cost-estimate",
+  "thread_id": "6abd4cb4-7fa4-83eb-9bc4-bab4b6b15387",
+  "url": "https://chatgpt.com/c/6abd4cb4-7fa4-83eb-9bc4-bab4b6b15387",
+  "turns": [
+    {
+      "id": "6b7a655e-44f5-4694-82b8-59e5f4919cc3",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1790790885.015,
+      "completedAt": 1790790912.021071,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "6b7a655e-44f5-4694-82b8-59e5f4919cc3",
+          "content": [
+            {
+              "type": "text",
+              "text": "Lis intégralement la pièce jointe Texte collé.txt et applique son skill copilot-m365-ops. Réponds uniquement à la DEMANDE finale ID cost-estimate. Confirme la lecture du corpus, consulte les sources officielles actuelles pour les faits volatils et réponds de façon concise en français.\n\n[User attached 1 file; file contents were not included]"
+            }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "91cec49d-28a5-4bda-bbf5-ba9c24e3dbbe",
+          "text": "Corpus `copilot-m365-ops` lu intégralement et appliqué. :chatgpt-content-reference{index=\"0\"}\n\n## Estimation pour **150 e-mails/jour/utilisateur**\n\nHypothèse réaliste : **22 jours ouvrés/mois**, soit **3 300 e-mails/mois/utilisateur**.\n\nPour un briefing quotidien **automatisé** qui récupère les mails, les analyse avec un modèle standard puis produit **une synthèse unique**, Microsoft facture essentiellement le traitement IA selon le volume de tokens. Le tarif actuel du **Standard harness** est de **1,5 Copilot Credit / 1 000 tokens** pour l'outil IA standard. Les déclenchements automatiques ne bénéficient pas automatiquement de la gratuité accordée à certains usages interactifs des utilisateurs Microsoft 365 Copilot licenciés. :chatgpt-content-reference{index=\"1\"}\n\n| Hypothèse moyenne par e-mail | Crédits/mois | Équivalent de capacité* |\n|---|---:|---:|\n| **500 tokens** | ≈ **2 475** | ≈ **17 € HT/mois** |\n| **1 000 tokens** | ≈ **4 950** | ≈ **34 € HT/mois** |\n| **2 000 tokens** | ≈ **9 900** | ≈ **69 € HT/mois** |\n\n\\* Microsoft affiche actuellement en France **25 000 Copilot Credits = 173,30 € HT/mois**, capacité mutualisée au niveau du tenant. Les montants ci-dessus représentent donc la **quote-part théorique de capacité consommée**, pas nécessairement une facture individuelle : si aucun crédit n'est déjà disponible, le mode prépayé implique l'achat d'un pack complet ; le paiement à l'usage est également proposé. :chatgpt-content-reference{index=\"2\"}\n\n### Ordre de grandeur à retenir\n\nPour **150 mails/jour**, je budgéterais **environ 30 à 50 € HT par utilisateur et par mois de consommation IA** dans un scénario raisonnablement optimisé. La variable déterminante n'est pas réellement le nombre de mails mais **le nombre total de tokens envoyés au modèle**.\n\nÀ l'inverse, si l'utilisateur licencié Microsoft 365 Copilot **déclenche lui-même** le briefing dans un agent Standard compatible avec les conditions Microsoft, génération, Graph grounding et actions peuvent être **sans coût Copilot Credits supplémentaire**, sous réserve du fair use. :chatgpt-content-reference{index=\"3\"}\n\nPour un déploiement, la bonne architecture est donc de **regrouper/réduire les 150 mails avant l'appel IA**, plutôt que d'effectuer 150 raisonnements indépendants : c'est ce qui peut faire passer le coût réel nettement sous cette fourchette."
+        }
+      ]
+    }
+  ]
+}

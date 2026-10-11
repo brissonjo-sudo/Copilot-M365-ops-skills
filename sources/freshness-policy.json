@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "policy": {
+    "pricing": {"max_age_days": 7, "live_check_required": true, "severity": "block"},
+    "billing_rates": {"max_age_days": 7, "live_check_required": true, "severity": "block"},
+    "licensing": {"max_age_days": 7, "live_check_required": true, "severity": "block"},
+    "cowork_billing": {"max_age_days": 7, "live_check_required": true, "severity": "block"},
+    "harness_billing": {"max_age_days": 7, "live_check_required": true, "severity": "block"},
+    "quotas_limits": {"max_age_days": 7, "live_check_required": true, "severity": "block"},
+    "availability": {"max_age_days": 7, "live_check_required": true, "severity": "warn"},
+    "roadmap": {"max_age_days": 7, "live_check_required": true, "severity": "warn"},
+    "released_versions": {"max_age_days": 7, "live_check_required": true, "severity": "warn"},
+    "governance": {"max_age_days": 30, "live_check_required": false, "severity": "warn"},
+    "architecture": {"max_age_days": 180, "live_check_required": false, "severity": "warn"}
+  },
+  "semantics": {
+    "max_age_days": "Maximum age of the repository's last human/source review. It is not permission to answer a live pricing/licensing question from cache.",
+    "live_check_required": "When true, re-check the current official source at answer time whenever live retrieval is available."
+  }
+}
