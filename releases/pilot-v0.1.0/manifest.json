@@ -1,0 +1,257 @@
+{
+  "version": "0.1.0",
+  "baseline_revision": "0612889b757b9a7e1016d0e268ab732d1dc1474c",
+  "status": "validation incomplète",
+  "native_installation": "not_confirmed",
+  "native_replays": "not_run",
+  "files": {
+    "INSTALL_CHATGPT.md": {
+      "sha256": "610fd7a6e48b0df6a58ecfb5680a8be6a29e9b35a349b4a5ff3e3647cff59bca",
+      "bytes": 3024
+    },
+    "LICENSE": {
+      "sha256": "55f4fbe9dde07138c7a2387269786b9d6fec98214e82ce5f6f04f41ce4b2b395",
+      "bytes": 1092
+    },
+    "README.md": {
+      "sha256": "c8b029bbdbd883671b298b0fcb48016b2d56e9aedfae6d2393fa1a71247d2bb5",
+      "bytes": 4204
+    },
+    "SKILL.md": {
+      "sha256": "0a484bcd0c15ee77c3a9446b60ed7d72c37a421c47f98f82a306357a8226f54c",
+      "bytes": 7447
+    },
+    "VERSION": {
+      "sha256": "3d097c315a1c543040f548da4c7051265e94c77211a2411ced1d4621344270de",
+      "bytes": 7
+    },
+    "docs/AUDIT-2026-09-30.md": {
+      "sha256": "190944cfda94778bf52db76ebac4f02e79cfe9cfcb8c65fe82d4c470c6f9c1e8",
+      "bytes": 5242
+    },
+    "docs/MAINTENANCE.md": {
+      "sha256": "06a4b3429759b9faf2e3f551f2bcc364484f73da99949d486b530ba95ed5dafb",
+      "bytes": 3098
+    },
+    "docs/MERGE-2026-10-11.md": {
+      "sha256": "0ab94c8691b37ae612931f84b8e7f2d3a65d8dd00e8e36bc7711b1ef49b31810",
+      "bytes": 3522
+    },
+    "docs/PILOT-0.1.0.md": {
+      "sha256": "b7bbe5206e9765619dfd3ba7afd8e5fbb47c9613983d4e838886f7f02c40cb11",
+      "bytes": 4388
+    },
+    "docs/RESEARCH-NOTES-2026-09-30.md": {
+      "sha256": "4a2837735907a556cc8c7ea69c89c51fcf6aa51271e68b5abfd7d2dfaf733f91",
+      "bytes": 1311
+    },
+    "docs/ROADMAP.md": {
+      "sha256": "5389a1df2108a408d5a49cd1ca973b3999b8ee108b392d709c8981529e29fff8",
+      "bytes": 1069
+    },
+    "examples/mail-briefing.md": {
+      "sha256": "c2ec38fe85d9cf41b4e1afcf4556e52443234f3d853a6275e4cd0f67cba0125d",
+      "bytes": 1501
+    },
+    "metadata.json": {
+      "sha256": "edaad0f7aa780b6fd68b7ed8330ee8b6f9d1017128bc26e9fed7c9260f3061c1",
+      "bytes": 456
+    },
+    "playbooks/choose-architecture.md": {
+      "sha256": "1c5cc28f5c3fcb70b56cdf5c9803d15128b8a91eef445d7a3d56760ab5670595",
+      "bytes": 1155
+    },
+    "playbooks/minimize-cost.md": {
+      "sha256": "6996ba3550e51990c17b9451f3f5fdb2a52bfbbdf5f2d896ccf67a3269dcf64f",
+      "bytes": 958
+    },
+    "playbooks/prepare-dsi-request.md": {
+      "sha256": "597381a6ff6167018e061a055a235969e052f1e26cfe808084d9ff9166d54815",
+      "bytes": 1102
+    },
+    "references/billing.md": {
+      "sha256": "bb30c47ebdfeaea846ad9af5717e08f7c1275054406997e29a6cddbd53b96734",
+      "bytes": 2354
+    },
+    "references/copilot-studio.md": {
+      "sha256": "a8f1e62c6c2cd070141ce2c9bcf21ebb309da7494eb1ac6c3b2ac11058e2a933",
+      "bytes": 1606
+    },
+    "references/cowork.md": {
+      "sha256": "0cde7451f7f56d580079713d2e302b31976809f4cc87cfba44e3142bd8135cd3",
+      "bytes": 1153
+    },
+    "references/decision-tree.md": {
+      "sha256": "b0e6a64fa8ab8f5076c6eae27adfee33b2eddd595c4d57a387539241f7bdf2b7",
+      "bytes": 1340
+    },
+    "references/governance-security.md": {
+      "sha256": "c18f2ac7d867f7b92fed8d98dfc24fc46133a87f52a2e7487006ca9b3402ae2e",
+      "bytes": 1203
+    },
+    "references/licensing.md": {
+      "sha256": "dfeb08eadf31a58cade2b7b8de28a88ded0b2f6dff9863cd85ff04f2d9afe8ae",
+      "bytes": 1552
+    },
+    "references/product-map.md": {
+      "sha256": "ffc7eebc7a44aa21b5213d0f8cb40b937df1c06c8ac958ab5877916ce8011e3b",
+      "bytes": 1864
+    },
+    "references/usl-vs-ubb.md": {
+      "sha256": "ebc0e9f26a83f0f090029c1b09fc066636a6ffe71c743bc8d1e138e07a6fbc20",
+      "bytes": 1413
+    },
+    "scripts/build_pilot.py": {
+      "sha256": "398e775bcf19e676b63476fed04f1506a82d9a3ceaf8d863e16bdc45158940d4",
+      "bytes": 3974
+    },
+    "scripts/check_freshness.py": {
+      "sha256": "6e1cf8a69cf36cc7a1b8e635190505ea20a8bf049eceedba33aaa410b85dccc7",
+      "bytes": 1755
+    },
+    "scripts/check_sources.py": {
+      "sha256": "99a9da248cb661eb0836a0a8f246cba9c9c89c6335e0e9a85db1349d2d8e894f",
+      "bytes": 2355
+    },
+    "scripts/validate_repo.py": {
+      "sha256": "0ac7a66f4ac6155a303d1b85339fd814e92edef86bcb64791f3562f493dc5db2",
+      "bytes": 3480
+    },
+    "sources/freshness-policy.json": {
+      "sha256": "53c555c4346028d627fe7f8ab97cc99b9dc2e3a8ab5369cdd61f557c495f6920",
+      "bytes": 1372
+    },
+    "sources/sources.json": {
+      "sha256": "46fd196f1f1f168806ee78d8a3b5e58558dae6df8fb5b508a725a68399b39400",
+      "bytes": 6350
+    },
+    "tests/README.md": {
+      "sha256": "b6bbe7c16f4f82ed63f2ef804b00552f656a399b78319bdfd2f38be7a64bde55",
+      "bytes": 2598
+    },
+    "tests/evaluations/2026-09-30/README.md": {
+      "sha256": "b315f1994af62bfd56fbf84b5627763042759c7d4a392cd8a21313b9279d0578",
+      "bytes": 4043
+    },
+    "tests/evaluations/2026-09-30/agent-called-flow.json": {
+      "sha256": "6e44fc4d89c02a7afb1167a44231da53150621582eb540c419c4e2e7a079ad3d",
+      "bytes": 2605
+    },
+    "tests/evaluations/2026-09-30/business-premium-confusion.json": {
+      "sha256": "98eb93b6a2fc7f09a4c7fda3445580ae70c1c795db2a8f7758920fccae8d18e1",
+      "bytes": 2950
+    },
+    "tests/evaluations/2026-09-30/cheapest-architecture-replay-1.json": {
+      "sha256": "14395f00beb76c038edf4a891bd47ee452746a64c63b9a2bdb6ec07f72d818ee",
+      "bytes": 3562
+    },
+    "tests/evaluations/2026-09-30/cheapest-architecture.json": {
+      "sha256": "dd8184a9e1dab20876109c7a5b996c852ef9173320f0e915935eededd79cf5db",
+      "bytes": 2842
+    },
+    "tests/evaluations/2026-09-30/computer-use.json": {
+      "sha256": "f65d660ef3f41ef5a40a3bda30449a30b8b494292c5de9255a72daddf5a206a2",
+      "bytes": 3172
+    },
+    "tests/evaluations/2026-09-30/corpus.txt": {
+      "sha256": "26165d309abb8376fcc04c10195e43b208bd3edacdce31155800447b8dfc9380",
+      "bytes": 32964
+    },
+    "tests/evaluations/2026-09-30/cost-estimate-replay-1.json": {
+      "sha256": "8d5bc4f74f24873be249d6545738982a831e87d11ce9d4c29c40007a741e43cf",
+      "bytes": 3325
+    },
+    "tests/evaluations/2026-09-30/cost-estimate.json": {
+      "sha256": "083e8856cc9cfb7395d4457ad521010173b985cfeedc43ce6bb50a21a25d9d53",
+      "bytes": 3630
+    },
+    "tests/evaluations/2026-09-30/cowork-multistep.json": {
+      "sha256": "51cc30ee415b66037a6ac2dd481ab09c85e03f085ef9f6573e112f17a13000a1",
+      "bytes": 3444
+    },
+    "tests/evaluations/2026-09-30/cowork-simple-email.json": {
+      "sha256": "1e61edf9fe7669d9b7e42476054bfe1ea87b5ea9e95bf358cc5bbe2ef6520879",
+      "bytes": 2409
+    },
+    "tests/evaluations/2026-09-30/external-website-agent.json": {
+      "sha256": "109450d7761d43fee7cee6657d8b6a349d8bedb6f9cc7e04c4e953c8b395f8b4",
+      "bytes": 3466
+    },
+    "tests/evaluations/2026-09-30/fair-use-limit.json": {
+      "sha256": "b338adad4605583d9f94bbb10691dce2efaf360704eccf20495bf0f1efe746c8",
+      "bytes": 2641
+    },
+    "tests/evaluations/2026-09-30/github-harness-build.json": {
+      "sha256": "c269ac2166c146b9799260191c064502a10429a26836db80e822fd2c66204775",
+      "bytes": 3891
+    },
+    "tests/evaluations/2026-09-30/judgment.json": {
+      "sha256": "b4c76b090d9007adeb7986eb0eb25f945f6e65a4d7419679b7c75804f4a63355",
+      "bytes": 92513
+    },
+    "tests/evaluations/2026-09-30/licensed-manual-mail-briefing.json": {
+      "sha256": "4a3657b6d5ffd980d9c26cbd99460d21d5f1f1b3506a7384719540480eb87ed3",
+      "bytes": 3271
+    },
+    "tests/evaluations/2026-09-30/manifest.json": {
+      "sha256": "d619e4b7c59829257072924bbd661bdbe9d0d1554b93c5a7a394dc2c66dc375c",
+      "bytes": 3704
+    },
+    "tests/evaluations/2026-09-30/roadmap-feature.json": {
+      "sha256": "9427c1a1e5eb8035cfa489e08f9b2cf9d2cae1dab37ee23f953131c646e3a53f",
+      "bytes": 2484
+    },
+    "tests/evaluations/2026-09-30/scheduled-mail-briefing-supplemental.json": {
+      "sha256": "3d6d3e900333b64d2af9a00123bba0a40d3bd852a06316babd554d9ca124ecbf",
+      "bytes": 4213
+    },
+    "tests/evaluations/2026-09-30/scheduled-mail-briefing.json": {
+      "sha256": "794df306c2835fe8199d019218df4d2499efa71b8950a78d7b9eaa6f893d9fc9",
+      "bytes": 4245
+    },
+    "tests/evaluations/2026-09-30/sensitive-send-email-action.json": {
+      "sha256": "a18350f1858fe1a4109304a9c575348f29384776b72b76ded9ee39ba1d8b3e8c",
+      "bytes": 2854
+    },
+    "tests/evaluations/2026-09-30/sharepoint-grounding.json": {
+      "sha256": "596004195134d86b568c70f712f133693af1d32c1a6e67cd4fb994775ae38cec",
+      "bytes": 3033
+    },
+    "tests/evaluations/2026-09-30/sources-observed.json": {
+      "sha256": "faaaa2ff362f758e3d9e8338cbeeca232bbd26be0b5d635f7d3535bddd44d394",
+      "bytes": 6505
+    },
+    "tests/evaluations/2026-09-30/unlicensed-internal-user-replay-1.json": {
+      "sha256": "904df6087b4dd329048ea341d45881472aad6d2191fcb40db8230339b0e1fd14",
+      "bytes": 2879
+    },
+    "tests/evaluations/2026-09-30/unlicensed-internal-user.json": {
+      "sha256": "6fc2b1b0731fdf42a76adfc8386b6b73e7324c55e574196b41592b9a6eec7148",
+      "bytes": 2812
+    },
+    "tests/evaluations/2026-09-30/usl-plus-ubb.json": {
+      "sha256": "63fd54df7eace5fc6909e40ec85ca19827e4bcc7df8502e035226014db7c5203",
+      "bytes": 2814
+    },
+    "tests/evaluations/2026-10-11-native/cheapest-architecture-prompt.txt": {
+      "sha256": "b01522ada9adfa8b5833c83941f8da5b4115dd2429dddac17160957b4a64c55c",
+      "bytes": 70
+    },
+    "tests/evaluations/2026-10-11-native/cost-estimate-prompt.txt": {
+      "sha256": "136fcc7cb15a33c7d6a4e4b2aa44fc5d4b91222bcda7c910a72f6de15c54babe",
+      "bytes": 52
+    },
+    "tests/evaluations/2026-10-11-native/manifest.json": {
+      "sha256": "86f62c9859793a214ea6eeaa5fd2fa24166b2def527bded27513b0db7119b8a5",
+      "bytes": 3431
+    },
+    "tests/evaluations/2026-10-11-native/unlicensed-internal-user-prompt.txt": {
+      "sha256": "bf96c6d4c27814722375405ad588aeeaf04f3835be01d72326534c5b987db2be",
+      "bytes": 81
+    },
+    "tests/scenarios.json": {
+      "sha256": "ba738bb4426e267582d29f12e449670245e5613451e2d70fc9908ac8b22cf6da",
+      "bytes": 5585
+    }
+  }
+}

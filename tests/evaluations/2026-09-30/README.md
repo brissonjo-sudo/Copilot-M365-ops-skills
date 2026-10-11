@@ -1,6 +1,6 @@
 # Captured release evaluation — 2026-09-30
 
-**Release gate: NOT SATISFIED. Keep PR #1 draft. No merge performed.**
+**Historical evaluation: the behavioral gate was not satisfied at capture time.** PR #1 was subsequently merged on 2026-10-11 after the maintainer explicitly accepted the documented respondent limitations; see [the merge record](../../../docs/MERGE-2026-10-11.md). Original responses and verdicts remain unchanged. This report does not certify native installation or the pilot release.
 
 All 17 original scenarios were executed in separate ChatGPT conversations with the complete final skill corpus explicitly loaded. GPT-6.1 Sol (High) independently judged their contents and checked Microsoft sources. Initial campaign: **13 PASS, 3 PARTIAL, 1 FAIL**. Three unchanged-prompt replays and one workload clarification are preserved separately; no original response was overwritten.
 
@@ -31,4 +31,4 @@ No additional skill/instruction defect or stale-reference defect was demonstrate
 
 The ChatGPT UI exposed the setting `Moyen 2/5`, not an exact responder model identifier. Explicit file loading was exercised; native ChatGPT installation/activation was not. No Microsoft tenant, invoice or deployment was tested because these scenarios concern documented decisions. The initial 17-in-one-context batch is excluded as a pretest. Visible citations establish response-source provenance; independent factual checks are recorded separately and do not prove every hidden retrieval operation.
 
-Before declaring merge-ready, resolve or independently validate the remaining harness, complete-cost and governance behaviors without changing sound billing/security rules. Review the independent final verdict and all applicable repository/remote CI gates on the exact published head. Successful CI alone does not close this behavioral gate.
+Before certifying the pilot, resolve or independently validate the remaining harness, complete-cost and governance behaviors without changing sound billing/security rules. Review the independent final verdict and all applicable repository/remote CI gates on the exact prepared head. Successful CI alone does not close this behavioral gate.

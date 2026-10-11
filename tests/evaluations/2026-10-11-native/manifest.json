@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-11",
+  "baseline_sha": "0612889b757b9a7e1016d0e268ab732d1dc1474c",
+  "installation_target": "ChatGPT desktop",
+  "loading_method": "native skill, not yet confirmed",
+  "status": "validation incomplète",
+  "installed_files": null,
+  "prepared_runtime_files": {
+    "SKILL.md": "0a484bcd0c15ee77c3a9446b60ed7d72c37a421c47f98f82a306357a8226f54c",
+    "references/billing.md": "bb30c47ebdfeaea846ad9af5717e08f7c1275054406997e29a6cddbd53b96734",
+    "references/copilot-studio.md": "a8f1e62c6c2cd070141ce2c9bcf21ebb309da7494eb1ac6c3b2ac11058e2a933",
+    "references/cowork.md": "0cde7451f7f56d580079713d2e302b31976809f4cc87cfba44e3142bd8135cd3",
+    "references/decision-tree.md": "b0e6a64fa8ab8f5076c6eae27adfee33b2eddd595c4d57a387539241f7bdf2b7",
+    "references/governance-security.md": "c18f2ac7d867f7b92fed8d98dfc24fc46133a87f52a2e7487006ca9b3402ae2e",
+    "references/licensing.md": "dfeb08eadf31a58cade2b7b8de28a88ded0b2f6dff9863cd85ff04f2d9afe8ae",
+    "references/product-map.md": "ffc7eebc7a44aa21b5213d0f8cb40b937df1c06c8ac958ab5877916ce8011e3b",
+    "references/usl-vs-ubb.md": "ebc0e9f26a83f0f090029c1b09fc066636a6ffe71c743bc8d1e138e07a6fbc20",
+    "playbooks/choose-architecture.md": "1c5cc28f5c3fcb70b56cdf5c9803d15128b8a91eef445d7a3d56760ab5670595",
+    "playbooks/minimize-cost.md": "6996ba3550e51990c17b9451f3f5fdb2a52bfbbdf5f2d896ccf67a3269dcf64f",
+    "playbooks/prepare-dsi-request.md": "597381a6ff6167018e061a055a235969e052f1e26cfe808084d9ff9166d54815",
+    "examples/mail-briefing.md": "c2ec38fe85d9cf41b4e1afcf4556e52443234f3d853a6275e4cd0f67cba0125d",
+    "sources/freshness-policy.json": "53c555c4346028d627fe7f8ab97cc99b9dc2e3a8ab5369cdd61f557c495f6920",
+    "sources/sources.json": "46fd196f1f1f168806ee78d8a3b5e58558dae6df8fb5b508a725a68399b39400"
+  },
+  "observations": [
+    "ChatGPT app listed as running with a single target window.",
+    "Accessibility tree contained window and empty regions, no skill controls.",
+    "Initial screenshot: FrameArrived timed out: timed out waiting on channel.",
+    "Recovery after app/window reselection and activation: window capture timed out: timed out waiting on channel.",
+    "User confirmed desktop visibility; capture retried and returned window capture timed out: timed out waiting on channel."
+  ],
+  "native_selector": "NOT_CONFIRMED",
+  "activation": "NOT_CONFIRMED",
+  "companion_read": "NOT_CONFIRMED",
+  "persistence": "NOT_CONFIRMED",
+  "respondent_model": null,
+  "respondent_settings": null,
+  "judge_model_required": "gpt-6.1-sol",
+  "judge_reasoning_required": "high",
+  "smoke_prompt": "Use copilot-m365-ops. We have Business Premium: is all Copilot Studio usage included?",
+  "smoke_status": "NOT_RUN",
+  "scenarios": [
+    {
+      "id": "unlicensed-internal-user",
+      "prompt": "An employee without Microsoft 365 Copilot uses a Copilot Studio agent in Teams.",
+      "status": "NOT_RUN",
+      "raw_response": null,
+      "verdict": null
+    },
+    {
+      "id": "cost-estimate",
+      "prompt": "Estimate monthly cost for 150 emails/day per user.",
+      "status": "NOT_RUN",
+      "raw_response": null,
+      "verdict": null
+    },
+    {
+      "id": "cheapest-architecture",
+      "prompt": "Choose the cheapest way to automate a deterministic repetitive task.",
+      "status": "NOT_RUN",
+      "raw_response": null,
+      "verdict": null
+    }
+  ]
+}
