@@ -62,6 +62,10 @@ python -m unittest discover -s tests -p 'test_*.py' -v
 
 **v0.1.0 foundation**
 
+PR #1 has been merged. A [v0.1.0 pilot candidate](docs/PILOT-0.1.0.md) is being prepared: **validation incomplète**. Native ChatGPT desktop activation and three native scenario replays remain unconfirmed. The historical file-loaded evaluation is preserved separately; its partial results are not promoted to passes.
+
+Build the unpublished pilot with `python scripts/build_pilot.py --output-dir dist`. The archive includes a payload manifest, companion resources and MIT license, with an external SHA256 checksum. Preparing the archive does not install the skill or publish a release.
+
 The first version focuses on architecture, billing correctness, freshness and governance rather than copying Microsoft documentation.
 
 ## Important

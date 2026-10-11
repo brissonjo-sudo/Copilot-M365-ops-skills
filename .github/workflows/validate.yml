@@ -22,3 +22,5 @@ jobs:
         run: python scripts/check_freshness.py
       - name: Tooling regression tests
         run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Maintenance issue regression tests
+        run: node --test tests/maintenance-issue.test.cjs

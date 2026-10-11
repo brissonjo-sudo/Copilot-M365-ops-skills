@@ -34,7 +34,7 @@ Use a fresh conversation and the complete corpus for each scenario; never supply
 
 Some prompts intentionally omit information: the roadmap case needs a feature identifier, and cost cases need architecture and workload assumptions. A safe clarification is valid; do not require a fabricated date or price. Record untested invariants separately and use a clearly labelled supplemental prompt to resolve missing inputs before certifying the release.
 
-The captured [2026-09-30 campaign](evaluations/2026-09-30/README.md) is a real ChatGPT file-loaded evaluation, not an LLM run in CI or a native-installation test. Its unresolved responder omissions keep the release gate open.
+The captured [2026-09-30 campaign](evaluations/2026-09-30/README.md) is a real ChatGPT file-loaded evaluation, not an LLM run in CI or a native-installation test. PR #1 was merged with explicit maintainer acceptance of its limitations. Those unresolved omissions remain limitations for the [pilot preparation](../docs/PILOT-0.1.0.md); CI does not certify them.
 
 Do not weaken billing/security invariants to increase pass rate.
 

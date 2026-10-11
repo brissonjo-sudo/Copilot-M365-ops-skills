@@ -1,0 +1,1 @@
+Estimate monthly cost for 150 emails/day per user.

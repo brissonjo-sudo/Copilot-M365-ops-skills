@@ -20,6 +20,14 @@ The canonical review ages are in `sources/freshness-policy.json`: 7 days for vol
 
 A successful HTTP check verifies reachability only. Read the actual content before setting `last_verified`; record the claim, final URL and verification date in the audit. Answer-time live verification remains required for categories marked `live_check_required`, even immediately after repository review.
 
+The workflow runs Wednesday at 06:30 UTC. It has `contents: read` and `issues: write`; no Microsoft tenant permissions. A manual dispatch on a preparation branch tests that branch's code but does not replace the schedule on the default branch.
+
+HTTP access and source freshness are independent gates. `check_sources.py --report reachability.json` labels 403 as `access_denied`, 404 as `not_found`, 429 as `rate_limited`, other HTTP failures as `http_error`, and connection/timeout failures as `network_error`. All remain nonzero results requiring review. A browser-accessible 403 page can be content-reviewed without claiming an automated access check passed or weakening freshness thresholds.
+
+When review is required, the workflow records the exact run/commit and both check outputs in one maintenance issue. It searches all open issues, excludes PRs, updates the existing issue body instead of creating duplicates, and serializes concurrent runs. Closing the issue after review is a maintainer action; an issue is not closed automatically merely because HTTP access recovers.
+
+For a manual permissions/reuse check, dispatch the prepared branch with `issue_self_test: true`. This uses a separate `Maintenance issue self-test (pilot)` issue and clearly labels it diagnostic. Dispatch twice to verify creation then reuse. It does not alter source dates, suppress check failures or assert that a real source is obsolete. The default is false and scheduled runs do not enable it.
+
 ## Immediate review triggers
 
 Do not wait for the weekly cycle after:

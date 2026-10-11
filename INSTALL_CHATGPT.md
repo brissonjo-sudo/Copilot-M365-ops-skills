@@ -2,6 +2,12 @@
 
 This is a ChatGPT skill about Microsoft 365 Copilot. Microsoft Copilot Studio and Microsoft Copilot Cowork are the advice domain.
 
+## Pilot candidate
+
+The prepared [v0.1.0 pilot](docs/PILOT-0.1.0.md) has **validation incomplète**. Extract the ZIP and preserve its single `copilot-m365-ops/` directory. Check the archive SHA256 against `SHA256SUMS`; `PACKAGE-MANIFEST.json` records payload hashes and the Git baseline. The manifest identifies prepared files, not proof that those files have been installed or activated.
+
+The actual desktop installation controls must be observed in your application. Native UI capture was blocked during pilot preparation, so no import button, installation location or native activation is certified by that attempt. The procedure below remains the required acceptance test.
+
 ## Native skill route
 
 Official OpenAI documentation describes standalone skills in the ChatGPT desktop app and plugin-bundled skills across Chat and Work. In a workspace with skill management, make the `copilot-m365-ops` folder available using the supported import/creation workflow. Preserve `SKILL.md`, `references/`, `playbooks/`, `examples/` and `sources/` together. Do not rename or flatten companion paths.
